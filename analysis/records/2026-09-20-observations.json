@@ -59,7 +59,9 @@
     "IMG_3449-b15"
    ],
    "segment": "S3",
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-09-20/IMG_3449.HEIC",
@@ -117,7 +119,9 @@
     "IMG_3449-b15"
    ],
    "segment": "S3",
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-09-20/IMG_3461.HEIC",
@@ -167,7 +171,9 @@
     "IMG_3461-b07"
    ],
    "segment": "S4",
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-09-20/IMG_3464.HEIC",
@@ -211,7 +217,9 @@
     "IMG_3464-b01"
    ],
    "segment": "S4",
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-09-20/IMG_3480.HEIC",
@@ -251,7 +259,9 @@
     "IMG_3480-b01"
    ],
    "segment": "S4",
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-09-20/IMG_3488.HEIC",
@@ -294,7 +304,9 @@
     "IMG_3488-b04"
    ],
    "segment": "S4",
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-09-20/IMG_3494.HEIC",
@@ -337,7 +349,9 @@
     "IMG_3494-b04"
    ],
    "segment": "S4",
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-09-20/IMG_3494.HEIC",
@@ -380,7 +394,9 @@
     "IMG_3494-b04"
    ],
    "segment": "S4",
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-09-20/IMG_3499.HEIC",
@@ -420,7 +436,9 @@
     "IMG_3499-b01"
    ],
    "segment": "S4",
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-09-20/IMG_3482.HEIC",
@@ -467,10 +485,12 @@
    "confirmed_by": "Geno, 2026-09-20",
    "confirmation": "gulls in flight on 2026-09-20 \u2014 CONFIRMED",
    "segment": "S4",
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   }
  ],
  "validation_problems": 0,
  "derived_by": "pipeline/observe.py \u2014 stop, event, census_class and detections_in_frames are computed, not typed",
- "schema_version": 3
+ "schema_version": 4
 }

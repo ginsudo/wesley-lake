@@ -31,11 +31,14 @@
    "notes": "BACKFILLED. The only water observation recoverable from before \u00a73a existed. The lake is frozen bank to bank, snow on both shores, drifted snow across the surface, the orange marker buoy frozen in.\n\nFiled as LAKE-WIDE, not WQ-1: this walk never reached the western terminus. Ice is a whole-lake property and is the ONLY field recordable without a fixed station \u2014 validate() now refuses anything else under LAKE-WIDE, because a reading with no fixed framing cannot be compared with one that has it.\n\nEverything else is not_assessable: the rack, its sill and posts, and the margins were never in frame.",
    "provider": "claude-pass2",
    "model": "Claude Opus 5, backfilled from bird records",
-   "schema_version": 2,
+   "schema_version": 3,
    "sky": "not_assessable",
    "water_appearance": "not_assessable",
-   "tide": "not_assessable"
+   "tide": "not_assessable",
+   "source": "own_walk",
+   "source_note": ""
   }
  ],
- "validation_problems": 0
+ "validation_problems": 0,
+ "schema_version": 3
 }

@@ -25,9 +25,12 @@
    "notes": "CONFIRMS log Entry 2, which recorded \"a dead fish stayed in the same spot on the dock throughout\" from EXIF-stripped photos. The original shows it. A written observation independently verified against the photograph.",
    "provider": "claude-sweep",
    "model": "Claude Opus 5, exhaustive visual sweep of all 262 photos",
-   "schema_version": 2,
-   "tide": "not_assessable"
+   "schema_version": 3,
+   "tide": "not_assessable",
+   "source": "own_walk",
+   "source_note": ""
   }
  ],
- "validation_problems": 0
+ "validation_problems": 0,
+ "schema_version": 3
 }

@@ -68,7 +68,9 @@
     "IMG_2183-b06",
     "IMG_2183-b07"
    ],
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-06-16/IMG_2183.HEIC",
@@ -134,9 +136,11 @@
     "IMG_2183-b06",
     "IMG_2183-b07"
    ],
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   }
  ],
  "validation_problems": 0,
- "schema_version": 3
+ "schema_version": 4
 }

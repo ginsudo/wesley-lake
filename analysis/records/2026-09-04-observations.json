@@ -90,7 +90,9 @@
     "IMG_3084-b05",
     "IMG_3084-b06"
    ],
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-09-04/IMG_3083.HEIC",
@@ -178,9 +180,11 @@
     "IMG_3084-b05",
     "IMG_3084-b06"
    ],
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   }
  ],
  "validation_problems": 0,
- "schema_version": 3
+ "schema_version": 4
 }

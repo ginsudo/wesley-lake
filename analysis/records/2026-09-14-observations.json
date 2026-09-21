@@ -48,7 +48,9 @@
     "IMG_3281-b06",
     "IMG_3281-b07"
    ],
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-09-14/IMG_3281.HEIC",
@@ -95,10 +97,12 @@
     "IMG_3281-b06",
     "IMG_3281-b07"
    ],
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   }
  ],
  "validation_problems": 0,
  "derived_by": "pipeline/observe.py \u2014 stop, event, census_class and detections_in_frames are computed, not typed",
- "schema_version": 3
+ "schema_version": 4
 }

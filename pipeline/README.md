@@ -111,12 +111,21 @@ fails is written **with its problems attached**, never dropped.
   counting depends on) and an **ID view** (native-resolution crops, biggest
   score first). Leads with the peak single-frame count, not the event total.
   `python3 pipeline/review.py <date>`
-- `test_pipeline.py` — 103 checks over all of the above: that `"none"` is a real
+- **Two provenance guards** (PROTOCOL 3, 3b), both enforced in code because
+  both were holes found by asking "what if the photos weren't mine?":
+  - `run.py` files a GPS-less photo to `photos/_no-gps/`. Previously the date
+    alone put it in the dated record, which silently asserts a location.
+  - `schema.py` / `water.py` / `census.py` carry `source`: `own_walk` or
+    `external`. An external record needs a `source_note`, may not claim
+    `count_exact`, `count_basis: additive`, `water_level` or `litter_count`,
+    and `census.py` routes it to `presence_only` — it never touches a total.
+- `test_pipeline.py` — 139 checks over all of the above: that `"none"` is a real
   no-op, that records failing `schema.validate` are written with their problems
   attached rather than dropped, that framing reproduces Entry 4's grouping, that
   every archived photo passes the geofence, that count=0 is not counted as a
   bird, and that S1 has never been photographed (if that one ever fails, someone
-  has walked the eastern third).
+  has walked the eastern third), and that an external record cannot enter the
+  core count.
 - `census.py --water` — the water rollup, including the brown-vs-wind
   cross-tabulation. Currently inconclusive, and says why.
 - `status.py` — what is done and what is waiting, per date. The answer to

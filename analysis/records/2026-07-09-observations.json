@@ -80,7 +80,9 @@
    ],
    "confirmed_by": "Geno, 2026-09-20",
    "confirmation": "Canada Goose as a regular species \u2014 CONFIRMED",
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-07-09/IMG_2568.HEIC",
@@ -129,10 +131,12 @@
     "IMG_2568-b08",
     "IMG_2568-b09"
    ],
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   }
  ],
  "validation_problems": 0,
  "derived_by": "pipeline/observe.py \u2014 stop, event, census_class and detections_in_frames are computed, not typed",
- "schema_version": 3
+ "schema_version": 4
 }

@@ -8,13 +8,23 @@ Bump SCHEMA_VERSION whenever a field is added, removed or given new meaning,
 and note the change in MIGRATIONS below so a reader of an old file knows what
 it was written against.
 Mirrors PROTOCOL.md section 5 — change them together."""
-SCHEMA_VERSION = 3
+SCHEMA_VERSION = 4
 MIGRATIONS = {
     1: 'original — species, count, stratum, activity, tier, features',
     2: 'added census_class + surface (PROTOCOL.md 5b); stratum gained `shallows`',
     3: 'added count_basis + frames (PROTOCOL.md 9); stop/event/segment derived '
        'by observe.py rather than typed',
+    4: 'added source + source_note. A record read from someone else\'s '
+       'photograph can establish PRESENCE and never a count',
 }
+
+# Where the observation came from. This exists because every counting rule in
+# this project assumes ONE observer on ONE walk: max-simultaneous counts,
+# sighting events, the 2.8x re-photography correction, effort bias. A photograph
+# from anywhere else has no walk behind it -- you cannot know what else was in
+# frame, or whether a stranger's swan is the same swan as yours an hour earlier.
+# So an external record may say "this species was here" and nothing more.
+SOURCES = ['own_walk', 'external']
 
 STRATA = ['open_water','shallows','island_or_mat',
           'shoreline_edge','bank_vegetation','overhanging_branch',
@@ -64,6 +74,7 @@ FEATURE_KEYS = ['bill','legs','head','breast_flank','wing_tail','asymmetries','s
 
 def blank(photo, **kw):
     r = dict(schema_version=SCHEMA_VERSION,
+             source='own_walk', source_note='',
              photo=photo, species='', confidence='unknown', count=None, count_exact=False,
              age_class='', stratum='', activity='', associations='',
              census_class='undetermined', surface='',
@@ -112,6 +123,20 @@ def validate(r):
     elif v != SCHEMA_VERSION:
         p.append(f"schema_version {v} but current is {SCHEMA_VERSION} "
                  f"({MIGRATIONS.get(SCHEMA_VERSION, '?')}) — migrate or re-derive")
+
+    src = r.get('source')
+    if src not in SOURCES:
+        p.append(f"bad source {src!r}; one of {SOURCES}")
+    elif src == 'external':
+        if not r.get('source_note'):
+            p.append("source 'external' needs a source_note — where it came from, "
+                     "and who took it")
+        if r.get('count_exact'):
+            p.append("source 'external' with count_exact — you cannot count exactly "
+                     "from a photograph whose framing and moment you did not choose")
+        if r.get('count_basis') == 'additive':
+            p.append("source 'external' with count_basis 'additive' — additivity is a "
+                     "claim about one observer's sequence; it cannot be made here")
 
     cb = r.get('count_basis')
     if cb not in COUNT_BASIS:

@@ -25,9 +25,12 @@
    "notes": "Found by the exhaustive sweep. The largest single piece of dumped material anywhere in the archive. Whether it was ever removed is unknown; no later frame covers that spot.",
    "provider": "claude-sweep",
    "model": "Claude Opus 5, exhaustive visual sweep of all 262 photos",
-   "schema_version": 2,
-   "tide": "not_assessable"
+   "schema_version": 3,
+   "tide": "not_assessable",
+   "source": "own_walk",
+   "source_note": ""
   }
  ],
- "validation_problems": 0
+ "validation_problems": 0,
+ "schema_version": 3
 }

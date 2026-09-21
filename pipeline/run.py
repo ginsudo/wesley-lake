@@ -40,7 +40,7 @@ def ingest():
     if not zips:
         print('no new zip at root — rebuilding from photos/ on disk'); return 0
     staged = os.path.join(ROOT, 'staging'); os.makedirs(staged, exist_ok=True)
-    n = 0
+    n = 0; no_gps = []
     for z in zips:
         print('unzipping', os.path.basename(z))
         with zipfile.ZipFile(z) as f: f.extractall(staged)
@@ -50,14 +50,31 @@ def ingest():
             if not r.get('dt'):
                 print('  !! no datetime, left in staging:', os.path.basename(p)); continue
             d = r['dt'][:10].replace(':', '-')
-            sub = 'photos' if zone(r['lat'], r['lon']) != 'OFF' else 'photos/_off-lake'
-            dest = os.path.join(ROOT, sub, d); os.makedirs(dest, exist_ok=True)
+            z = zone(r['lat'], r['lon'])
+            # PROTOCOL.md 3: "Never infer a location silently." A photo with no
+            # GPS used to be filed straight into photos/<date>/ as though it were
+            # on the lake, because NOGPS is not OFF. Nothing in the archive has
+            # ever tripped it, but any photo from elsewhere -- a stranger's, a
+            # screenshot, anything off the web -- would have walked in unnoticed
+            # and created a date that nobody walked.
+            if z == 'NOGPS':
+                dest = os.path.join(ROOT, 'photos', '_no-gps'); no_gps.append(r['file'])
+            elif z == 'OFF':
+                dest = os.path.join(ROOT, 'photos', '_off-lake', d)
+            else:
+                dest = os.path.join(ROOT, 'photos', d)
+            os.makedirs(dest, exist_ok=True)
             dst = os.path.join(dest, os.path.basename(p))
             if not os.path.exists(dst): shutil.move(p, dst); n += 1
         arc = os.path.join(ROOT, 'archive', 'zips'); os.makedirs(arc, exist_ok=True)
         stamp = datetime.date.today().isoformat()
         shutil.move(z, os.path.join(arc, f'{stamp}-{os.path.basename(z)}'))
     print(f'filed {n} photos')
+    if no_gps:
+        print(f'  !! {len(no_gps)} photo(s) had NO GPS and went to photos/_no-gps/,'
+              f' NOT into the dated record: {", ".join(no_gps[:5])}'
+              + (' ...' if len(no_gps) > 5 else ''))
+        print('     PROTOCOL.md 3: ask Geno for date and location, or leave them out.')
     return n
 
 def build():

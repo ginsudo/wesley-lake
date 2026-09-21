@@ -228,7 +228,9 @@
    ],
    "confirmed_by": "Geno, 2026-09-20",
    "confirmation": "the lake freezes \u2014 CONFIRMED. \"No birds\" is Claude\u2019s read of these 14 frames only; Geno expects birds DO use the frozen lake and will not know until next winter. Recorded as an open hypothesis, not a contradiction.",
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-01-31/IMG_0288.HEIC",
@@ -271,7 +273,9 @@
     "IMG_0289-b01",
     "IMG_0289-b02"
    ],
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-01-31/IMG_0290.HEIC",
@@ -314,9 +318,11 @@
    "detections_in_frames": [
     "IMG_0292-b01"
    ],
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   }
  ],
  "validation_problems": 0,
- "schema_version": 3
+ "schema_version": 4
 }

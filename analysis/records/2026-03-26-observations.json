@@ -77,7 +77,9 @@
    ],
    "confirmed_by": "Geno, 2026-09-20",
    "confirmation": "Canada Goose as a regular species \u2014 CONFIRMED",
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-03-26/IMG_0618.HEIC",
@@ -151,7 +153,9 @@
     "IMG_0618-b17",
     "IMG_0618-b18"
    ],
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-03-26/IMG_0617.HEIC",
@@ -221,7 +225,9 @@
     "IMG_0618-b17",
     "IMG_0618-b18"
    ],
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-03-26/IMG_0617.HEIC",
@@ -293,10 +299,12 @@
    ],
    "confirmed_by": "Geno, 2026-09-20",
    "confirmation": "unidentified diving duck, not a mallard \u2014 CONFIRMED as a real sighting; species still unresolved",
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   }
  ],
  "validation_problems": 0,
  "derived_by": "pipeline/observe.py \u2014 stop, event, census_class and detections_in_frames are computed, not typed",
- "schema_version": 3
+ "schema_version": 4
 }

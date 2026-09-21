@@ -46,9 +46,11 @@
    "detections_in_frames": [
     "IMG_0428-b01"
    ],
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   }
  ],
  "validation_problems": 0,
- "schema_version": 3
+ "schema_version": 4
 }

@@ -26,9 +26,12 @@
    "notes": "THIS CONTRADICTS the earlier claim that there is no algae anywhere in the archive \u2014 a claim made from a sample of ~80 frames, and wrong. Identification is uncertain: duckweed, filamentous algae and floating green litter all look like this at this range. Small in extent, nothing like a bloom. Worth a close photo if it recurs.",
    "provider": "claude-sweep",
    "model": "Claude Opus 5, exhaustive visual sweep of all 262 photos",
-   "schema_version": 2,
-   "tide": "not_assessable"
+   "schema_version": 3,
+   "tide": "not_assessable",
+   "source": "own_walk",
+   "source_note": ""
   }
  ],
- "validation_problems": 0
+ "validation_problems": 0,
+ "schema_version": 3
 }

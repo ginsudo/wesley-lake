@@ -63,7 +63,9 @@
     "IMG_3509-b07"
    ],
    "segment": "S5",
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-09-21/IMG_3540.HEIC",
@@ -141,7 +143,9 @@
     "IMG_3544-b02"
    ],
    "segment": "S4",
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-09-21/IMG_3540.HEIC",
@@ -200,9 +204,11 @@
     "IMG_3541-b05"
    ],
    "segment": "S4",
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   }
  ],
  "validation_problems": 0,
- "schema_version": 3
+ "schema_version": 4
 }

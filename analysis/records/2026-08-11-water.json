@@ -28,9 +28,12 @@
    "notes": "NOT a member of the swan family: 2 adults and all 4 cygnets were counted alive in the same event. A mortality record the log did not have. \u00a78 lists an abrupt fish kill as a water-health signal; a SINGLE carcass is not that, and should not be read as one.",
    "provider": "claude-sweep",
    "model": "Claude Opus 5, exhaustive visual sweep of all 262 photos",
-   "schema_version": 2,
-   "tide": "not_assessable"
+   "schema_version": 3,
+   "tide": "not_assessable",
+   "source": "own_walk",
+   "source_note": ""
   }
  ],
- "validation_problems": 0
+ "validation_problems": 0,
+ "schema_version": 3
 }

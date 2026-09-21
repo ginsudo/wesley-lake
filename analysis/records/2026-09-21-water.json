@@ -30,11 +30,14 @@
    "notes": "FIRST OBSERVATION AT WQ-1, and the first water-quality record in the project. Read from IMG_3519 (wide, rack and sill) and IMG_3520 (the culvert mouth and parapet).\n\nLITTER: at least nine discrete items are separable against the brown organic mat \u2014 one blue plastic bag or wrapper at the left edge, four or five pale white wrappers strung along the waterline, one orange and one or two yellow items. Colour is what separates plastic from organic here. Given as a range because several more are at the resolution limit and a rippled surface hides some; this is a LOWER BOUND, like every count in this project.\n\nORGANIC: a dense band of twigs and reed stems packed across the lower mesh, roughly the bottom 40%, well below the horizontal rail.\n\nLEVEL: water meets the base of the mesh at the concrete sill.\n\nNOTHING UNUSUAL otherwise \u2014 no sheen, no foam, no algal mat, no dumped object. Recorded rather than left silent (PROTOCOL.md \u00a73a).\n\nn=1. This is a baseline, not a trend.\n\nTIDE: not checked. Wesley Lake meets the ocean at a flume, so if there is any exchange the level against the sill may be a tide reading, not a lake reading. Recorded as `unknown` rather than left unasked. Whether the lake is actually tidal is not yet established.",
    "provider": "claude-pass2",
    "model": "Claude Opus 5, native-resolution crops",
-   "schema_version": 2,
+   "schema_version": 3,
    "tide": "unknown",
    "sky": "overcast",
-   "water_appearance": "not_assessable"
+   "water_appearance": "not_assessable",
+   "source": "own_walk",
+   "source_note": ""
   }
  ],
- "validation_problems": 0
+ "validation_problems": 0,
+ "schema_version": 3
 }

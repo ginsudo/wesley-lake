@@ -35,14 +35,18 @@ ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 import surfaces                      # for the shared geography.md table parser
 
-SCHEMA_VERSION = 2
+SCHEMA_VERSION = 3
 MIGRATIONS = {
     1: 'original — surface_state, ice_cover, organic_load, water_level, '
        'marginal_vegetation, litter',
     2: 'added sky + water_appearance, gated on a clear sky (the exhaustive '
        'sweep of 2026-09-21 overturned the blanket exclusion of colour); '
        'organic_load gained `scattered` and `banded_below_rail`',
+    3: 'added source + source_note, matching schema.py — an external photograph '
+       'can show a condition existed, never that it is comparable to a series',
 }
+
+SOURCES = ['own_walk', 'external']
 
 NA = 'not_assessable'
 
@@ -111,6 +115,7 @@ def stations(path=None):
 
 def blank(date, station, **kw):
     r = dict(schema_version=SCHEMA_VERSION,
+             source='own_walk', source_note='',
              date=date, station=station, frames=None,
              sky=NA, water_appearance=NA, tide=NA,
              surface_state=NA, ice_cover=NA, organic_load=NA,
@@ -145,6 +150,16 @@ def validate(r, known=None):
         p.append(f"no schema_version; current is {SCHEMA_VERSION}, see water.MIGRATIONS")
     elif v != SCHEMA_VERSION:
         p.append(f"schema_version {v} but current is {SCHEMA_VERSION} — migrate")
+    if r.get('source') not in SOURCES:
+        p.append(f"bad source {r.get('source')!r}; one of {SOURCES}")
+    elif r.get('source') == 'external':
+        if not r.get('source_note'):
+            p.append("source 'external' needs a source_note")
+        for f in ('water_level', 'litter_count'):
+            if r.get(f) not in (NA, None):
+                p.append(f"source 'external' with {f} — a fixed-station series needs "
+                         f"the same framing every time; a stranger's photograph is "
+                         f"not that. Presence and condition only")
     if r.get('station') not in known:
         p.append(f"unknown station {r.get('station')!r}; "
                  f"geography.md has {sorted(known)}")

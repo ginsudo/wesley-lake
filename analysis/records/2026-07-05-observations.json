@@ -69,7 +69,9 @@
     "IMG_2469-b07",
     "IMG_2469-b08"
    ],
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-07-05/IMG_2469.HEIC",
@@ -136,7 +138,9 @@
     "IMG_2469-b07",
     "IMG_2469-b08"
    ],
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-07-05/IMG_2469.HEIC",
@@ -184,9 +188,11 @@
     "IMG_2469-b07",
     "IMG_2469-b08"
    ],
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   }
  ],
  "validation_problems": 0,
- "schema_version": 3
+ "schema_version": 4
 }

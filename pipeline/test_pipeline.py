@@ -527,7 +527,46 @@ check('the segment tests now include 2026-09-20',
       any('2026-09-20' in f for f in glob.glob(
           os.path.join(ROOT, 'analysis', 'records', '*-observations.json'))))
 
-# 10. fractional-box contract of base.Detector --------------------------------
+# 10. provenance guards — an external photograph is not an observation -------
+check('every record defaults to own_walk', schema.blank('x')['source'] == 'own_walk'
+      and water.blank('2026-01-01','WQ-1')['source'] == 'own_walk')
+check('external without a source_note is caught',
+      any('source_note' in x for x in schema.validate(
+          schema.blank('x', source='external'))))
+check('external with count_exact is refused',
+      any('count exactly' in x for x in schema.validate(
+          schema.blank('x', source='external', source_note='web', count=3,
+                       count_exact=True))),
+      'framing and moment were chosen by someone else')
+check('external with additive counting is refused',
+      any('additivity is a claim' in x for x in schema.validate(
+          schema.blank('x', source='external', source_note='web', count=3,
+                       count_basis='additive'))))
+check('external water cannot carry a level or a litter count',
+      len([x for x in water.validate(water.blank('2026-01-01','WQ-1', frames=['a'],
+           source='external', source_note='web', water_level='at_sill',
+           tide='unknown', litter_count=2, litter_types=['other']))
+           if 'external' in x]) == 2)
+_ext = census.tally([
+    schema.blank('a', species='Mallard', count=4, stratum='open_water',
+                 surface='open_water', census_class='core',
+                 count_basis='max_simultaneous', frames=['a'], event=1),
+    schema.blank('b', species='Brant', count=30, stratum='open_water',
+                 surface='open_water', census_class='core',
+                 count_basis='max_simultaneous', frames=['b'], event=1,
+                 source='external', source_note='web')])
+check('an external record never reaches the core count',
+      _ext['core'] == 4 and _ext['presence_only'].get('Brant') == 1,
+      f"core={_ext['core']} — every counting rule assumes one observer on one walk")
+check('a GPS-less photo is not filed into the dated record',
+      "'_no-gps'" in open(os.path.join(HERE, 'run.py')).read(),
+      'PROTOCOL.md 3: never infer a location silently')
+check('all records migrated to the current schema versions',
+      all(r.get('schema_version') == schema.SCHEMA_VERSION
+          for f in glob.glob(os.path.join(ROOT,'analysis','records','*-observations.json'))
+          for r in json.load(open(f))['records']))
+
+# 11. fractional-box contract of base.Detector --------------------------------
 from providers.base import Detector
 check('base.Detector.detect is abstract', 
       Detector.detect.__doc__ and 'fractional' in Detector.detect.__doc__)

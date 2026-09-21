@@ -97,10 +97,36 @@ off-lake.
 
 If a photo has no GPS: say so plainly, ask Geno once for date and location, and
 record `location_source: user` or `unknown`. Never infer a location silently.
+Ingest enforces this — a photo with no usable fix is filed to `photos/_no-gps/`
+and named in a warning, never dropped into a dated folder where its date alone
+would imply it was taken at the lake.
 
 If ON_LAKE or NEAR: check for birds. If none, record it as a no-bird lake
 observation anyway — water clarity, algae, ice, crowding, and landmark evidence all
 matter. If OFF and no birds, say so briefly and record nothing.
+
+## 3b. Provenance — whose walk was this?
+
+Every record carries `source`:
+
+- **`own_walk`** — Geno took the photograph, on a walk, and knows what was
+  around it. This is the default and, so far, the only value in use.
+- **`external`** — anyone else's photograph: the web, Google Maps, a neighbour.
+
+Everything this protocol says about counting assumes `own_walk`. The core count
+(5b) is a count of what one observer saw on one pass; `count_basis: additive`
+is a claim about that observer's own sequence; `count_exact` means the frame was
+framed to be countable. None of those survive a photograph whose moment and
+framing someone else chose, so the schema refuses all three on an external
+record, and the census diverts it to **presence only** — the species was at the
+lake, contributing nothing to any total.
+
+Water is stricter still: an external frame may carry appearance and visible
+litter *types*, but never `water_level` (it needs a tide stage and a known sill)
+and never `litter_count` (you cannot know what the framing left out).
+
+An `external` record also requires `source_note` — where it came from and who
+took it. No exceptions; an unattributed photograph is not evidence.
 
 ## 3a. Water quality — only what a photograph can carry
 

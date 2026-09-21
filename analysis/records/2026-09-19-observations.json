@@ -47,7 +47,9 @@
     "IMG_3443-b07"
    ],
    "segment": "S4",
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-09-19/IMG_3443.HEIC",
@@ -93,7 +95,9 @@
     "IMG_3443-b07"
    ],
    "segment": "S4",
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-09-19/IMG_3445.HEIC",
@@ -146,7 +150,9 @@
     "IMG_3445-b10"
    ],
    "segment": "S4",
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-09-19/IMG_3440.HEIC",
@@ -191,7 +197,9 @@
     "IMG_3440-b06"
    ],
    "segment": "S4",
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-09-19/IMG_3446.HEIC",
@@ -231,10 +239,12 @@
     "IMG_3446-b01"
    ],
    "segment": "S4",
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   }
  ],
  "validation_problems": 0,
  "derived_by": "pipeline/observe.py \u2014 stop, event, census_class and detections_in_frames are computed, not typed",
- "schema_version": 3
+ "schema_version": 4
 }

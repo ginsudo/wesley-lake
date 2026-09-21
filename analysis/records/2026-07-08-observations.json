@@ -98,7 +98,9 @@
     "IMG_2555-b08",
     "IMG_2555-b09"
    ],
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-07-08/IMG_2550.HEIC",
@@ -194,9 +196,11 @@
     "IMG_2555-b08",
     "IMG_2555-b09"
    ],
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   }
  ],
  "validation_problems": 0,
- "schema_version": 3
+ "schema_version": 4
 }

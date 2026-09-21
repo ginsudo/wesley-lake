@@ -27,9 +27,12 @@
    "notes": "Under a CLEAR sky, so a merely reflective surface would read blue. This is the water\u2019s own colour. Cause not determinable from a photograph \u2014 sediment, tannin and an algal tint all look like this. Also the largest goose count of the year (8-12); whether that is coincidence or connected is not answerable here.",
    "provider": "claude-sweep",
    "model": "Claude Opus 5, exhaustive visual sweep of all 262 photos",
-   "schema_version": 2,
-   "tide": "not_assessable"
+   "schema_version": 3,
+   "tide": "not_assessable",
+   "source": "own_walk",
+   "source_note": ""
   }
  ],
- "validation_problems": 0
+ "validation_problems": 0,
+ "schema_version": 3
 }

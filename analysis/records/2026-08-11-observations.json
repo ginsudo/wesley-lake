@@ -154,7 +154,9 @@
     "IMG_2846-b05",
     "IMG_2846-b06"
    ],
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-08-11/IMG_2838.HEIC",
@@ -306,7 +308,9 @@
     "IMG_2846-b05",
     "IMG_2846-b06"
    ],
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-08-11/IMG_2838.HEIC",
@@ -360,9 +364,11 @@
     "IMG_2838-b13",
     "IMG_2838-b14"
    ],
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   }
  ],
  "validation_problems": 0,
- "schema_version": 3
+ "schema_version": 4
 }

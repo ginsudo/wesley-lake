@@ -19,11 +19,20 @@ Git-ignored. Delete the whole directory whenever you like.
 every stratum and surface assignment, every water assessment — each one came
 from someone looking at a native-resolution crop and deciding.
 
-- `*-observations.json` — bird records (`pipeline/schema.py`, v3)
-- `*-water.json` — water records (`pipeline/water.py`, v2)
+- `*-observations.json` — bird records (`pipeline/schema.py`, v4)
+- `*-water.json` — water records (`pipeline/water.py`, v3)
 - `*.md`, the per-session write-ups and the season rollup
 
 In git, and it is the reason this project is in git at all.
+
+## Provenance
+
+Every record says whose walk it came from (`source`, PROTOCOL 3b). All 82 of
+them currently say `own_walk`. If an `external` one ever appears, it is there
+for presence only and carries no count — see `pipeline/census.py`.
+
+`photos/_no-gps/` holds photos ingest could not place. They are not records and
+not evidence of anything until someone says where they were taken.
 
 ## The rule
 

@@ -60,7 +60,9 @@
     "IMG_3402-b11"
    ],
    "segment": "S5",
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   },
   {
    "photo": "photos/2026-09-17/IMG_3404.HEIC",
@@ -144,9 +146,11 @@
     "IMG_3406-b13"
    ],
    "segment": "S4",
-   "schema_version": 3
+   "schema_version": 4,
+   "source": "own_walk",
+   "source_note": ""
   }
  ],
  "validation_problems": 0,
- "schema_version": 3
+ "schema_version": 4
 }

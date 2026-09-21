@@ -36,6 +36,7 @@ def tally(records):
         'noted_species': collections.Counter(),
         'problems': [],
         'not_summed': out_dups,
+        'presence_only': collections.Counter(),
     }
     # PROTOCOL.md section 9. Two records of one species in one sighting event are
     # the same birds re-photographed unless one says `additive`. Sum them and the
@@ -67,6 +68,14 @@ def tally(records):
 
     for r in records:
         if id(r) in dup_ids:
+            continue
+        # An external record establishes that a species was present and nothing
+        # more. It never reaches core, noted or any surface/segment total,
+        # because every one of those assumes one observer on one walk.
+        if r.get('source') == 'external':
+            out['presence_only'][r.get('species') or '(unidentified)'] += 1
+            for pr in schema.validate(r):
+                out['problems'].append(f"{r.get('photo')}: {pr}")
             continue
         # `or 1` here used to turn count=0 into 1, so a deliberately recorded
         # no-bird observation ("MAT-02 empty", "flat calm, nothing on the lake")
@@ -150,6 +159,10 @@ def report(path):
         print('\n  by stratum')
         for s, n in t['by_stratum'].most_common():
             print(f"    {s:<22} {n}  ({schema.census_of(s)})")
+    if t['presence_only']:
+        print('\n  presence only — external photographs, never counted')
+        for k, v in t['presence_only'].most_common():
+            print(f"    {k:<22} seen on {v} external record(s)")
     if t['not_summed']:
         print(f"\n  {len(t['not_summed'])} record(s) NOT summed — re-photographed, "
               f"not additive (PROTOCOL.md 9)")
