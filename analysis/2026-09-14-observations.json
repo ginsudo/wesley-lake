@@ -1,0 +1,101 @@
+{
+ "date": "2026-09-14",
+ "generated": "2026-09-20T18:25:20",
+ "source": "Pass 2. Claude Opus 5 reading native-resolution crops. Species IDs are Claude\u2019s read, not Geno\u2019s confirmation (PROTOCOL.md 9). Not in logs/bird-log.md. September: first upending record.",
+ "records": [
+  {
+   "photo": "photos/2026-09-14/IMG_3281.HEIC",
+   "species": "Mute Swan",
+   "confidence": "certain",
+   "count": 1,
+   "count_exact": true,
+   "age_class": "adult",
+   "stratum": "open_water",
+   "activity": "dabbling",
+   "associations": "",
+   "census_class": "core",
+   "surface": "open_water",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_3281.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "submerged",
+    "legs": "not visible",
+    "head": "submerged \u2014 upending",
+    "breast_flank": "white",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "B",
+   "individual_id": "SWAN-B01",
+   "notes": "Upending, head and neck fully underwater \u2014 the only feeding-posture record in the log so far. Most of this frame\u2019s other detections are its own wake and reflection.",
+   "provider": "claude-pass2",
+   "model": "Claude Opus 5, native-resolution crops",
+   "segment": "S4",
+   "bank": "mid",
+   "detections_in_frames": [
+    "IMG_3281-b01",
+    "IMG_3281-b02",
+    "IMG_3281-b03",
+    "IMG_3281-b04",
+    "IMG_3281-b05",
+    "IMG_3281-b06",
+    "IMG_3281-b07"
+   ]
+  },
+  {
+   "photo": "photos/2026-09-14/IMG_3281.HEIC",
+   "species": "Mute Swan",
+   "confidence": "certain",
+   "count": 1,
+   "count_exact": true,
+   "age_class": "cygnet (near-grown)",
+   "stratum": "open_water",
+   "activity": "dabbling",
+   "associations": "",
+   "census_class": "core",
+   "surface": "open_water",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_3281.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "dark grey",
+    "legs": "not visible",
+    "head": "grey-brown",
+    "breast_flank": "brown-grey, fully feathered",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "C",
+   "individual_id": "",
+   "notes": "One cygnet with the adult; single frame, so a lower bound only.",
+   "provider": "claude-pass2",
+   "model": "Claude Opus 5, native-resolution crops",
+   "segment": "S4",
+   "bank": "mid",
+   "detections_in_frames": [
+    "IMG_3281-b01",
+    "IMG_3281-b02",
+    "IMG_3281-b03",
+    "IMG_3281-b04",
+    "IMG_3281-b05",
+    "IMG_3281-b06",
+    "IMG_3281-b07"
+   ]
+  }
+ ],
+ "validation_problems": 0,
+ "derived_by": "pipeline/observe.py \u2014 stop, event, census_class and detections_in_frames are computed, not typed"
+}

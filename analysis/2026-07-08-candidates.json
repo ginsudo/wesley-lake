@@ -1,0 +1,5013 @@
+{
+ "date": "2026-07-08",
+ "generated": "2026-09-20T18:30:33",
+ "detector": {
+  "provider": "yolox",
+  "model": "yolox_s@640 [CoreML+CPU]",
+  "conf": 0.15,
+  "iou": 0.55,
+  "tile": 1200,
+  "overlap": 0.25,
+  "whole_frame": true
+ },
+ "photos": 6,
+ "detections": 69,
+ "validated_clean": 69,
+ "validation_problems": 0,
+ "framing": {
+  "stale_fixes": {},
+  "zoom_bursts": [
+   {
+    "frames": [
+     "IMG_2551.HEIC",
+     "IMG_2552.HEIC"
+    ],
+    "gain": "interpolated"
+   },
+   {
+    "frames": [
+     "IMG_2553.HEIC",
+     "IMG_2554.HEIC"
+    ],
+    "gain": "interpolated"
+   }
+  ],
+  "events": {
+   "1": [
+    "IMG_2550.HEIC",
+    "IMG_2551.HEIC",
+    "IMG_2552.HEIC",
+    "IMG_2553.HEIC",
+    "IMG_2554.HEIC",
+    "IMG_2555.HEIC"
+   ]
+  },
+  "note": "Detections are NOT deduplicated across frames. Frames sharing an event, and especially frames in one zoom burst, are re-views of the same birds \u2014 summing them inflates the count ~2.8x. PROTOCOL.md 9."
+ },
+ "surfaces": {
+  "assignable": [
+   "open_water",
+   "MAT-01",
+   "MAT-02",
+   "MAT-03",
+   "MAT-04",
+   "MAT-unassigned"
+  ],
+  "mats_known_in_these_frames": {},
+  "note": "PROTOCOL.md 5b. Every record here is census_class \"undetermined\" \u2014 the detector assigns no stratum, so nothing in this file counts toward the core count yet. Pass 2 sets stratum and surface; census class then follows from stratum."
+ },
+ "caveat": "A detection is a place to look, not an identification. Species, age, stratum, activity and tier are all unset; PROTOCOL.md section 4 pass 2 still has to happen on the crops.",
+ "records": [
+  {
+   "photo": "photos/2026-07-08/IMG_2550.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2550.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2550-b01",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.515778,
+    0.4864,
+    0.625726,
+    0.535544
+   ],
+   "box_px": [
+    471,
+    280
+   ],
+   "score": 0.9119,
+   "crop": "work/2026-07-08/crops/IMG_2550-b01.jpg",
+   "crop_px": [
+    1602,
+    954
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2550-b01-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2550-b01-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2550-b01-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2550-b01-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 3.6,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.0058138888889,
+   "dt": "2026:07:08 20:11:13"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2550.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2550.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2550-b02",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.727725,
+    0.480078,
+    0.785676,
+    0.500588
+   ],
+   "box_px": [
+    248,
+    117
+   ],
+   "score": 0.8631,
+   "crop": "work/2026-07-08/crops/IMG_2550-b02.jpg",
+   "crop_px": [
+    844,
+    398
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2550-b02-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2550-b02-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2550-b02-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2550-b02-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 6.9,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.0058138888889,
+   "dt": "2026:07:08 20:11:13"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2550.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2550.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2550-b03",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.672368,
+    0.401057,
+    0.720177,
+    0.441175
+   ],
+   "box_px": [
+    204,
+    229
+   ],
+   "score": 0.8303,
+   "crop": "work/2026-07-08/crops/IMG_2550-b03.jpg",
+   "crop_px": [
+    696,
+    780
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2550-b03-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2550-b03-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2550-b03-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2550-b03-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 7.5,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.0058138888889,
+   "dt": "2026:07:08 20:11:13"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2550.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2550.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2550-b04",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.445006,
+    0.498303,
+    0.490182,
+    0.518833
+   ],
+   "box_px": [
+    193,
+    117
+   ],
+   "score": 0.812,
+   "crop": "work/2026-07-08/crops/IMG_2550-b04.jpg",
+   "crop_px": [
+    658,
+    398
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2550-b04-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2550-b04-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2550-b04-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2550-b04-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 8.9,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.0058138888889,
+   "dt": "2026:07:08 20:11:13"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2550.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2550.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 134 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2550-b05",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.572348,
+    0.428245,
+    0.603824,
+    0.44505
+   ],
+   "box_px": [
+    134,
+    95
+   ],
+   "score": 0.7827,
+   "crop": "work/2026-07-08/crops/IMG_2550-b05.jpg",
+   "crop_px": [
+    458,
+    326
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 12.8,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.0058138888889,
+   "dt": "2026:07:08 20:11:13"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2550.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2550.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 77 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2550-b06",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.543081,
+    0.378565,
+    0.56012,
+    0.392142
+   ],
+   "box_px": [
+    72,
+    77
+   ],
+   "score": 0.644,
+   "crop": "work/2026-07-08/crops/IMG_2550-b06.jpg",
+   "crop_px": [
+    248,
+    264
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 22.3,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.0058138888889,
+   "dt": "2026:07:08 20:11:13"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2550.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2550.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2550-b07",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.442025,
+    0.493563,
+    0.513509,
+    0.530338
+   ],
+   "box_px": [
+    306,
+    210
+   ],
+   "score": 0.5557,
+   "crop": "work/2026-07-08/crops/IMG_2550-b07.jpg",
+   "crop_px": [
+    1042,
+    714
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2550-b07-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2550-b07-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2550-b07-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2550-b07-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 5.6,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.0058138888889,
+   "dt": "2026:07:08 20:11:13"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2550.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2550.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 159 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2550-b08",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.571598,
+    0.427137,
+    0.606454,
+    0.455114
+   ],
+   "box_px": [
+    149,
+    159
+   ],
+   "score": 0.4863,
+   "crop": "work/2026-07-08/crops/IMG_2550-b08.jpg",
+   "crop_px": [
+    508,
+    544
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 10.8,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.0058138888889,
+   "dt": "2026:07:08 20:11:13"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2550.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2550.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 57 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2550-b09",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.73347,
+    0.835622,
+    0.7468,
+    0.843766
+   ],
+   "box_px": [
+    57,
+    46
+   ],
+   "score": 0.4814,
+   "crop": "work/2026-07-08/crops/IMG_2550-b09.jpg",
+   "crop_px": [
+    194,
+    158
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 30.1,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.0058138888889,
+   "dt": "2026:07:08 20:11:13"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2550.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2550.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2550-b10",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.308596,
+    0.429949,
+    0.402081,
+    0.56966
+   ],
+   "box_px": [
+    400,
+    798
+   ],
+   "score": 0.4369,
+   "crop": "work/2026-07-08/crops/IMG_2550-b10.jpg",
+   "crop_px": [
+    681,
+    1357
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2550-b10-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2550-b10-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2550-b10-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2550-b10-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 2.1,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.0058138888889,
+   "dt": "2026:07:08 20:11:13"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2550.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2550.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 150 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2550-b11",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.541694,
+    0.374859,
+    0.56537,
+    0.401142
+   ],
+   "box_px": [
+    101,
+    150
+   ],
+   "score": 0.4043,
+   "crop": "work/2026-07-08/crops/IMG_2550-b11.jpg",
+   "crop_px": [
+    344,
+    510
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 11.4,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.0058138888889,
+   "dt": "2026:07:08 20:11:13"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2550.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2550.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 31 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2550-b12",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.326004,
+    0.884269,
+    0.331661,
+    0.889866
+   ],
+   "box_px": [
+    24,
+    31
+   ],
+   "score": 0.2081,
+   "crop": "work/2026-07-08/crops/IMG_2550-b12.jpg",
+   "crop_px": [
+    82,
+    110
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 55.3,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.0058138888889,
+   "dt": "2026:07:08 20:11:13"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2551.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2551.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check. RE-PHOTOGRAPHED: this frame is the wide member of a zoom burst IMG_2551.HEIC..IMG_2552.HEIC \u2014 one subject. 76.0mm-eq is ~2.9x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2551-b01",
+   "zoom_burst": [
+    "IMG_2551.HEIC",
+    "IMG_2552.HEIC"
+   ],
+   "zoom_role": "wide",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.574602,
+    0.576289,
+    0.67931,
+    0.625098
+   ],
+   "box_px": [
+    448,
+    278
+   ],
+   "score": 0.9349,
+   "crop": "work/2026-07-08/crops/IMG_2551-b01.jpg",
+   "crop_px": [
+    1526,
+    948
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2551-b01-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2551-b01-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2551-b01-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2551-b01-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 3.8,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.0058138888889,
+   "dt": "2026:07:08 20:11:15"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2551.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2551.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check. RE-PHOTOGRAPHED: this frame is the wide member of a zoom burst IMG_2551.HEIC..IMG_2552.HEIC \u2014 one subject. 76.0mm-eq is ~2.9x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2551-b02",
+   "zoom_burst": [
+    "IMG_2551.HEIC",
+    "IMG_2552.HEIC"
+   ],
+   "zoom_role": "wide",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.722963,
+    0.505769,
+    0.768627,
+    0.545035
+   ],
+   "box_px": [
+    195,
+    224
+   ],
+   "score": 0.8562,
+   "crop": "work/2026-07-08/crops/IMG_2551-b02.jpg",
+   "crop_px": [
+    666,
+    762
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2551-b02-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2551-b02-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2551-b02-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2551-b02-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 7.6,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.0058138888889,
+   "dt": "2026:07:08 20:11:15"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2551.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2551.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check. RE-PHOTOGRAPHED: this frame is the wide member of a zoom burst IMG_2551.HEIC..IMG_2552.HEIC \u2014 one subject. 76.0mm-eq is ~2.9x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2551-b03",
+   "zoom_burst": [
+    "IMG_2551.HEIC",
+    "IMG_2552.HEIC"
+   ],
+   "zoom_role": "wide",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.731956,
+    0.586811,
+    0.784618,
+    0.607973
+   ],
+   "box_px": [
+    225,
+    120
+   ],
+   "score": 0.7821,
+   "crop": "work/2026-07-08/crops/IMG_2551-b03.jpg",
+   "crop_px": [
+    768,
+    412
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2551-b03-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2551-b03-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2551-b03-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2551-b03-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 7.6,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.0058138888889,
+   "dt": "2026:07:08 20:11:15"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2551.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2551.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 89 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written RE-PHOTOGRAPHED: this frame is the wide member of a zoom burst IMG_2551.HEIC..IMG_2552.HEIC \u2014 one subject. 76.0mm-eq is ~2.9x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2551-b04",
+   "zoom_burst": [
+    "IMG_2551.HEIC",
+    "IMG_2552.HEIC"
+   ],
+   "zoom_role": "wide",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.60454,
+    0.48019,
+    0.624295,
+    0.495793
+   ],
+   "box_px": [
+    84,
+    89
+   ],
+   "score": 0.7373,
+   "crop": "work/2026-07-08/crops/IMG_2551-b04.jpg",
+   "crop_px": [
+    288,
+    304
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 19.3,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.0058138888889,
+   "dt": "2026:07:08 20:11:15"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2551.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2551.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 127 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written RE-PHOTOGRAPHED: this frame is the wide member of a zoom burst IMG_2551.HEIC..IMG_2552.HEIC \u2014 one subject. 76.0mm-eq is ~2.9x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2551-b05",
+   "zoom_burst": [
+    "IMG_2551.HEIC",
+    "IMG_2552.HEIC"
+   ],
+   "zoom_role": "wide",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.615739,
+    0.529403,
+    0.645599,
+    0.547345
+   ],
+   "box_px": [
+    127,
+    102
+   ],
+   "score": 0.6211,
+   "crop": "work/2026-07-08/crops/IMG_2551-b05.jpg",
+   "crop_px": [
+    434,
+    348
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 13.5,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.0058138888889,
+   "dt": "2026:07:08 20:11:15"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2551.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2551.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check. RE-PHOTOGRAPHED: this frame is the wide member of a zoom burst IMG_2551.HEIC..IMG_2552.HEIC \u2014 one subject. 76.0mm-eq is ~2.9x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2551-b06",
+   "zoom_burst": [
+    "IMG_2551.HEIC",
+    "IMG_2552.HEIC"
+   ],
+   "zoom_role": "wide",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.48468,
+    0.591413,
+    0.521297,
+    0.625127
+   ],
+   "box_px": [
+    156,
+    192
+   ],
+   "score": 0.5114,
+   "crop": "work/2026-07-08/crops/IMG_2551-b06.jpg",
+   "crop_px": [
+    534,
+    656
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2551-b06-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2551-b06-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2551-b06-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2551-b06-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 8.9,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.0058138888889,
+   "dt": "2026:07:08 20:11:15"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2551.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2551.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 149 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written RE-PHOTOGRAPHED: this frame is the wide member of a zoom burst IMG_2551.HEIC..IMG_2552.HEIC \u2014 one subject. 76.0mm-eq is ~2.9x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2551-b07",
+   "zoom_burst": [
+    "IMG_2551.HEIC",
+    "IMG_2552.HEIC"
+   ],
+   "zoom_role": "wide",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.603595,
+    0.478487,
+    0.628076,
+    0.504692
+   ],
+   "box_px": [
+    104,
+    149
+   ],
+   "score": 0.4608,
+   "crop": "work/2026-07-08/crops/IMG_2551-b07.jpg",
+   "crop_px": [
+    356,
+    510
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 11.5,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.0058138888889,
+   "dt": "2026:07:08 20:11:15"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2551.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2551.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check. RE-PHOTOGRAPHED: this frame is the wide member of a zoom burst IMG_2551.HEIC..IMG_2552.HEIC \u2014 one subject. 76.0mm-eq is ~2.9x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2551-b08",
+   "zoom_burst": [
+    "IMG_2551.HEIC",
+    "IMG_2552.HEIC"
+   ],
+   "zoom_role": "wide",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.613984,
+    0.525588,
+    0.648776,
+    0.554734
+   ],
+   "box_px": [
+    149,
+    166
+   ],
+   "score": 0.3958,
+   "crop": "work/2026-07-08/crops/IMG_2551-b08.jpg",
+   "crop_px": [
+    506,
+    566
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2551-b08-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2551-b08-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2551-b08-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2551-b08-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 10.3,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.0058138888889,
+   "dt": "2026:07:08 20:11:15"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2552.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2552.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check. RE-PHOTOGRAPHED: this frame is the zoomed member of a zoom burst IMG_2551.HEIC..IMG_2552.HEIC \u2014 one subject. 76.0mm-eq is ~2.9x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2552-b01",
+   "zoom_burst": [
+    "IMG_2551.HEIC",
+    "IMG_2552.HEIC"
+   ],
+   "zoom_role": "zoomed",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.735262,
+    0.31615,
+    0.87543,
+    0.439777
+   ],
+   "box_px": [
+    423,
+    498
+   ],
+   "score": 0.9365,
+   "crop": "work/2026-07-08/crops/IMG_2552-b01.jpg",
+   "crop_px": [
+    1440,
+    1694
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2552-b01-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2552-b01-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2552-b01-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2552-b01-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 2.4,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.00582222222222,
+   "dt": "2026:07:08 20:11:19"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2552.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2552.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check. RE-PHOTOGRAPHED: this frame is the zoomed member of a zoom burst IMG_2551.HEIC..IMG_2552.HEIC \u2014 one subject. 76.0mm-eq is ~2.9x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2552-b02",
+   "zoom_burst": [
+    "IMG_2551.HEIC",
+    "IMG_2552.HEIC"
+   ],
+   "zoom_role": "zoomed",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.305747,
+    0.515937,
+    0.396158,
+    0.646768
+   ],
+   "box_px": [
+    273,
+    527
+   ],
+   "score": 0.8761,
+   "crop": "work/2026-07-08/crops/IMG_2552-b02.jpg",
+   "crop_px": [
+    930,
+    1794
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2552-b02-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2552-b02-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2552-b02-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2552-b02-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 2.3,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.00582222222222,
+   "dt": "2026:07:08 20:11:19"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2552.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2552.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check. RE-PHOTOGRAPHED: this frame is the zoomed member of a zoom burst IMG_2551.HEIC..IMG_2552.HEIC \u2014 one subject. 76.0mm-eq is ~2.9x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2552-b03",
+   "zoom_burst": [
+    "IMG_2551.HEIC",
+    "IMG_2552.HEIC"
+   ],
+   "zoom_role": "zoomed",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.304499,
+    0.51545,
+    0.558619,
+    0.646953
+   ],
+   "box_px": [
+    768,
+    530
+   ],
+   "score": 0.8697,
+   "crop": "work/2026-07-08/crops/IMG_2552-b03.jpg",
+   "crop_px": [
+    1307,
+    902
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2552-b03-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2552-b03-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2552-b03-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2552-b03-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 1.6,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.00582222222222,
+   "dt": "2026:07:08 20:11:19"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2552.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2552.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check. RE-PHOTOGRAPHED: this frame is the zoomed member of a zoom burst IMG_2551.HEIC..IMG_2552.HEIC \u2014 one subject. 76.0mm-eq is ~2.9x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2552-b04",
+   "zoom_burst": [
+    "IMG_2551.HEIC",
+    "IMG_2552.HEIC"
+   ],
+   "zoom_role": "zoomed",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.410518,
+    0.405654,
+    0.523611,
+    0.456302
+   ],
+   "box_px": [
+    341,
+    204
+   ],
+   "score": 0.8179,
+   "crop": "work/2026-07-08/crops/IMG_2552-b04.jpg",
+   "crop_px": [
+    1164,
+    694
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2552-b04-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2552-b04-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2552-b04-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2552-b04-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 3.5,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.00582222222222,
+   "dt": "2026:07:08 20:11:19"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2552.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2552.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check. RE-PHOTOGRAPHED: this frame is the zoomed member of a zoom burst IMG_2551.HEIC..IMG_2552.HEIC \u2014 one subject. 76.0mm-eq is ~2.9x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2552-b05",
+   "zoom_burst": [
+    "IMG_2551.HEIC",
+    "IMG_2552.HEIC"
+   ],
+   "zoom_role": "zoomed",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.687741,
+    0.570157,
+    0.792337,
+    0.640683
+   ],
+   "box_px": [
+    316,
+    284
+   ],
+   "score": 0.7874,
+   "crop": "work/2026-07-08/crops/IMG_2552-b05.jpg",
+   "crop_px": [
+    1074,
+    966
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2552-b05-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2552-b05-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2552-b05-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2552-b05-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 3.8,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.00582222222222,
+   "dt": "2026:07:08 20:11:19"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2552.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2552.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check. RE-PHOTOGRAPHED: this frame is the zoomed member of a zoom burst IMG_2551.HEIC..IMG_2552.HEIC \u2014 one subject. 76.0mm-eq is ~2.9x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2552-b06",
+   "zoom_burst": [
+    "IMG_2551.HEIC",
+    "IMG_2552.HEIC"
+   ],
+   "zoom_role": "zoomed",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.374884,
+    0.295968,
+    0.452443,
+    0.381769
+   ],
+   "box_px": [
+    234,
+    345
+   ],
+   "score": 0.6806,
+   "crop": "work/2026-07-08/crops/IMG_2552-b06.jpg",
+   "crop_px": [
+    798,
+    1176
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2552-b06-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2552-b06-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2552-b06-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2552-b06-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 3.5,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.00582222222222,
+   "dt": "2026:07:08 20:11:19"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2552.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2552.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check. RE-PHOTOGRAPHED: this frame is the zoomed member of a zoom burst IMG_2551.HEIC..IMG_2552.HEIC \u2014 one subject. 76.0mm-eq is ~2.9x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2552-b07",
+   "zoom_burst": [
+    "IMG_2551.HEIC",
+    "IMG_2552.HEIC"
+   ],
+   "zoom_role": "zoomed",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.100659,
+    0.657895,
+    0.185571,
+    0.804312
+   ],
+   "box_px": [
+    256,
+    590
+   ],
+   "score": 0.6027,
+   "crop": "work/2026-07-08/crops/IMG_2552-b07.jpg",
+   "crop_px": [
+    437,
+    1003
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2552-b07-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2552-b07-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2552-b07-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2552-b07-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 2.1,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.00582222222222,
+   "dt": "2026:07:08 20:11:19"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2552.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2552.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 124 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written RE-PHOTOGRAPHED: this frame is the zoomed member of a zoom burst IMG_2551.HEIC..IMG_2552.HEIC \u2014 one subject. 76.0mm-eq is ~2.9x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2552-b08",
+   "zoom_burst": [
+    "IMG_2551.HEIC",
+    "IMG_2552.HEIC"
+   ],
+   "zoom_role": "zoomed",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.085462,
+    0.271762,
+    0.126703,
+    0.282684
+   ],
+   "box_px": [
+    124,
+    44
+   ],
+   "score": 0.3535,
+   "crop": "work/2026-07-08/crops/IMG_2552-b08.jpg",
+   "crop_px": [
+    424,
+    150
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 9.8,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.00582222222222,
+   "dt": "2026:07:08 20:11:19"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2552.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2552.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 109 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written RE-PHOTOGRAPHED: this frame is the zoomed member of a zoom burst IMG_2551.HEIC..IMG_2552.HEIC \u2014 one subject. 76.0mm-eq is ~2.9x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2552-b09",
+   "zoom_burst": [
+    "IMG_2551.HEIC",
+    "IMG_2552.HEIC"
+   ],
+   "zoom_role": "zoomed",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.189495,
+    0.406167,
+    0.225544,
+    0.417393
+   ],
+   "box_px": [
+    109,
+    45
+   ],
+   "score": 0.2707,
+   "crop": "work/2026-07-08/crops/IMG_2552-b09.jpg",
+   "crop_px": [
+    372,
+    154
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 11.1,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.00582222222222,
+   "dt": "2026:07:08 20:11:19"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2552.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2552.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 75 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written RE-PHOTOGRAPHED: this frame is the zoomed member of a zoom burst IMG_2551.HEIC..IMG_2552.HEIC \u2014 one subject. 76.0mm-eq is ~2.9x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2552-b10",
+   "zoom_burst": [
+    "IMG_2551.HEIC",
+    "IMG_2552.HEIC"
+   ],
+   "zoom_role": "zoomed",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.203133,
+    0.360303,
+    0.228134,
+    0.366117
+   ],
+   "box_px": [
+    75,
+    23
+   ],
+   "score": 0.2398,
+   "crop": "work/2026-07-08/crops/IMG_2552-b10.jpg",
+   "crop_px": [
+    258,
+    80
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 16.1,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.00582222222222,
+   "dt": "2026:07:08 20:11:19"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2552.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2552.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check. RE-PHOTOGRAPHED: this frame is the zoomed member of a zoom burst IMG_2551.HEIC..IMG_2552.HEIC \u2014 one subject. 76.0mm-eq is ~2.9x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2552-b11",
+   "zoom_burst": [
+    "IMG_2551.HEIC",
+    "IMG_2552.HEIC"
+   ],
+   "zoom_role": "zoomed",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.602848,
+    0.567774,
+    0.794435,
+    0.660006
+   ],
+   "box_px": [
+    579,
+    371
+   ],
+   "score": 0.2096,
+   "crop": "work/2026-07-08/crops/IMG_2552-b11.jpg",
+   "crop_px": [
+    985,
+    632
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2552-b11-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2552-b11-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2552-b11-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2552-b11-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 2.1,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.00582222222222,
+   "dt": "2026:07:08 20:11:19"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2552.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2552.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 157 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written RE-PHOTOGRAPHED: this frame is the zoomed member of a zoom burst IMG_2551.HEIC..IMG_2552.HEIC \u2014 one subject. 76.0mm-eq is ~2.9x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2552-b12",
+   "zoom_burst": [
+    "IMG_2551.HEIC",
+    "IMG_2552.HEIC"
+   ],
+   "zoom_role": "zoomed",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.124247,
+    0.361207,
+    0.176278,
+    0.380705
+   ],
+   "box_px": [
+    157,
+    78
+   ],
+   "score": 0.1963,
+   "crop": "work/2026-07-08/crops/IMG_2552-b12.jpg",
+   "crop_px": [
+    536,
+    268
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 7.7,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.00582222222222,
+   "dt": "2026:07:08 20:11:19"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2552.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2552.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 130 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written RE-PHOTOGRAPHED: this frame is the zoomed member of a zoom burst IMG_2551.HEIC..IMG_2552.HEIC \u2014 one subject. 76.0mm-eq is ~2.9x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2552-b13",
+   "zoom_burst": [
+    "IMG_2551.HEIC",
+    "IMG_2552.HEIC"
+   ],
+   "zoom_role": "zoomed",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.15402,
+    0.251819,
+    0.197155,
+    0.259804
+   ],
+   "box_px": [
+    130,
+    32
+   ],
+   "score": 0.1716,
+   "crop": "work/2026-07-08/crops/IMG_2552-b13.jpg",
+   "crop_px": [
+    442,
+    108
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 9.3,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.00582222222222,
+   "dt": "2026:07:08 20:11:19"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2552.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2552.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 98 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written RE-PHOTOGRAPHED: this frame is the zoomed member of a zoom burst IMG_2551.HEIC..IMG_2552.HEIC \u2014 one subject. 76.0mm-eq is ~2.9x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2552-b14",
+   "zoom_burst": [
+    "IMG_2551.HEIC",
+    "IMG_2552.HEIC"
+   ],
+   "zoom_role": "zoomed",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.200081,
+    0.295209,
+    0.232808,
+    0.301322
+   ],
+   "box_px": [
+    98,
+    24
+   ],
+   "score": 0.1686,
+   "crop": "work/2026-07-08/crops/IMG_2552-b14.jpg",
+   "crop_px": [
+    336,
+    84
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 12.3,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.216502777777784,
+   "lon": -74.00582222222222,
+   "dt": "2026:07:08 20:11:19"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2553.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2553.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 98 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written RE-PHOTOGRAPHED: this frame is the wide member of a zoom burst IMG_2553.HEIC..IMG_2554.HEIC \u2014 one subject. 78.0mm-eq is ~3.0x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2553-b01",
+   "zoom_burst": [
+    "IMG_2553.HEIC",
+    "IMG_2554.HEIC"
+   ],
+   "zoom_role": "wide",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.538758,
+    0.433922,
+    0.558494,
+    0.451177
+   ],
+   "box_px": [
+    84,
+    98
+   ],
+   "score": 0.8085,
+   "crop": "work/2026-07-08/crops/IMG_2553-b01.jpg",
+   "crop_px": [
+    288,
+    334
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 17.5,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216705555555556,
+   "lon": -74.0060111111111,
+   "dt": "2026:07:08 20:12:54"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2553.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2553.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check. RE-PHOTOGRAPHED: this frame is the wide member of a zoom burst IMG_2553.HEIC..IMG_2554.HEIC \u2014 one subject. 78.0mm-eq is ~3.0x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2553-b02",
+   "zoom_burst": [
+    "IMG_2553.HEIC",
+    "IMG_2554.HEIC"
+   ],
+   "zoom_role": "wide",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.527139,
+    0.436095,
+    0.566388,
+    0.469452
+   ],
+   "box_px": [
+    168,
+    190
+   ],
+   "score": 0.8045,
+   "crop": "work/2026-07-08/crops/IMG_2553-b02.jpg",
+   "crop_px": [
+    572,
+    648
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2553-b02-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2553-b02-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2553-b02-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2553-b02-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 9.0,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216705555555556,
+   "lon": -74.0060111111111,
+   "dt": "2026:07:08 20:12:54"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2553.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2553.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 102 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written RE-PHOTOGRAPHED: this frame is the wide member of a zoom burst IMG_2553.HEIC..IMG_2554.HEIC \u2014 one subject. 78.0mm-eq is ~3.0x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2553-b03",
+   "zoom_burst": [
+    "IMG_2553.HEIC",
+    "IMG_2554.HEIC"
+   ],
+   "zoom_role": "wide",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.426604,
+    0.478181,
+    0.450527,
+    0.490811
+   ],
+   "box_px": [
+    102,
+    72
+   ],
+   "score": 0.7665,
+   "crop": "work/2026-07-08/crops/IMG_2553-b03.jpg",
+   "crop_px": [
+    348,
+    244
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 16.8,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216705555555556,
+   "lon": -74.0060111111111,
+   "dt": "2026:07:08 20:12:54"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2553.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2553.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 127 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written RE-PHOTOGRAPHED: this frame is the wide member of a zoom burst IMG_2553.HEIC..IMG_2554.HEIC \u2014 one subject. 78.0mm-eq is ~3.0x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2553-b04",
+   "zoom_burst": [
+    "IMG_2553.HEIC",
+    "IMG_2554.HEIC"
+   ],
+   "zoom_role": "wide",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.456143,
+    0.475855,
+    0.485922,
+    0.484887
+   ],
+   "box_px": [
+    127,
+    51
+   ],
+   "score": 0.7227,
+   "crop": "work/2026-07-08/crops/IMG_2553-b04.jpg",
+   "crop_px": [
+    434,
+    174
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 13.5,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216705555555556,
+   "lon": -74.0060111111111,
+   "dt": "2026:07:08 20:12:54"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2553.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2553.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 87 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written RE-PHOTOGRAPHED: this frame is the wide member of a zoom burst IMG_2553.HEIC..IMG_2554.HEIC \u2014 one subject. 78.0mm-eq is ~3.0x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2553-b05",
+   "zoom_burst": [
+    "IMG_2553.HEIC",
+    "IMG_2554.HEIC"
+   ],
+   "zoom_role": "wide",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.688034,
+    0.677354,
+    0.708396,
+    0.683689
+   ],
+   "box_px": [
+    87,
+    36
+   ],
+   "score": 0.7061,
+   "crop": "work/2026-07-08/crops/IMG_2553-b05.jpg",
+   "crop_px": [
+    296,
+    122
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 19.7,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216705555555556,
+   "lon": -74.0060111111111,
+   "dt": "2026:07:08 20:12:54"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2553.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2553.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 64 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written RE-PHOTOGRAPHED: this frame is the wide member of a zoom burst IMG_2553.HEIC..IMG_2554.HEIC \u2014 one subject. 78.0mm-eq is ~3.0x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2553-b06",
+   "zoom_burst": [
+    "IMG_2553.HEIC",
+    "IMG_2554.HEIC"
+   ],
+   "zoom_role": "wide",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.605293,
+    0.445696,
+    0.620266,
+    0.45201
+   ],
+   "box_px": [
+    64,
+    36
+   ],
+   "score": 0.5666,
+   "crop": "work/2026-07-08/crops/IMG_2553-b06.jpg",
+   "crop_px": [
+    218,
+    122
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 26.8,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216705555555556,
+   "lon": -74.0060111111111,
+   "dt": "2026:07:08 20:12:54"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2553.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2553.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 97 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written RE-PHOTOGRAPHED: this frame is the wide member of a zoom burst IMG_2553.HEIC..IMG_2554.HEIC \u2014 one subject. 78.0mm-eq is ~3.0x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2553-b07",
+   "zoom_burst": [
+    "IMG_2553.HEIC",
+    "IMG_2554.HEIC"
+   ],
+   "zoom_role": "wide",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.640736,
+    0.455783,
+    0.663585,
+    0.465648
+   ],
+   "box_px": [
+    97,
+    56
+   ],
+   "score": 0.4899,
+   "crop": "work/2026-07-08/crops/IMG_2553-b07.jpg",
+   "crop_px": [
+    334,
+    192
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 17.7,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216705555555556,
+   "lon": -74.0060111111111,
+   "dt": "2026:07:08 20:12:54"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2553.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2553.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check. RE-PHOTOGRAPHED: this frame is the wide member of a zoom burst IMG_2553.HEIC..IMG_2554.HEIC \u2014 one subject. 78.0mm-eq is ~3.0x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2553-b08",
+   "zoom_burst": [
+    "IMG_2553.HEIC",
+    "IMG_2554.HEIC"
+   ],
+   "zoom_role": "wide",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.673219,
+    0.656905,
+    0.71722,
+    0.66587
+   ],
+   "box_px": [
+    188,
+    51
+   ],
+   "score": 0.3372,
+   "crop": "work/2026-07-08/crops/IMG_2553-b08.jpg",
+   "crop_px": [
+    640,
+    174
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2553-b08-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2553-b08-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2553-b08-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2553-b08-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 9.1,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216705555555556,
+   "lon": -74.0060111111111,
+   "dt": "2026:07:08 20:12:54"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2553.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2553.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 109 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written RE-PHOTOGRAPHED: this frame is the wide member of a zoom burst IMG_2553.HEIC..IMG_2554.HEIC \u2014 one subject. 78.0mm-eq is ~3.0x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2553-b09",
+   "zoom_burst": [
+    "IMG_2553.HEIC",
+    "IMG_2554.HEIC"
+   ],
+   "zoom_role": "wide",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.424903,
+    0.479998,
+    0.450366,
+    0.499226
+   ],
+   "box_px": [
+    109,
+    109
+   ],
+   "score": 0.278,
+   "crop": "work/2026-07-08/crops/IMG_2553-b09.jpg",
+   "crop_px": [
+    370,
+    374
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 15.7,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216705555555556,
+   "lon": -74.0060111111111,
+   "dt": "2026:07:08 20:12:54"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2553.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2553.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check. RE-PHOTOGRAPHED: this frame is the wide member of a zoom burst IMG_2553.HEIC..IMG_2554.HEIC \u2014 one subject. 78.0mm-eq is ~3.0x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2553-b10",
+   "zoom_burst": [
+    "IMG_2553.HEIC",
+    "IMG_2554.HEIC"
+   ],
+   "zoom_role": "wide",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.670415,
+    0.409579,
+    0.717299,
+    0.435558
+   ],
+   "box_px": [
+    200,
+    148
+   ],
+   "score": 0.2743,
+   "crop": "work/2026-07-08/crops/IMG_2553-b10.jpg",
+   "crop_px": [
+    684,
+    504
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2553-b10-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2553-b10-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2553-b10-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2553-b10-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 8.6,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216705555555556,
+   "lon": -74.0060111111111,
+   "dt": "2026:07:08 20:12:54"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2553.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2553.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 141 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written RE-PHOTOGRAPHED: this frame is the wide member of a zoom burst IMG_2553.HEIC..IMG_2554.HEIC \u2014 one subject. 78.0mm-eq is ~3.0x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2553-b11",
+   "zoom_burst": [
+    "IMG_2553.HEIC",
+    "IMG_2554.HEIC"
+   ],
+   "zoom_role": "wide",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.423481,
+    0.476312,
+    0.456483,
+    0.495087
+   ],
+   "box_px": [
+    141,
+    107
+   ],
+   "score": 0.2615,
+   "crop": "work/2026-07-08/crops/IMG_2553-b11.jpg",
+   "crop_px": [
+    482,
+    364
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 12.2,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216705555555556,
+   "lon": -74.0060111111111,
+   "dt": "2026:07:08 20:12:54"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2553.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2553.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 159 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written RE-PHOTOGRAPHED: this frame is the wide member of a zoom burst IMG_2553.HEIC..IMG_2554.HEIC \u2014 one subject. 78.0mm-eq is ~3.0x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2553-b12",
+   "zoom_burst": [
+    "IMG_2553.HEIC",
+    "IMG_2554.HEIC"
+   ],
+   "zoom_role": "wide",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.448104,
+    0.474511,
+    0.485227,
+    0.488575
+   ],
+   "box_px": [
+    159,
+    80
+   ],
+   "score": 0.2492,
+   "crop": "work/2026-07-08/crops/IMG_2553-b12.jpg",
+   "crop_px": [
+    540,
+    272
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 10.8,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216705555555556,
+   "lon": -74.0060111111111,
+   "dt": "2026:07:08 20:12:54"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2553.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2553.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 69 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written RE-PHOTOGRAPHED: this frame is the wide member of a zoom burst IMG_2553.HEIC..IMG_2554.HEIC \u2014 one subject. 78.0mm-eq is ~3.0x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2553-b13",
+   "zoom_burst": [
+    "IMG_2553.HEIC",
+    "IMG_2554.HEIC"
+   ],
+   "zoom_role": "wide",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.704516,
+    0.661242,
+    0.719125,
+    0.673448
+   ],
+   "box_px": [
+    62,
+    69
+   ],
+   "score": 0.2298,
+   "crop": "work/2026-07-08/crops/IMG_2553-b13.jpg",
+   "crop_px": [
+    212,
+    238
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 24.8,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216705555555556,
+   "lon": -74.0060111111111,
+   "dt": "2026:07:08 20:12:54"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2553.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2553.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 128 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written RE-PHOTOGRAPHED: this frame is the wide member of a zoom burst IMG_2553.HEIC..IMG_2554.HEIC \u2014 one subject. 78.0mm-eq is ~3.0x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2553-b14",
+   "zoom_burst": [
+    "IMG_2553.HEIC",
+    "IMG_2554.HEIC"
+   ],
+   "zoom_role": "wide",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.67501,
+    0.420414,
+    0.700154,
+    0.442962
+   ],
+   "box_px": [
+    107,
+    128
+   ],
+   "score": 0.1872,
+   "crop": "work/2026-07-08/crops/IMG_2553-b14.jpg",
+   "crop_px": [
+    366,
+    438
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 13.4,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216705555555556,
+   "lon": -74.0060111111111,
+   "dt": "2026:07:08 20:12:54"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2553.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2553.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check. RE-PHOTOGRAPHED: this frame is the wide member of a zoom burst IMG_2553.HEIC..IMG_2554.HEIC \u2014 one subject. 78.0mm-eq is ~3.0x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2553-b15",
+   "zoom_burst": [
+    "IMG_2553.HEIC",
+    "IMG_2554.HEIC"
+   ],
+   "zoom_role": "wide",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.693882,
+    0.630438,
+    0.735663,
+    0.639723
+   ],
+   "box_px": [
+    178,
+    53
+   ],
+   "score": 0.1783,
+   "crop": "work/2026-07-08/crops/IMG_2553-b15.jpg",
+   "crop_px": [
+    610,
+    180
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2553-b15-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2553-b15-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2553-b15-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2553-b15-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 9.6,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216705555555556,
+   "lon": -74.0060111111111,
+   "dt": "2026:07:08 20:12:54"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2553.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2553.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 65 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written RE-PHOTOGRAPHED: this frame is the wide member of a zoom burst IMG_2553.HEIC..IMG_2554.HEIC \u2014 one subject. 78.0mm-eq is ~3.0x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2553-b16",
+   "zoom_burst": [
+    "IMG_2553.HEIC",
+    "IMG_2554.HEIC"
+   ],
+   "zoom_role": "wide",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.708082,
+    0.653953,
+    0.723426,
+    0.663254
+   ],
+   "box_px": [
+    65,
+    53
+   ],
+   "score": 0.1534,
+   "crop": "work/2026-07-08/crops/IMG_2553-b16.jpg",
+   "crop_px": [
+    224,
+    182
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 26.4,
+   "frame_px": [
+    4284,
+    5712
+   ],
+   "lat": 40.216705555555556,
+   "lon": -74.0060111111111,
+   "dt": "2026:07:08 20:12:54"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2554.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2554.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check. RE-PHOTOGRAPHED: this frame is the zoomed member of a zoom burst IMG_2553.HEIC..IMG_2554.HEIC \u2014 one subject. 78.0mm-eq is ~3.0x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2554-b01",
+   "zoom_burst": [
+    "IMG_2553.HEIC",
+    "IMG_2554.HEIC"
+   ],
+   "zoom_role": "zoomed",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.430459,
+    0.449932,
+    0.556596,
+    0.512156
+   ],
+   "box_px": [
+    381,
+    250
+   ],
+   "score": 0.94,
+   "crop": "work/2026-07-08/crops/IMG_2554-b01.jpg",
+   "crop_px": [
+    1296,
+    852
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2554-b01-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2554-b01-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2554-b01-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2554-b01-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 3.2,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.216705555555556,
+   "lon": -74.00600555555556,
+   "dt": "2026:07:08 20:12:58"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2554.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2554.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check. RE-PHOTOGRAPHED: this frame is the zoomed member of a zoom burst IMG_2553.HEIC..IMG_2554.HEIC \u2014 one subject. 78.0mm-eq is ~3.0x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2554-b02",
+   "zoom_burst": [
+    "IMG_2553.HEIC",
+    "IMG_2554.HEIC"
+   ],
+   "zoom_role": "zoomed",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.408499,
+    0.418156,
+    0.46099,
+    0.475435
+   ],
+   "box_px": [
+    158,
+    230
+   ],
+   "score": 0.8753,
+   "crop": "work/2026-07-08/crops/IMG_2554-b02.jpg",
+   "crop_px": [
+    540,
+    784
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2554-b02-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2554-b02-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2554-b02-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2554-b02-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 5.3,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.216705555555556,
+   "lon": -74.00600555555556,
+   "dt": "2026:07:08 20:12:58"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2554.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2554.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check. RE-PHOTOGRAPHED: this frame is the zoomed member of a zoom burst IMG_2553.HEIC..IMG_2554.HEIC \u2014 one subject. 78.0mm-eq is ~3.0x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2554-b03",
+   "zoom_burst": [
+    "IMG_2553.HEIC",
+    "IMG_2554.HEIC"
+   ],
+   "zoom_role": "zoomed",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.297614,
+    0.528626,
+    0.359222,
+    0.561745
+   ],
+   "box_px": [
+    186,
+    133
+   ],
+   "score": 0.8579,
+   "crop": "work/2026-07-08/crops/IMG_2554-b03.jpg",
+   "crop_px": [
+    634,
+    454
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2554-b03-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2554-b03-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2554-b03-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2554-b03-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 6.5,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.216705555555556,
+   "lon": -74.00600555555556,
+   "dt": "2026:07:08 20:12:58"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2554.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2554.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check. RE-PHOTOGRAPHED: this frame is the zoomed member of a zoom burst IMG_2553.HEIC..IMG_2554.HEIC \u2014 one subject. 78.0mm-eq is ~3.0x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2554-b04",
+   "zoom_burst": [
+    "IMG_2553.HEIC",
+    "IMG_2554.HEIC"
+   ],
+   "zoom_role": "zoomed",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.653989,
+    0.429287,
+    0.718996,
+    0.456108
+   ],
+   "box_px": [
+    196,
+    108
+   ],
+   "score": 0.8463,
+   "crop": "work/2026-07-08/crops/IMG_2554-b04.jpg",
+   "crop_px": [
+    670,
+    366
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2554-b04-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2554-b04-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2554-b04-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2554-b04-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 6.2,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.216705555555556,
+   "lon": -74.00600555555556,
+   "dt": "2026:07:08 20:12:58"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2554.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2554.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check. RE-PHOTOGRAPHED: this frame is the zoomed member of a zoom burst IMG_2553.HEIC..IMG_2554.HEIC \u2014 one subject. 78.0mm-eq is ~3.0x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2554-b05",
+   "zoom_burst": [
+    "IMG_2553.HEIC",
+    "IMG_2554.HEIC"
+   ],
+   "zoom_role": "zoomed",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.259731,
+    0.527657,
+    0.359146,
+    0.56493
+   ],
+   "box_px": [
+    300,
+    150
+   ],
+   "score": 0.7992,
+   "crop": "work/2026-07-08/crops/IMG_2554-b05.jpg",
+   "crop_px": [
+    1022,
+    512
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2554-b05-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2554-b05-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2554-b05-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2554-b05-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 4.0,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.216705555555556,
+   "lon": -74.00600555555556,
+   "dt": "2026:07:08 20:12:58"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2554.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2554.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check. RE-PHOTOGRAPHED: this frame is the zoomed member of a zoom burst IMG_2553.HEIC..IMG_2554.HEIC \u2014 one subject. 78.0mm-eq is ~3.0x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2554-b06",
+   "zoom_burst": [
+    "IMG_2553.HEIC",
+    "IMG_2554.HEIC"
+   ],
+   "zoom_role": "zoomed",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.751024,
+    0.464634,
+    0.811263,
+    0.489658
+   ],
+   "box_px": [
+    182,
+    100
+   ],
+   "score": 0.7683,
+   "crop": "work/2026-07-08/crops/IMG_2554-b06.jpg",
+   "crop_px": [
+    620,
+    342
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2554-b06-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2554-b06-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2554-b06-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2554-b06-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 6.6,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.216705555555556,
+   "lon": -74.00600555555556,
+   "dt": "2026:07:08 20:12:58"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2554.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2554.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check. RE-PHOTOGRAPHED: this frame is the zoomed member of a zoom burst IMG_2553.HEIC..IMG_2554.HEIC \u2014 one subject. 78.0mm-eq is ~3.0x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2554-b07",
+   "zoom_burst": [
+    "IMG_2553.HEIC",
+    "IMG_2554.HEIC"
+   ],
+   "zoom_role": "zoomed",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.229035,
+    0.552581,
+    0.306007,
+    0.588286
+   ],
+   "box_px": [
+    232,
+    143
+   ],
+   "score": 0.609,
+   "crop": "work/2026-07-08/crops/IMG_2554-b07.jpg",
+   "crop_px": [
+    790,
+    490
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2554-b07-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2554-b07-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2554-b07-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2554-b07-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 5.2,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.216705555555556,
+   "lon": -74.00600555555556,
+   "dt": "2026:07:08 20:12:58"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2554.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2554.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check. RE-PHOTOGRAPHED: this frame is the zoomed member of a zoom burst IMG_2553.HEIC..IMG_2554.HEIC \u2014 one subject. 78.0mm-eq is ~3.0x on a 26mm lens with no telephoto \u2014 upscaled past the 2x sensor crop. No more information than cropping the wide frame, and PROTOCOL.md \u00a75a applies: the apparent detail is partly synthesised.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2554-b08",
+   "zoom_burst": [
+    "IMG_2553.HEIC",
+    "IMG_2554.HEIC"
+   ],
+   "zoom_role": "zoomed",
+   "zoom_gain": "interpolated",
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.767764,
+    0.862457,
+    0.99219,
+    0.919057
+   ],
+   "box_px": [
+    678,
+    228
+   ],
+   "score": 0.2345,
+   "crop": "work/2026-07-08/crops/IMG_2554-b08.jpg",
+   "crop_px": [
+    940,
+    388
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2554-b08-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2554-b08-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2554-b08-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2554-b08-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 1.8,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.216705555555556,
+   "lon": -74.00600555555556,
+   "dt": "2026:07:08 20:12:58"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2555.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2555.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2555-b01",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.317731,
+    0.332683,
+    0.372579,
+    0.396709
+   ],
+   "box_px": [
+    165,
+    258
+   ],
+   "score": 0.8815,
+   "crop": "work/2026-07-08/crops/IMG_2555-b01.jpg",
+   "crop_px": [
+    564,
+    876
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2555-b01-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2555-b01-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2555-b01-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2555-b01-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 4.7,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.21669722222222,
+   "lon": -74.00600555555556,
+   "dt": "2026:07:08 20:13:05"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2555.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2555.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 133 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2555-b02",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.248139,
+    0.441948,
+    0.292298,
+    0.472162
+   ],
+   "box_px": [
+    133,
+    121
+   ],
+   "score": 0.8774,
+   "crop": "work/2026-07-08/crops/IMG_2555-b02.jpg",
+   "crop_px": [
+    454,
+    414
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 9.1,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.21669722222222,
+   "lon": -74.00600555555556,
+   "dt": "2026:07:08 20:13:05"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2555.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2555.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2555-b03",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.473514,
+    0.355511,
+    0.54401,
+    0.420927
+   ],
+   "box_px": [
+    213,
+    263
+   ],
+   "score": 0.8468,
+   "crop": "work/2026-07-08/crops/IMG_2555-b03.jpg",
+   "crop_px": [
+    724,
+    896
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2555-b03-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2555-b03-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2555-b03-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2555-b03-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 4.6,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.21669722222222,
+   "lon": -74.00600555555556,
+   "dt": "2026:07:08 20:13:05"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2555.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2555.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2555-b04",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.432396,
+    0.409955,
+    0.523802,
+    0.444225
+   ],
+   "box_px": [
+    276,
+    138
+   ],
+   "score": 0.8161,
+   "crop": "work/2026-07-08/crops/IMG_2555-b04.jpg",
+   "crop_px": [
+    940,
+    470
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2555-b04-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2555-b04-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2555-b04-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2555-b04-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 4.4,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.21669722222222,
+   "lon": -74.00600555555556,
+   "dt": "2026:07:08 20:13:05"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2555.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2555.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 116 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2555-b05",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.684072,
+    0.342986,
+    0.72255,
+    0.371231
+   ],
+   "box_px": [
+    116,
+    113
+   ],
+   "score": 0.7919,
+   "crop": "work/2026-07-08/crops/IMG_2555-b05.jpg",
+   "crop_px": [
+    396,
+    386
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 10.4,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.21669722222222,
+   "lon": -74.00600555555556,
+   "dt": "2026:07:08 20:13:05"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2555.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2555.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2555-b06",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.431993,
+    0.357135,
+    0.546311,
+    0.446463
+   ],
+   "box_px": [
+    345,
+    360
+   ],
+   "score": 0.7294,
+   "crop": "work/2026-07-08/crops/IMG_2555-b06.jpg",
+   "crop_px": [
+    1176,
+    1226
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2555-b06-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2555-b06-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2555-b06-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2555-b06-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 3.4,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.21669722222222,
+   "lon": -74.00600555555556,
+   "dt": "2026:07:08 20:13:05"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2555.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2555.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2555-b07",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.778289,
+    0.373054,
+    0.843551,
+    0.392533
+   ],
+   "box_px": [
+    197,
+    78
+   ],
+   "score": 0.6709,
+   "crop": "work/2026-07-08/crops/IMG_2555-b07.jpg",
+   "crop_px": [
+    670,
+    268
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2555-b07-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2555-b07-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2555-b07-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2555-b07-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 6.1,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.21669722222222,
+   "lon": -74.00600555555556,
+   "dt": "2026:07:08 20:13:05"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2555.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2555.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 87 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2555-b08",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.893255,
+    0.924513,
+    0.916462,
+    0.94628
+   ],
+   "box_px": [
+    70,
+    87
+   ],
+   "score": 0.38,
+   "crop": "work/2026-07-08/crops/IMG_2555-b08.jpg",
+   "crop_px": [
+    238,
+    300
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 13.9,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.21669722222222,
+   "lon": -74.00600555555556,
+   "dt": "2026:07:08 20:13:05"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2555.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2555.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 150 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2555-b09",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.941527,
+    0.963203,
+    0.991272,
+    0.989198
+   ],
+   "box_px": [
+    150,
+    104
+   ],
+   "score": 0.3416,
+   "crop": "work/2026-07-08/crops/IMG_2555-b09.jpg",
+   "crop_px": [
+    460,
+    358
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 8.1,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.21669722222222,
+   "lon": -74.00600555555556,
+   "dt": "2026:07:08 20:13:05"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2555.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2555.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2555-b10",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.829853,
+    0.754304,
+    0.976748,
+    0.843698
+   ],
+   "box_px": [
+    444,
+    360
+   ],
+   "score": 0.2552,
+   "crop": "work/2026-07-08/crops/IMG_2555-b10.jpg",
+   "crop_px": [
+    1340,
+    1224
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2555-b10-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2555-b10-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2555-b10-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2555-b10-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 2.7,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.21669722222222,
+   "lon": -74.00600555555556,
+   "dt": "2026:07:08 20:13:05"
+  },
+  {
+   "photo": "photos/2026-07-08/IMG_2555.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 1,
+   "frames": [
+    "IMG_2555.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2555-b11",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.712587,
+    0.764144,
+    0.860376,
+    0.794803
+   ],
+   "box_px": [
+    446,
+    123
+   ],
+   "score": 0.1846,
+   "crop": "work/2026-07-08/crops/IMG_2555-b11.jpg",
+   "crop_px": [
+    1520,
+    420
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-07-08/crops/IMG_2555-b11-head_bill.jpg",
+    "neck": "work/2026-07-08/crops/IMG_2555-b11-neck.jpg",
+    "wing_flank": "work/2026-07-08/crops/IMG_2555-b11-wing_flank.jpg",
+    "legs_feet": "work/2026-07-08/crops/IMG_2555-b11-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 2.7,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.21669722222222,
+   "lon": -74.00600555555556,
+   "dt": "2026:07:08 20:13:05"
+  }
+ ]
+}

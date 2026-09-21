@@ -1,0 +1,42 @@
+{
+  "_comment": "Which model fills which role. Swap a value; nothing else changes.",
+  "roles": {
+    "detector": "yolox",
+    "identifier": "claude_cli",
+    "reviewer": "claude_cli"
+  },
+  "providers": {
+    "claude_cli": {
+      "binary": "claude",
+      "model": null,
+      "timeout": 180
+    },
+    "claude_api": {
+      "model": "claude-opus-4-6",
+      "max_tokens": 2000
+    },
+    "local_vlm": {
+      "endpoint": "http://localhost:11434/api/generate",
+      "model": "qwen2.5vl:7b"
+    },
+    "_yolox_comment": [
+      "YOLOX (Megvii), Apache-2.0, COCO class 14 = bird. ONNX Runtime on CPU,",
+      "CoreML EP used when present. Models cached in pipeline/models/.",
+      "conf 0.15 is a cost-asymmetry choice, not a fit to logs/bird-log.md: a",
+      "distant bird the sweep misses is invisible forever, a false positive",
+      "costs one glance at a crop. Raise it for a cleaner working set; lower it",
+      "before ever concluding a frame is birdless.",
+      "tile 1200 with overlap 0.25 sweeps 24 MP frames at native resolution.",
+      "whole_frame adds one letterboxed pass for birds too big for a tile."
+    ],
+    "yolox": {
+      "model": "yolox_s",
+      "conf": 0.15,
+      "iou": 0.55,
+      "contain": 0.8,
+      "tile": 1200,
+      "overlap": 0.25,
+      "whole_frame": true
+    }
+  }
+}

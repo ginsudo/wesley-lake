@@ -1,0 +1,63 @@
+# Wesley Lake — project notes for Claude Code
+
+Bird observation and water-quality records for Wesley Lake (Asbury Park / Ocean
+Grove, NJ). Runs locally on the MacBook Air.
+
+**Read `PROTOCOL.md` before touching anything.** It is the spec: ingest, geofence,
+identification tiers, the two-pass analysis method, and the discipline rules.
+`pipeline/README.md` says what is built and what to build next.
+
+## Layout
+    PROTOCOL.md        the method (the spec)
+    geography.md       crossings, segments, floating mats, landmarks
+    CLAUDE.md          this file
+    pipeline/          local processing code — run.py is the entry point
+    photos/YYYY-MM-DD/ originals, full resolution, EXIF intact
+    photos/_off-lake/  geofenced out
+    work/<date>/       generated contact sheets and crops (disposable)
+    logs/              bird-log.md, narrative.md, individuals.md, patterns.md
+    analysis/          exif-index.csv, session-index.md, per-session write-ups
+    archive/zips/      processed source zips
+
+## Conventions that matter
+- `logs/bird-log.md` and `logs/narrative.md` are **append-only**. Never
+  consolidate or summarize the narrative.
+- Identification tiers A–D (PROTOCOL.md §6) are load-bearing. Never assign an
+  individual ID to a Tier D bird. Never upgrade a "possible" to a "probable" on
+  retelling.
+- Never identify a bird from a contact sheet. Crop at native resolution first.
+- `work/` is disposable and regenerable; never put anything durable there.
+- Deletion is disabled in this folder for the Claude desktop bridge. Move, don't
+  delete.
+- Geofence is a bounding box, never a point radius. An early version used a
+  150 m radius on one mid-lake point and classified the whole east end off-lake.
+
+## Environment
+Python 3 with `pillow` and `pillow-heif`. HEIC is the native format — plain Pillow
+cannot open it without the plugin. `exiftool` is not installed and is not needed.
+
+## ENVIRONMENT — two places this code runs
+
+Verified 2026-09-20. These are different machines-in-effect and the code must
+work in both.
+
+**1. The Cowork shell (what Claude reaches through the desktop app).**
+Ubuntu 22.04, aarch64, 4 CPUs — a Linux VM the Claude desktop app runs on the
+MacBook Air. Not macOS. `HOME` is `/sessions/<session-id>/`, and the project
+folder is **FUSE-mounted** at `$HOME/mnt/Wesley Lake`. The files are genuinely
+on the Mac's disk; only the shell is virtual. The rest of the Mac is invisible —
+`/Users` does not exist there, only connected folders.
+
+Two consequences, both already handled:
+- `$HOME` is **session-scoped**. Anything `pip install`ed there is gone next
+  session. `run.py` re-installs its deps on demand rather than failing.
+- The `claude` binary exists at `/opt/cowork/claude-bin/claude` but supports
+  **only** `claude -p "<prompt>"` — no `--model`, no other flags. The
+  `claude_cli` provider tries flags and falls back to bare `-p`.
+
+**2. Native macOS Terminal.** Path is `~/Claude/Projects/Wesley Lake`. Different
+Python, its own site-packages, and presumably the full Claude Code CLI. Install
+deps once: `pip3 install pillow pillow-heif`.
+
+Timings measured in the VM (45 s for 153 photos) were on 4 virtualised cores.
+Native will differ; it has not been measured.

@@ -1,0 +1,48 @@
+{
+ "date": "2025-10-20",
+ "generated": "2026-09-20T18:45:28",
+ "source": "Pass 2. Claude\u2019s read; not in logs/.",
+ "derived_by": "pipeline/observe.py \u2014 stop, event, census_class and detections_in_frames are computed, not typed",
+ "records": [
+  {
+   "photo": "photos/2025-10-20/PXL_20251020_224348176.MP.jpg",
+   "species": "",
+   "confidence": "unknown",
+   "count": 0,
+   "count_exact": true,
+   "age_class": "",
+   "stratum": "open_water",
+   "activity": "",
+   "associations": "",
+   "census_class": "core",
+   "surface": "open_water",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "PXL_20251020_224348176.MP.jpg",
+    "PXL_20251020_224353941.MP.jpg"
+   ],
+   "count_basis": "max_simultaneous",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "Sunset, 18:43, east end looking west. NO BIRDS. Shot on a Pixel 9 \u2014 a fourth device, and the first non-Apple camera in the record, so the optics reasoning in framing.py (5.96mm / 2.22mm, no telephoto) does not apply to these two frames. Low light at dusk; absence here is weak evidence.",
+   "provider": "claude-pass2",
+   "model": "Claude Opus 5, native-resolution crops",
+   "segment": "S2",
+   "bank": "mid",
+   "detections_in_frames": []
+  }
+ ],
+ "validation_problems": 0
+}

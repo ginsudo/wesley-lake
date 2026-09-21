@@ -1,0 +1,36 @@
+{
+ "date": "2026-09-21",
+ "generated": "2026-09-21T10:31:24",
+ "schema": "pipeline/water.py \u2014 PROTOCOL.md \u00a73a",
+ "caveat": "Categories only. No colour, clarity or turbidity: illumination dominates the pixels and depth is not visible in a photograph. Counts are of what is VISIBLE, which is a lower bound.",
+ "records": [
+  {
+   "date": "2026-09-21",
+   "station": "WQ-1",
+   "frames": [
+    "IMG_3519.HEIC",
+    "IMG_3520.HEIC"
+   ],
+   "surface_state": "rippled",
+   "ice_cover": "none",
+   "organic_load": "banded_below_rail",
+   "water_level": "at_sill",
+   "marginal_vegetation": "fringing",
+   "litter_count": 9,
+   "litter_exact": false,
+   "litter_range": [
+    8,
+    14
+   ],
+   "litter_types": [
+    "plastic_film",
+    "other"
+   ],
+   "notable": "",
+   "notes": "FIRST OBSERVATION AT WQ-1, and the first water-quality record in the project. Read from IMG_3519 (wide, rack and sill) and IMG_3520 (the culvert mouth and parapet).\n\nLITTER: at least nine discrete items are separable against the brown organic mat \u2014 one blue plastic bag or wrapper at the left edge, four or five pale white wrappers strung along the waterline, one orange and one or two yellow items. Colour is what separates plastic from organic here. Given as a range because several more are at the resolution limit and a rippled surface hides some; this is a LOWER BOUND, like every count in this project.\n\nORGANIC: a dense band of twigs and reed stems packed across the lower mesh, roughly the bottom 40%, well below the horizontal rail.\n\nLEVEL: water meets the base of the mesh at the concrete sill.\n\nNOTHING UNUSUAL otherwise \u2014 no sheen, no foam, no algal mat, no dumped object. Recorded rather than left silent (PROTOCOL.md \u00a73a).\n\nn=1. This is a baseline, not a trend.",
+   "provider": "claude-pass2",
+   "model": "Claude Opus 5, native-resolution crops"
+  }
+ ],
+ "validation_problems": 0
+}

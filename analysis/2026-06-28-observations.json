@@ -1,0 +1,49 @@
+{
+ "date": "2026-06-28",
+ "generated": "2026-09-20T18:23:26",
+ "source": "Pass 2. Claude Opus 5 reading native-resolution crops. Species IDs are Claude\u2019s read, not Geno\u2019s confirmation (PROTOCOL.md 9). Not in logs/bird-log.md. June: effectively birdless; mat empty.",
+ "records": [
+  {
+   "photo": "photos/2026-06-28/IMG_2286.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "unknown",
+   "stratum": "open_water",
+   "activity": "loafing",
+   "associations": "",
+   "census_class": "core",
+   "surface": "open_water",
+   "stop": 2,
+   "event": 2,
+   "frames": [
+    "IMG_2286.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "A near-birdless visit: one unresolvable speck on open water across 4 photos. The mat in frame held NOTHING \u2014 recorded because an empty mat is an observation (PROTOCOL.md 5b), not silence.",
+   "provider": "claude-pass2",
+   "model": "Claude Opus 5, native-resolution crops",
+   "segment": "S4",
+   "bank": "mid",
+   "detections_in_frames": [
+    "IMG_2286-b01"
+   ]
+  }
+ ],
+ "validation_problems": 0,
+ "derived_by": "pipeline/observe.py \u2014 stop, event, census_class and detections_in_frames are computed, not typed"
+}

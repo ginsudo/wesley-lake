@@ -1,0 +1,1315 @@
+{
+ "date": "2026-06-30",
+ "generated": "2026-09-20T18:30:21",
+ "detector": {
+  "provider": "yolox",
+  "model": "yolox_s@640 [CoreML+CPU]",
+  "conf": 0.15,
+  "iou": 0.55,
+  "tile": 1200,
+  "overlap": 0.25,
+  "whole_frame": true
+ },
+ "photos": 6,
+ "detections": 18,
+ "validated_clean": 18,
+ "validation_problems": 0,
+ "framing": {
+  "stale_fixes": {},
+  "zoom_bursts": [],
+  "events": {
+   "1": [
+    "IMG_2299.HEIC",
+    "IMG_2300.HEIC",
+    "IMG_2301.HEIC"
+   ],
+   "2": [
+    "IMG_2303.HEIC",
+    "IMG_2304.HEIC",
+    "IMG_2305.HEIC"
+   ]
+  },
+  "note": "Detections are NOT deduplicated across frames. Frames sharing an event, and especially frames in one zoom burst, are re-views of the same birds \u2014 summing them inflates the count ~2.8x. PROTOCOL.md 9."
+ },
+ "surfaces": {
+  "assignable": [
+   "open_water",
+   "MAT-01",
+   "MAT-02",
+   "MAT-03",
+   "MAT-04",
+   "MAT-unassigned"
+  ],
+  "mats_known_in_these_frames": {},
+  "note": "PROTOCOL.md 5b. Every record here is census_class \"undetermined\" \u2014 the detector assigns no stratum, so nothing in this file counts toward the core count yet. Pass 2 sets stratum and surface; census class then follows from stratum."
+ },
+ "caveat": "A detection is a place to look, not an identification. Species, age, stratum, activity and tier are all unset; PROTOCOL.md section 4 pass 2 still has to happen on the crops.",
+ "records": [
+  {
+   "photo": "photos/2026-06-30/IMG_2299.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2299.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2299-b01",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.228515,
+    0.36736,
+    0.656251,
+    0.738109
+   ],
+   "box_px": [
+    2443,
+    1588
+   ],
+   "score": 0.9233,
+   "crop": "work/2026-06-30/crops/IMG_2299-b01.jpg",
+   "crop_px": [
+    1700,
+    1105
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-06-30/crops/IMG_2299-b01-head_bill.jpg",
+    "neck": "work/2026-06-30/crops/IMG_2299-b01-neck.jpg",
+    "wing_flank": "work/2026-06-30/crops/IMG_2299-b01-wing_flank.jpg",
+    "legs_feet": "work/2026-06-30/crops/IMG_2299-b01-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 0.9,
+   "frame_px": [
+    5712,
+    4284
+   ],
+   "lat": 40.21490555555556,
+   "lon": -74.00942222222223,
+   "dt": "2026:06:30 09:21:05"
+  },
+  {
+   "photo": "photos/2026-06-30/IMG_2299.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2299.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2299-b02",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.796118,
+    0.486415,
+    0.880369,
+    0.528187
+   ],
+   "box_px": [
+    481,
+    178
+   ],
+   "score": 0.5795,
+   "crop": "work/2026-06-30/crops/IMG_2299-b02.jpg",
+   "crop_px": [
+    1638,
+    608
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-06-30/crops/IMG_2299-b02-head_bill.jpg",
+    "neck": "work/2026-06-30/crops/IMG_2299-b02-neck.jpg",
+    "wing_flank": "work/2026-06-30/crops/IMG_2299-b02-wing_flank.jpg",
+    "legs_feet": "work/2026-06-30/crops/IMG_2299-b02-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 4.8,
+   "frame_px": [
+    5712,
+    4284
+   ],
+   "lat": 40.21490555555556,
+   "lon": -74.00942222222223,
+   "dt": "2026:06:30 09:21:05"
+  },
+  {
+   "photo": "photos/2026-06-30/IMG_2299.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2299.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2299-b03",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.815757,
+    0.918198,
+    0.852321,
+    0.948646
+   ],
+   "box_px": [
+    208,
+    130
+   ],
+   "score": 0.4319,
+   "crop": "work/2026-06-30/crops/IMG_2299-b03.jpg",
+   "crop_px": [
+    710,
+    444
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-06-30/crops/IMG_2299-b03-head_bill.jpg",
+    "neck": "work/2026-06-30/crops/IMG_2299-b03-neck.jpg",
+    "wing_flank": "work/2026-06-30/crops/IMG_2299-b03-wing_flank.jpg",
+    "legs_feet": "work/2026-06-30/crops/IMG_2299-b03-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 11.0,
+   "frame_px": [
+    5712,
+    4284
+   ],
+   "lat": 40.21490555555556,
+   "lon": -74.00942222222223,
+   "dt": "2026:06:30 09:21:05"
+  },
+  {
+   "photo": "photos/2026-06-30/IMG_2299.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2299.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 131 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2299-b04",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.929877,
+    0.602177,
+    0.941512,
+    0.632805
+   ],
+   "box_px": [
+    66,
+    131
+   ],
+   "score": 0.2502,
+   "crop": "work/2026-06-30/crops/IMG_2299-b04.jpg",
+   "crop_px": [
+    226,
+    446
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 17.4,
+   "frame_px": [
+    5712,
+    4284
+   ],
+   "lat": 40.21490555555556,
+   "lon": -74.00942222222223,
+   "dt": "2026:06:30 09:21:05"
+  },
+  {
+   "photo": "photos/2026-06-30/IMG_2300.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2300.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2300-b01",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.219374,
+    0.317071,
+    0.667638,
+    0.719908
+   ],
+   "box_px": [
+    2560,
+    1725
+   ],
+   "score": 0.937,
+   "crop": "work/2026-06-30/crops/IMG_2300-b01.jpg",
+   "crop_px": [
+    1700,
+    1146
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-06-30/crops/IMG_2300-b01-head_bill.jpg",
+    "neck": "work/2026-06-30/crops/IMG_2300-b01-neck.jpg",
+    "wing_flank": "work/2026-06-30/crops/IMG_2300-b01-wing_flank.jpg",
+    "legs_feet": "work/2026-06-30/crops/IMG_2300-b01-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 0.9,
+   "frame_px": [
+    5712,
+    4284
+   ],
+   "lat": 40.214908333333334,
+   "lon": -74.00942222222223,
+   "dt": "2026:06:30 09:21:07"
+  },
+  {
+   "photo": "photos/2026-06-30/IMG_2300.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2300.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2300-b02",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.504675,
+    0.72458,
+    0.604142,
+    0.975271
+   ],
+   "box_px": [
+    568,
+    1073
+   ],
+   "score": 0.7522,
+   "crop": "work/2026-06-30/crops/IMG_2300-b02.jpg",
+   "crop_px": [
+    966,
+    1556
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-06-30/crops/IMG_2300-b02-head_bill.jpg",
+    "neck": "work/2026-06-30/crops/IMG_2300-b02-neck.jpg",
+    "wing_flank": "work/2026-06-30/crops/IMG_2300-b02-wing_flank.jpg",
+    "legs_feet": "work/2026-06-30/crops/IMG_2300-b02-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 2.1,
+   "frame_px": [
+    5712,
+    4284
+   ],
+   "lat": 40.214908333333334,
+   "lon": -74.00942222222223,
+   "dt": "2026:06:30 09:21:07"
+  },
+  {
+   "photo": "photos/2026-06-30/IMG_2300.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2300.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2300-b03",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.838342,
+    0.41782,
+    0.929975,
+    0.456077
+   ],
+   "box_px": [
+    523,
+    163
+   ],
+   "score": 0.3856,
+   "crop": "work/2026-06-30/crops/IMG_2300-b03.jpg",
+   "crop_px": [
+    1780,
+    558
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-06-30/crops/IMG_2300-b03-head_bill.jpg",
+    "neck": "work/2026-06-30/crops/IMG_2300-b03-neck.jpg",
+    "wing_flank": "work/2026-06-30/crops/IMG_2300-b03-wing_flank.jpg",
+    "legs_feet": "work/2026-06-30/crops/IMG_2300-b03-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 4.4,
+   "frame_px": [
+    5712,
+    4284
+   ],
+   "lat": 40.214908333333334,
+   "lon": -74.00942222222223,
+   "dt": "2026:06:30 09:21:07"
+  },
+  {
+   "photo": "photos/2026-06-30/IMG_2300.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2300.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 137 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2300-b04",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.907181,
+    0.742763,
+    0.923453,
+    0.774892
+   ],
+   "box_px": [
+    92,
+    137
+   ],
+   "score": 0.3416,
+   "crop": "work/2026-06-30/crops/IMG_2300-b04.jpg",
+   "crop_px": [
+    316,
+    468
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 16.7,
+   "frame_px": [
+    5712,
+    4284
+   ],
+   "lat": 40.214908333333334,
+   "lon": -74.00942222222223,
+   "dt": "2026:06:30 09:21:07"
+  },
+  {
+   "photo": "photos/2026-06-30/IMG_2301.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2301.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2301-b01",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.111763,
+    0.723995,
+    0.210071,
+    0.811567
+   ],
+   "box_px": [
+    561,
+    375
+   ],
+   "score": 0.8658,
+   "crop": "work/2026-06-30/crops/IMG_2301-b01.jpg",
+   "crop_px": [
+    955,
+    638
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-06-30/crops/IMG_2301-b01-head_bill.jpg",
+    "neck": "work/2026-06-30/crops/IMG_2301-b01-neck.jpg",
+    "wing_flank": "work/2026-06-30/crops/IMG_2301-b01-wing_flank.jpg",
+    "legs_feet": "work/2026-06-30/crops/IMG_2301-b01-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 4.1,
+   "frame_px": [
+    5712,
+    4284
+   ],
+   "lat": 40.21488888888889,
+   "lon": -74.00943055555555,
+   "dt": "2026:06:30 09:21:11"
+  },
+  {
+   "photo": "photos/2026-06-30/IMG_2301.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2301.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2301-b02",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.232179,
+    0.668327,
+    0.267791,
+    0.700019
+   ],
+   "box_px": [
+    203,
+    135
+   ],
+   "score": 0.7896,
+   "crop": "work/2026-06-30/crops/IMG_2301-b02.jpg",
+   "crop_px": [
+    690,
+    462
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-06-30/crops/IMG_2301-b02-head_bill.jpg",
+    "neck": "work/2026-06-30/crops/IMG_2301-b02-neck.jpg",
+    "wing_flank": "work/2026-06-30/crops/IMG_2301-b02-wing_flank.jpg",
+    "legs_feet": "work/2026-06-30/crops/IMG_2301-b02-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 11.3,
+   "frame_px": [
+    5712,
+    4284
+   ],
+   "lat": 40.21488888888889,
+   "lon": -74.00943055555555,
+   "dt": "2026:06:30 09:21:11"
+  },
+  {
+   "photo": "photos/2026-06-30/IMG_2301.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2301.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2301-b03",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.232001,
+    0.668428,
+    0.267267,
+    0.734481
+   ],
+   "box_px": [
+    201,
+    282
+   ],
+   "score": 0.6072,
+   "crop": "work/2026-06-30/crops/IMG_2301-b03.jpg",
+   "crop_px": [
+    686,
+    962
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-06-30/crops/IMG_2301-b03-head_bill.jpg",
+    "neck": "work/2026-06-30/crops/IMG_2301-b03-neck.jpg",
+    "wing_flank": "work/2026-06-30/crops/IMG_2301-b03-wing_flank.jpg",
+    "legs_feet": "work/2026-06-30/crops/IMG_2301-b03-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 8.1,
+   "frame_px": [
+    5712,
+    4284
+   ],
+   "lat": 40.21488888888889,
+   "lon": -74.00943055555555,
+   "dt": "2026:06:30 09:21:11"
+  },
+  {
+   "photo": "photos/2026-06-30/IMG_2301.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2301.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 68 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2301-b04",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.412218,
+    0.108586,
+    0.424231,
+    0.118847
+   ],
+   "box_px": [
+    68,
+    43
+   ],
+   "score": 0.3011,
+   "crop": "work/2026-06-30/crops/IMG_2301-b04.jpg",
+   "crop_px": [
+    234,
+    150
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 33.6,
+   "frame_px": [
+    5712,
+    4284
+   ],
+   "lat": 40.21488888888889,
+   "lon": -74.00943055555555,
+   "dt": "2026:06:30 09:21:11"
+  },
+  {
+   "photo": "photos/2026-06-30/IMG_2301.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2301.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 77 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2301-b05",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.377784,
+    0.101682,
+    0.386897,
+    0.11985
+   ],
+   "box_px": [
+    52,
+    77
+   ],
+   "score": 0.2427,
+   "crop": "work/2026-06-30/crops/IMG_2301-b05.jpg",
+   "crop_px": [
+    178,
+    264
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 29.7,
+   "frame_px": [
+    5712,
+    4284
+   ],
+   "lat": 40.21488888888889,
+   "lon": -74.00943055555555,
+   "dt": "2026:06:30 09:21:11"
+  },
+  {
+   "photo": "photos/2026-06-30/IMG_2301.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2301.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 44 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2301-b06",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.392165,
+    0.084914,
+    0.397467,
+    0.095367
+   ],
+   "box_px": [
+    30,
+    44
+   ],
+   "score": 0.223,
+   "crop": "work/2026-06-30/crops/IMG_2301-b06.jpg",
+   "crop_px": [
+    102,
+    152
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 51.9,
+   "frame_px": [
+    5712,
+    4284
+   ],
+   "lat": 40.21488888888889,
+   "lon": -74.00943055555555,
+   "dt": "2026:06:30 09:21:11"
+  },
+  {
+   "photo": "photos/2026-06-30/IMG_2301.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2301.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. box is 62 px on its long side, under the 160 px floor where PROTOCOL.md 5a sub-crops could show a band or deformity; sub-crops not written",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2301-b07",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.38874,
+    0.110481,
+    0.399614,
+    0.12441
+   ],
+   "box_px": [
+    62,
+    59
+   ],
+   "score": 0.1547,
+   "crop": "work/2026-06-30/crops/IMG_2301-b07.jpg",
+   "crop_px": [
+    212,
+    202
+   ],
+   "subcrops": {},
+   "marks_resolvable": false,
+   "implied_distance_m": 36.9,
+   "frame_px": [
+    5712,
+    4284
+   ],
+   "lat": 40.21488888888889,
+   "lon": -74.00943055555555,
+   "dt": "2026:06:30 09:21:11"
+  },
+  {
+   "photo": "photos/2026-06-30/IMG_2303.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 2,
+   "frames": [
+    "IMG_2303.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2303-b01",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.514895,
+    0.531789,
+    0.603836,
+    0.56449
+   ],
+   "box_px": [
+    268,
+    131
+   ],
+   "score": 0.7638,
+   "crop": "work/2026-06-30/crops/IMG_2303-b01.jpg",
+   "crop_px": [
+    916,
+    448
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-06-30/crops/IMG_2303-b01-head_bill.jpg",
+    "neck": "work/2026-06-30/crops/IMG_2303-b01-neck.jpg",
+    "wing_flank": "work/2026-06-30/crops/IMG_2303-b01-wing_flank.jpg",
+    "legs_feet": "work/2026-06-30/crops/IMG_2303-b01-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 4.5,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.21515,
+   "lon": -74.00987222222223,
+   "dt": "2026:06:30 15:10:44"
+  },
+  {
+   "photo": "photos/2026-06-30/IMG_2304.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 2,
+   "frames": [
+    "IMG_2304.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2304-b01",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.503129,
+    0.461673,
+    0.556852,
+    0.494979
+   ],
+   "box_px": [
+    162,
+    134
+   ],
+   "score": 0.3569,
+   "crop": "work/2026-06-30/crops/IMG_2304-b01.jpg",
+   "crop_px": [
+    552,
+    456
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-06-30/crops/IMG_2304-b01-head_bill.jpg",
+    "neck": "work/2026-06-30/crops/IMG_2304-b01-neck.jpg",
+    "wing_flank": "work/2026-06-30/crops/IMG_2304-b01-wing_flank.jpg",
+    "legs_feet": "work/2026-06-30/crops/IMG_2304-b01-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 7.5,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.215161111111115,
+   "lon": -74.00985833333333,
+   "dt": "2026:06:30 15:10:50"
+  },
+  {
+   "photo": "photos/2026-06-30/IMG_2305.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": false,
+   "age_class": "",
+   "stratum": "",
+   "activity": "",
+   "associations": "",
+   "census_class": "undetermined",
+   "surface": "",
+   "stop": 2,
+   "event": 2,
+   "frames": [
+    "IMG_2305.HEIC"
+   ],
+   "count_basis": "single_frame",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "detector box only \u2014 nothing identified. sub-crops written for the 5a hard-mark check.",
+   "provider": "yolox",
+   "model": "yolox_s@640 [CoreML+CPU]",
+   "detection_id": "IMG_2305-b01",
+   "zoom_burst": null,
+   "zoom_role": null,
+   "zoom_gain": null,
+   "gps_suspect": null,
+   "surface_candidates": [],
+   "box": [
+    0.52122,
+    0.502212,
+    0.574903,
+    0.550635
+   ],
+   "box_px": [
+    162,
+    195
+   ],
+   "score": 0.7526,
+   "crop": "work/2026-06-30/crops/IMG_2305-b01.jpg",
+   "crop_px": [
+    552,
+    664
+   ],
+   "subcrops": {
+    "head_bill": "work/2026-06-30/crops/IMG_2305-b01-head_bill.jpg",
+    "neck": "work/2026-06-30/crops/IMG_2305-b01-neck.jpg",
+    "wing_flank": "work/2026-06-30/crops/IMG_2305-b01-wing_flank.jpg",
+    "legs_feet": "work/2026-06-30/crops/IMG_2305-b01-legs_feet.jpg"
+   },
+   "marks_resolvable": true,
+   "implied_distance_m": 6.2,
+   "frame_px": [
+    3024,
+    4032
+   ],
+   "lat": 40.215161111111115,
+   "lon": -74.00985833333333,
+   "dt": "2026:06:30 15:10:51"
+  }
+ ]
+}

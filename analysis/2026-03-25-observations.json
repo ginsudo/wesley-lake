@@ -1,0 +1,64 @@
+{
+ "date": "2026-03-25",
+ "generated": "2026-09-20T18:22:50",
+ "source": "Pass 2. Claude Opus 5 reading native-resolution crops. Species IDs are Claude\u2019s read, not Geno\u2019s confirmation (PROTOCOL.md 9). Not in logs/bird-log.md. March: the resident pair confirmed as two adults together.",
+ "records": [
+  {
+   "photo": "photos/2026-03-25/IMG_0609.HEIC",
+   "species": "Mute Swan",
+   "confidence": "certain",
+   "count": 2,
+   "count_exact": true,
+   "age_class": "adult",
+   "stratum": "open_water",
+   "activity": "loafing",
+   "associations": "",
+   "census_class": "core",
+   "surface": "open_water",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_0608.HEIC",
+    "IMG_0609.HEIC",
+    "IMG_0611.HEIC",
+    "IMG_0612.HEIC",
+    "IMG_0613.HEIC"
+   ],
+   "count_basis": "max_simultaneous",
+   "features": {
+    "bill": "bright orange with black basal knob on both",
+    "legs": "not visible",
+    "head": "white",
+    "breast_flank": "white",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "full adult"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "B",
+   "individual_id": "SWAN-B01+B02",
+   "notes": "THE PAIR, together, five weeks before the 04-27 nest. Both adults present in one frame \u2014 the resident pair as a pair, which the September record only ever inferred. Same stretch, same pair, assumed.",
+   "provider": "claude-pass2",
+   "model": "Claude Opus 5, native-resolution crops",
+   "segment": "S5",
+   "bank": "mid",
+   "detections_in_frames": [
+    "IMG_0608-b01",
+    "IMG_0608-b02",
+    "IMG_0609-b01",
+    "IMG_0609-b02",
+    "IMG_0609-b03",
+    "IMG_0611-b01",
+    "IMG_0611-b02",
+    "IMG_0611-b03",
+    "IMG_0612-b01",
+    "IMG_0612-b02",
+    "IMG_0613-b01",
+    "IMG_0613-b02"
+   ]
+  }
+ ],
+ "validation_problems": 0,
+ "derived_by": "pipeline/observe.py \u2014 stop, event, census_class and detections_in_frames are computed, not typed"
+}

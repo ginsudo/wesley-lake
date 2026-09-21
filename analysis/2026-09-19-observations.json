@@ -1,0 +1,234 @@
+{
+ "date": "2026-09-19",
+ "generated": "2026-09-20T18:02:07",
+ "source": "PILOT pass-2. Claude Opus 5 reading native-resolution crops from work/2026-09-19/crops/. Species IDs are Claude\u2019s read, not Geno\u2019s confirmation (PROTOCOL.md 9). Not yet in logs/bird-log.md.",
+ "records": [
+  {
+   "photo": "photos/2026-09-19/IMG_3443.HEIC",
+   "species": "Mute Swan",
+   "confidence": "certain",
+   "count": 1,
+   "count_exact": true,
+   "age_class": "adult",
+   "stratum": "open_water",
+   "activity": "dabbling",
+   "associations": "with 4 cygnets and mallards; being hand-fed by a member of the public",
+   "census_class": "core",
+   "surface": "open_water",
+   "features": {
+    "bill": "bright orange with black basal knob",
+    "legs": "not visible",
+    "head": "white, buff-stained neck",
+    "breast_flank": "white",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "much larger than the cygnets"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "B",
+   "individual_id": "SWAN-B01",
+   "notes": "West end, ~40.2148/-74.0100. Assumed one of the resident pair \u2014 same stretch, same pair, assumed. Only 1 adult present; the second was not seen.",
+   "provider": "claude-pass2",
+   "model": "Claude Opus 5, crops at native resolution",
+   "count_basis": "max_simultaneous",
+   "frames": [
+    "IMG_3443.HEIC"
+   ],
+   "event": 1,
+   "stop": 2,
+   "detections_in_frames": [
+    "IMG_3443-b01",
+    "IMG_3443-b02",
+    "IMG_3443-b03",
+    "IMG_3443-b04",
+    "IMG_3443-b05",
+    "IMG_3443-b06",
+    "IMG_3443-b07"
+   ],
+   "segment": "S4"
+  },
+  {
+   "photo": "photos/2026-09-19/IMG_3443.HEIC",
+   "species": "Mute Swan",
+   "confidence": "certain",
+   "count": 4,
+   "count_exact": true,
+   "age_class": "cygnet",
+   "stratum": "open_water",
+   "activity": "dabbling",
+   "associations": "with 1 adult and mallards",
+   "census_class": "core",
+   "surface": "open_water",
+   "features": {
+    "bill": "grey-pink",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "brown-grey, not yet molted",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "approaching adult bulk, still fully brown"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "C",
+   "individual_id": "",
+   "notes": "FOUR cygnets counted in a single frame \u2014 the full brood. Still fully brown-grey on 2026-09-19. Being hand-fed at the bulkhead; all four floating, none on the bank.",
+   "provider": "claude-pass2",
+   "model": "Claude Opus 5, crops at native resolution",
+   "count_basis": "max_simultaneous",
+   "frames": [
+    "IMG_3443.HEIC"
+   ],
+   "event": 1,
+   "stop": 2,
+   "detections_in_frames": [
+    "IMG_3443-b01",
+    "IMG_3443-b02",
+    "IMG_3443-b03",
+    "IMG_3443-b04",
+    "IMG_3443-b05",
+    "IMG_3443-b06",
+    "IMG_3443-b07"
+   ],
+   "segment": "S4"
+  },
+  {
+   "photo": "photos/2026-09-19/IMG_3445.HEIC",
+   "species": "Mallard",
+   "confidence": "certain",
+   "count": 4,
+   "count_exact": false,
+   "age_class": "mixed: female-type and eclipse male",
+   "stratum": "open_water",
+   "activity": "dabbling",
+   "associations": "attending the swan feeding",
+   "census_class": "core",
+   "surface": "open_water",
+   "features": {
+    "bill": "orange-and-dark on female-types; dull yellow on eclipse-type birds",
+    "legs": "not visible",
+    "head": "dark on eclipse-type birds",
+    "breast_flank": "brown mottled",
+    "wing_tail": "curled upper-tail coverts visible on at least one \u2014 eclipse drake",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "Max simultaneous read across IMG_3443/3445, not a census.",
+   "provider": "claude-pass2",
+   "model": "Claude Opus 5, crops at native resolution",
+   "count_range": [
+    4,
+    6
+   ],
+   "count_basis": "max_simultaneous",
+   "frames": [
+    "IMG_3445.HEIC"
+   ],
+   "event": 1,
+   "stop": 2,
+   "detections_in_frames": [
+    "IMG_3445-b01",
+    "IMG_3445-b02",
+    "IMG_3445-b03",
+    "IMG_3445-b04",
+    "IMG_3445-b05",
+    "IMG_3445-b06",
+    "IMG_3445-b07",
+    "IMG_3445-b08",
+    "IMG_3445-b09",
+    "IMG_3445-b10"
+   ],
+   "segment": "S4"
+  },
+  {
+   "photo": "photos/2026-09-19/IMG_3440.HEIC",
+   "species": "Gull sp.",
+   "confidence": "probable",
+   "count": 1,
+   "count_exact": true,
+   "age_class": "unknown",
+   "stratum": "open_water",
+   "activity": "wing_drying",
+   "associations": "",
+   "census_class": "core",
+   "surface": "open_water",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "grey mantle, wings raised over the back",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "On the water with wings raised. Wing-drying vs just-landed not separable from a single frame; species not resolvable.",
+   "provider": "claude-pass2",
+   "model": "Claude Opus 5, crops at native resolution",
+   "count_basis": "max_simultaneous",
+   "frames": [
+    "IMG_3440.HEIC"
+   ],
+   "event": 1,
+   "stop": 1,
+   "detections_in_frames": [
+    "IMG_3440-b01",
+    "IMG_3440-b02",
+    "IMG_3440-b03",
+    "IMG_3440-b04",
+    "IMG_3440-b05",
+    "IMG_3440-b06"
+   ],
+   "segment": "S4"
+  },
+  {
+   "photo": "photos/2026-09-19/IMG_3446.HEIC",
+   "species": "Double-crested Cormorant",
+   "confidence": "probable",
+   "count": 2,
+   "count_exact": true,
+   "age_class": "unknown",
+   "stratum": "island_or_mat",
+   "activity": "loafing",
+   "associations": "",
+   "census_class": "core",
+   "surface": "MAT-01",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "dark, upright, cormorant jizz at ~90 m"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "MAT-01 identified by its DURABLE MARK \u2014 the dark log/timber projecting from the base, the same feature seen in IMG_3185 (09-08) and IMG_3461 (09-20). Third date chained on structure, not foliage or position. Flowers not resolvable at this range, which is the point. Camera 40.21666/-74.00585, 16:19:30.",
+   "provider": "claude-pass2",
+   "model": "Claude Opus 5, crops at native resolution",
+   "count_basis": "max_simultaneous",
+   "frames": [
+    "IMG_3446.HEIC"
+   ],
+   "event": 2,
+   "stop": 3,
+   "detections_in_frames": [
+    "IMG_3446-b01"
+   ],
+   "segment": "S4"
+  }
+ ],
+ "validation_problems": 0,
+ "derived_by": "pipeline/observe.py \u2014 stop, event, census_class and detections_in_frames are computed, not typed"
+}

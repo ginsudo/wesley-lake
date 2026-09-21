@@ -1,0 +1,28 @@
+{
+ "subject": "Great Blue Heron age, 2026-09-20 \u2014 re-read from the less-synthetic frame",
+ "generated": "2026-09-20T18:40:31",
+ "why": "Entry 4 calls the bird \"probably immature / first-year, ~65% confident\" on a dark bill and a dark crown with no plumes. framing.py shows that read rests partly on IMG_3481, which is 272mm-equivalent on a phone with no telephoto \u2014 a ~10.5x upscale past the 2x sensor crop, where PROTOCOL.md 5a says the apparent detail is partly synthesised.",
+ "what_was_compared": [
+  {
+   "frame": "IMG_3478",
+   "eq35": 26,
+   "px_on_bird": "209x147",
+   "verdict": "USELESS for ageing \u2014 the bird is an unfocused smudge. The wide frame provides no independent check, which is itself worth knowing: there is no un-zoomed version of this observation to fall back on."
+  },
+  {
+   "frame": "IMG_3480",
+   "eq35": 119,
+   "px_on_bird": "545x608",
+   "verdict": "The most trustworthy usable frame. Shows a dark cap, a bill dark above and paler below, a pale foreneck with dark streaking, and no head plumes."
+  },
+  {
+   "frame": "IMG_3481",
+   "eq35": 272,
+   "px_on_bird": "1268x1105",
+   "verdict": "Looks sharper and carries no more real information. Nothing visible here is absent from IMG_3480."
+  }
+ ],
+ "conclusion": "The immature read SURVIVES \u2014 IMG_3480 supports it as well as IMG_3481 did, so the conclusion was not an artefact of the upscale. But one of its two supporting arguments is weaker than Entry 4 implies: \"no plumes\" is poor evidence in late September, because an ADULT Great Blue Heron is in non-breeding plumage by then and has shed its breeding plumes too. The bill tone is doing nearly all the work. ~65% should be read as generous rather than conservative, and the honest confidence is lower.",
+ "recommendation": "Leave Entry 4 as written \u2014 it is hedged, and the hedge is still right. Add this as a note when the season goes into the log. If an immature recurs at this mat, photograph it at 2x or closer, not at 10x.",
+ "status": "Claude\u2019s read. Not confirmed by Geno. Not in logs/bird-log.md."
+}

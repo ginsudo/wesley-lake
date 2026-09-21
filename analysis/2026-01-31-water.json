@@ -1,0 +1,37 @@
+{
+ "date": "2026-01-31",
+ "generated": "2026-09-21T10:34:26",
+ "schema": "pipeline/water.py \u2014 PROTOCOL.md \u00a73a",
+ "caveat": "Categories only. No colour, clarity or turbidity: illumination dominates the pixels and depth is not visible in a photograph. Counts are of what is VISIBLE, which is a lower bound.",
+ "records": [
+  {
+   "date": "2026-01-31",
+   "station": "LAKE-WIDE",
+   "frames": [
+    "IMG_0277.HEIC",
+    "IMG_0278.HEIC",
+    "IMG_0279.HEIC",
+    "IMG_0280.HEIC",
+    "IMG_0281.HEIC",
+    "IMG_0282.HEIC",
+    "IMG_0283.HEIC",
+    "IMG_0284.HEIC",
+    "IMG_0285.HEIC"
+   ],
+   "surface_state": "frozen",
+   "ice_cover": "complete",
+   "organic_load": "not_assessable",
+   "water_level": "not_assessable",
+   "marginal_vegetation": "not_assessable",
+   "litter_count": null,
+   "litter_exact": false,
+   "litter_range": null,
+   "litter_types": [],
+   "notable": "Lake frozen bank to bank.",
+   "notes": "BACKFILLED. The only water observation recoverable from before \u00a73a existed. The lake is frozen bank to bank, snow on both shores, drifted snow across the surface, the orange marker buoy frozen in.\n\nFiled as LAKE-WIDE, not WQ-1: this walk never reached the western terminus. Ice is a whole-lake property and is the ONLY field recordable without a fixed station \u2014 validate() now refuses anything else under LAKE-WIDE, because a reading with no fixed framing cannot be compared with one that has it.\n\nEverything else is not_assessable: the rack, its sill and posts, and the margins were never in frame.",
+   "provider": "claude-pass2",
+   "model": "Claude Opus 5, backfilled from bird records"
+  }
+ ],
+ "validation_problems": 0
+}

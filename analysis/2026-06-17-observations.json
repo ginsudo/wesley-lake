@@ -1,0 +1,107 @@
+{
+ "date": "2026-06-17",
+ "generated": "2026-09-20T18:23:26",
+ "source": "Pass 2. Claude Opus 5 reading native-resolution crops. Species IDs are Claude\u2019s read, not Geno\u2019s confirmation (PROTOCOL.md 9). Not in logs/bird-log.md. June: cormorant + mallard on a mat; the frame that revealed the manufactured base.",
+ "records": [
+  {
+   "photo": "photos/2026-06-17/IMG_2187.HEIC",
+   "species": "Double-crested Cormorant",
+   "confidence": "certain",
+   "count": 1,
+   "count_exact": true,
+   "age_class": "juvenile/first-year",
+   "stratum": "island_or_mat",
+   "activity": "loafing",
+   "associations": "",
+   "census_class": "core",
+   "surface": "MAT-unassigned",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2185.HEIC",
+    "IMG_2186.HEIC",
+    "IMG_2187.HEIC"
+   ],
+   "count_basis": "max_simultaneous",
+   "features": {
+    "bill": "hooked, orange-yellow gular patch",
+    "legs": "black, webbed, resolved on the mat surface",
+    "head": "dark",
+    "breast_flank": "distinctly pale buffy throat and breast against dark upperparts \u2014 juvenile",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "large, upright"
+   },
+   "marks_checked": true,
+   "marks": "legs cleanly resolved at the waterline, unbanded; no tags, no deformity, no entanglement visible",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "MAT-unassigned deliberately: the sedge skirt resembles MAT-02 but a seasonal cue is not identity across dates (PROTOCOL.md 5b), and the mats drift. THIS IS THE FRAME that shows the mat base is a manufactured module \u2014 bevelled edge, corner, planting ports, a teal artificial element. See geography.md.",
+   "provider": "claude-pass2",
+   "model": "Claude Opus 5, native-resolution crops",
+   "segment": "S4",
+   "bank": "mid",
+   "detections_in_frames": [
+    "IMG_2185-b01",
+    "IMG_2185-b02",
+    "IMG_2185-b03",
+    "IMG_2186-b01",
+    "IMG_2186-b02",
+    "IMG_2186-b03",
+    "IMG_2186-b04",
+    "IMG_2186-b05",
+    "IMG_2187-b01",
+    "IMG_2187-b02",
+    "IMG_2187-b03"
+   ]
+  },
+  {
+   "photo": "photos/2026-06-17/IMG_2187.HEIC",
+   "species": "Mallard",
+   "confidence": "probable",
+   "count": 1,
+   "count_exact": true,
+   "age_class": "female or eclipse",
+   "stratum": "island_or_mat",
+   "activity": "loafing",
+   "associations": "",
+   "census_class": "core",
+   "surface": "MAT-unassigned",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2185.HEIC",
+    "IMG_2187.HEIC"
+   ],
+   "count_basis": "max_simultaneous",
+   "features": {
+    "bill": "dull orange-brown",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "brown mottled",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "Sharing the mat with the cormorant \u2014 first record of a duck ON a mat rather than on the water beside one.",
+   "provider": "claude-pass2",
+   "model": "Claude Opus 5, native-resolution crops",
+   "segment": "S4",
+   "bank": "mid",
+   "detections_in_frames": [
+    "IMG_2185-b01",
+    "IMG_2185-b02",
+    "IMG_2185-b03",
+    "IMG_2187-b01",
+    "IMG_2187-b02",
+    "IMG_2187-b03"
+   ]
+  }
+ ],
+ "validation_problems": 0,
+ "derived_by": "pipeline/observe.py \u2014 stop, event, census_class and detections_in_frames are computed, not typed"
+}
