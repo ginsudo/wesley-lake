@@ -1,5 +1,21 @@
 """The observation record. This contract is fixed; providers are swappable.
+
+VERSIONING. Every record carries `schema_version`. This field exists because
+its absence hurt: when this schema gained `census_class` and later
+`count_basis`, every file already on disk silently became invalid, and the fix
+was two rounds of hand-backfilling with no way to tell old records from new.
+Bump SCHEMA_VERSION whenever a field is added, removed or given new meaning,
+and note the change in MIGRATIONS below so a reader of an old file knows what
+it was written against.
 Mirrors PROTOCOL.md section 5 — change them together."""
+SCHEMA_VERSION = 3
+MIGRATIONS = {
+    1: 'original — species, count, stratum, activity, tier, features',
+    2: 'added census_class + surface (PROTOCOL.md 5b); stratum gained `shallows`',
+    3: 'added count_basis + frames (PROTOCOL.md 9); stop/event/segment derived '
+       'by observe.py rather than typed',
+}
+
 STRATA = ['open_water','shallows','island_or_mat',
           'shoreline_edge','bank_vegetation','overhanging_branch',
           'in_flight','man_made_perch']
@@ -47,7 +63,8 @@ TIERS = ['A','B','C','D']
 FEATURE_KEYS = ['bill','legs','head','breast_flank','wing_tail','asymmetries','size']
 
 def blank(photo, **kw):
-    r = dict(photo=photo, species='', confidence='unknown', count=None, count_exact=False,
+    r = dict(schema_version=SCHEMA_VERSION,
+             photo=photo, species='', confidence='unknown', count=None, count_exact=False,
              age_class='', stratum='', activity='', associations='',
              census_class='undetermined', surface='',
              stop=None, event=None, frames=None, count_basis='unknown',
@@ -87,6 +104,14 @@ def validate(r):
         p.append("Tier A requires a recorded hard mark")
     miss = [k for k in FEATURE_KEYS if k not in (r.get('features') or {})]
     if miss: p.append(f"missing feature keys: {miss}")
+
+    v = r.get('schema_version')
+    if v is None:
+        p.append(f"no schema_version — written before versioning; current is "
+                 f"{SCHEMA_VERSION}, see schema.MIGRATIONS")
+    elif v != SCHEMA_VERSION:
+        p.append(f"schema_version {v} but current is {SCHEMA_VERSION} "
+                 f"({MIGRATIONS.get(SCHEMA_VERSION, '?')}) — migrate or re-derive")
 
     cb = r.get('count_basis')
     if cb not in COUNT_BASIS:

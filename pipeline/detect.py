@@ -91,7 +91,7 @@ def is_fresh(date, photo_dir=None, out_json=None):
     newer than its candidates file, or the detector settings changed.
     """
     photo_dir = photo_dir or os.path.join(ROOT, 'photos', date)
-    out_json = out_json or os.path.join(ROOT, 'analysis', f'{date}-candidates.json')
+    out_json = out_json or os.path.join(ROOT, 'analysis', 'derived', f'{date}-candidates.json')
     if not os.path.exists(out_json): return False
     try:
         prev = json.load(open(out_json))
@@ -117,7 +117,7 @@ def detect_date(date, det, photo_dir=None, work_dir=None, out_json=None,
 
     photo_dir = photo_dir or os.path.join(ROOT, 'photos', date)
     work_dir = work_dir or os.path.join(ROOT, 'work', date)
-    out_json = out_json or os.path.join(ROOT, 'analysis', f'{date}-candidates.json')
+    out_json = out_json or os.path.join(ROOT, 'analysis', 'derived', f'{date}-candidates.json')
     crops_dir = os.path.join(work_dir, 'crops')
     ov_dir = os.path.join(work_dir, 'overlay')
     os.makedirs(crops_dir, exist_ok=True)
@@ -286,7 +286,7 @@ def detect_date(date, det, photo_dir=None, work_dir=None, out_json=None,
 
 
 def settings_changed(date, det, out_json=None):
-    out_json = out_json or os.path.join(ROOT, 'analysis', f'{date}-candidates.json')
+    out_json = out_json or os.path.join(ROOT, 'analysis', 'derived', f'{date}-candidates.json')
     if not os.path.exists(out_json): return True
     try:
         return json.load(open(out_json)).get('detector') != settings_of(det)

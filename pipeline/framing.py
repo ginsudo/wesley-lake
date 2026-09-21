@@ -55,7 +55,7 @@ TRUE_CROP_EQ35 = 52
 
 def load(date=None):
     """Rows from analysis/exif-index.csv, with numbers parsed. One date or all."""
-    p = os.path.join(ROOT, 'analysis', 'exif-index.csv')
+    p = os.path.join(ROOT, 'analysis', 'derived', 'exif-index.csv')
     out = collections.defaultdict(list)
     for r in csv.DictReader(open(p)):
         if not r.get('dt'):

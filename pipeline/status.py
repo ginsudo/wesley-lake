@@ -36,10 +36,10 @@ def _n(pattern):
 
 
 def state(date):
-    a = os.path.join(ROOT, 'analysis')
-    cand = os.path.join(a, f'{date}-candidates.json')
-    obs = os.path.join(a, f'{date}-observations.json')
-    wat = os.path.join(a, f'{date}-water.json')
+    # derived/ is regenerable, records/ is not — see analysis/README.md
+    cand = os.path.join(ROOT, 'analysis', 'derived', f'{date}-candidates.json')
+    obs = os.path.join(ROOT, 'analysis', 'records', f'{date}-observations.json')
+    wat = os.path.join(ROOT, 'analysis', 'records', f'{date}-water.json')
     st = {
         'date': date,
         'photos': _n(f'photos/{date}/*'),

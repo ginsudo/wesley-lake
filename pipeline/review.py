@@ -45,7 +45,7 @@ def build(date, conf=CONF, outdir=None):
     from PIL import Image, ImageDraw
     import pillow_heif; pillow_heif.register_heif_opener()
 
-    cand = os.path.join(ROOT, 'analysis', f'{date}-candidates.json')
+    cand = os.path.join(ROOT, 'analysis', 'derived', f'{date}-candidates.json')
     if not os.path.exists(cand):
         print(f'no candidates for {date} — run detect.py first'); return
     d = json.load(open(cand))

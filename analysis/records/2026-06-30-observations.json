@@ -1,0 +1,106 @@
+{
+ "date": "2026-06-30",
+ "generated": "2026-09-20T18:23:26",
+ "source": "Pass 2. Claude Opus 5 reading native-resolution crops. Species IDs are Claude\u2019s read, not Geno\u2019s confirmation (PROTOCOL.md 9). Not in logs/bird-log.md. June: single adult; no brood in frame.",
+ "records": [
+  {
+   "photo": "photos/2026-06-30/IMG_2300.HEIC",
+   "species": "Mute Swan",
+   "confidence": "certain",
+   "count": 1,
+   "count_exact": true,
+   "age_class": "adult",
+   "stratum": "open_water",
+   "activity": "dabbling",
+   "associations": "",
+   "census_class": "core",
+   "surface": "open_water",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_2299.HEIC",
+    "IMG_2300.HEIC",
+    "IMG_2301.HEIC"
+   ],
+   "count_basis": "max_simultaneous",
+   "features": {
+    "bill": "bright orange with black basal knob",
+    "legs": "not visible",
+    "head": "white",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "B",
+   "individual_id": "SWAN-B01",
+   "notes": "Single adult close to the Asbury bank, feeding along the weed-covered edge. No cygnets in any frame of this event.",
+   "provider": "claude-pass2",
+   "model": "Claude Opus 5, native-resolution crops",
+   "segment": "S4",
+   "bank": "N",
+   "detections_in_frames": [
+    "IMG_2299-b01",
+    "IMG_2299-b02",
+    "IMG_2299-b03",
+    "IMG_2300-b01",
+    "IMG_2300-b02",
+    "IMG_2300-b03",
+    "IMG_2300-b04",
+    "IMG_2301-b01",
+    "IMG_2301-b02",
+    "IMG_2301-b03",
+    "IMG_2301-b04"
+   ],
+   "schema_version": 3
+  },
+  {
+   "photo": "photos/2026-06-30/IMG_2303.HEIC",
+   "species": "",
+   "confidence": "unknown",
+   "count": 1,
+   "count_exact": true,
+   "age_class": "unknown",
+   "stratum": "open_water",
+   "activity": "loafing",
+   "associations": "",
+   "census_class": "core",
+   "surface": "open_water",
+   "stop": 2,
+   "event": 2,
+   "frames": [
+    "IMG_2303.HEIC",
+    "IMG_2305.HEIC"
+   ],
+   "count_basis": "max_simultaneous",
+   "features": {
+    "bill": "not visible",
+    "legs": "not visible",
+    "head": "not visible",
+    "breast_flank": "not visible",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "small, dark, long-necked \u2014 cormorant or duck, not separable"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "D",
+   "individual_id": "",
+   "notes": "Mid-channel, too distant to identify.",
+   "provider": "claude-pass2",
+   "model": "Claude Opus 5, native-resolution crops",
+   "segment": "S4",
+   "bank": "mid",
+   "detections_in_frames": [
+    "IMG_2303-b01",
+    "IMG_2305-b01"
+   ],
+   "schema_version": 3
+  }
+ ],
+ "validation_problems": 0,
+ "derived_by": "pipeline/observe.py \u2014 stop, event, census_class and detections_in_frames are computed, not typed",
+ "schema_version": 3
+}

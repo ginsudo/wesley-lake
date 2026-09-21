@@ -370,7 +370,7 @@ check('a bank photo is a short distance out, not inside',
 check('every archived on-lake photo passes the geofence',
       all(lake.zone(float(r['lat']), float(r['lon'])) == 'ON'
           for r in __import__('csv').DictReader(
-              open(os.path.join(ROOT, 'analysis', 'exif-index.csv'))) if r['lat']),
+              open(os.path.join(ROOT, 'analysis', 'derived', 'exif-index.csv'))) if r['lat']),
       'a geofence that rejects a real observation is worse than a loose one')
 check('somewhere obviously not the lake is OFF',
       lake.zone(40.2300, -74.0100) == 'OFF')           # ~1.5 km north, inland
@@ -395,11 +395,11 @@ check('east of the Ocean Ave end returns no segment, not a guess',
       lake.segment_for(-73.9900) == '')
 check('every record now carries a derived segment',
       all(r.get('segment') for f in __import__('glob').glob(
-              os.path.join(ROOT,'analysis','*-observations.json'))
+              os.path.join(ROOT,'analysis','records','*-observations.json'))
           for r in json.load(open(f))['records']),
       'observe.py derives segment; none should be blank')
 _recs = [r for f in __import__('glob').glob(
-             os.path.join(ROOT,'analysis','*-observations.json'))
+             os.path.join(ROOT,'analysis','records','*-observations.json'))
          for r in json.load(open(f))['records']]
 check('S1 has never been photographed',
       not any(r.get('segment') == 'S1' for r in _recs),
@@ -413,12 +413,29 @@ check('S2 has been photographed, and every visit was birdless',
 import water
 _st = water.stations()
 check('geography.md defines at least one water station', 'WQ-1' in _st, str(sorted(_st)))
+check('both record types carry a schema_version',
+      schema.blank('x').get('schema_version') == schema.SCHEMA_VERSION
+      and water.blank('2026-01-01','WQ-1').get('schema_version') == water.SCHEMA_VERSION,
+      'their absence meant two rounds of hand-backfilling when the schema moved')
+check('a record from an older schema is caught, not silently accepted',
+      any('schema_version' in x for x in
+          schema.validate({**schema.blank('x'), 'schema_version': 1})))
+check('every migration step is documented',
+      set(schema.MIGRATIONS) == set(range(1, schema.SCHEMA_VERSION + 1)),
+      str(sorted(schema.MIGRATIONS)))
+check('derived and authored records live in separate directories',
+      os.path.isdir(os.path.join(ROOT,'analysis','derived'))
+      and os.path.isdir(os.path.join(ROOT,'analysis','records'))
+      and not glob.glob(os.path.join(ROOT,'analysis','*.json')),
+      'irreplaceable records must not sit beside regenerable output')
+check('analysis/ says which half is safe to delete',
+      'NEVER DELETE' in open(os.path.join(ROOT,'analysis','README.md')).read())
 check('a blank water record is not clean — it must cite frames',
       any('no frames' in x for x in water.validate(water.blank('2026-01-01','WQ-1'))))
 
 def _w(**k):
     base = dict(frames=['a.HEIC'], surface_state='glassy', ice_cover='none',
-                organic_load='clear', water_level='at_sill',
+                organic_load='clear', water_level='at_sill', tide='unknown',
                 marginal_vegetation='sparse')
     return water.validate(water.blank('2026-01-01', 'WQ-1', **{**base, **k}), _st)
 
@@ -472,7 +489,7 @@ check('prepare() assigns no judged field', not (_assigned & _judged),
       str(sorted(_assigned & _judged)) + ' — prepare builds the material, '
       'a person judges it')
 
-_wf = os.path.join(ROOT,'analysis','2026-09-21-water.json')
+_wf = os.path.join(ROOT,'analysis','records','2026-09-21-water.json')
 if os.path.exists(_wf):
     _wd = json.load(open(_wf))
     check('the first real water observation validates clean',
@@ -503,12 +520,12 @@ check('water.prepare builds a sheet without judging anything',
           .split('def prepare')[1].split('def ')[0],
       'prepare() may open images; it must not set any judged field')
 check('every analysis record file uses one naming convention',
-      not glob.glob(os.path.join(ROOT, 'analysis', '*-core-count.json')),
+      not glob.glob(os.path.join(ROOT, 'analysis', 'records', '*-core-count.json')),
       'a stray -core-count.json meant globs of *-observations.json silently '
       'skipped the best-analysed date')
 check('the segment tests now include 2026-09-20',
       any('2026-09-20' in f for f in glob.glob(
-          os.path.join(ROOT, 'analysis', '*-observations.json'))))
+          os.path.join(ROOT, 'analysis', 'records', '*-observations.json'))))
 
 # 10. fractional-box contract of base.Detector --------------------------------
 from providers.base import Detector

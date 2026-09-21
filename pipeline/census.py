@@ -165,8 +165,57 @@ def report(path):
     return t
 
 
+def water_rollup():
+    """Water observations, and the one cross-tabulation worth running.
+
+    Wesley Lake is a shallow coastal lagoon. Shallow lagoons resuspend sediment
+    in wind, so wind-driven turbidity should track a disturbed surface; tannin
+    and a standing algal tint should not. `surface_state` is the only wind proxy
+    the record has, so crossing it against `water_appearance` is the cheapest
+    available discriminator between "the wind stirred it up" and "the water is
+    like that".
+    """
+    import glob, json, collections, os
+    HERE = os.path.dirname(os.path.abspath(__file__))
+    ROOT = os.path.dirname(HERE)
+    recs = [r for f in sorted(glob.glob(os.path.join(ROOT, 'analysis', 'records',
+                                                     '*-water.json')))
+            for r in json.load(open(f))['records']]
+    if not recs:
+        print('no water records'); return
+    print(f'{len(recs)} water observations\n')
+    print('BROWN WATER vs SURFACE STATE (the wind proxy)')
+    print(f"  {'appearance':<18}{'glassy':>8}{'rippled':>9}{'wind':>7}{'other':>7}")
+    tab = collections.Counter()
+    for r in recs:
+        tab[(r.get('water_appearance', '?'), r.get('surface_state', '?'))] += 1
+    apps = sorted({a for a, _ in tab})
+    for a in apps:
+        row = [tab[(a, s)] for s in ('glassy', 'rippled', 'wind_whipped')]
+        other = sum(v for (aa, s), v in tab.items()
+                    if aa == a and s not in ('glassy', 'rippled', 'wind_whipped'))
+        print(f"  {a:<18}{row[0]:>8}{row[1]:>9}{row[2]:>7}{other:>7}")
+    states = {r.get('surface_state') for r in recs
+              if r.get('water_appearance') not in (None, 'not_assessable')}
+    print()
+    if len(states) <= 1:
+        print(f'  INCONCLUSIVE — every judgeable observation is surface_state '
+              f'{sorted(states)}. With no variance in the wind proxy the cross-tab '
+              f'cannot discriminate. This is a coding problem, not a finding: '
+              f'surface_state was recorded loosely. Judge it deliberately from now '
+              f'on and this table becomes answerable in a handful of visits.')
+    else:
+        print('  Read with care: n is small and surface_state is a weak wind proxy.')
+    print('\nNOTABLE (every non-empty entry)')
+    for r in recs:
+        if r.get('notable'):
+            print(f"  {r['date']}  {r['notable'][:96]}")
+
+
 if __name__ == '__main__':
     if len(sys.argv) < 2:
         print(__doc__); sys.exit(2)
+    if '--water' in sys.argv:
+        water_rollup(); sys.exit(0)
     for a in sys.argv[1:]:
         report(a)

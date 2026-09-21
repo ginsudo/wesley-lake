@@ -66,7 +66,7 @@ def build():
         for p in sorted(glob.glob(os.path.join(d, '*'))):
             if os.path.isfile(p): rows.append(exif.parse(p))
     rows = [r for r in rows if r.get('dt')]
-    csvp = os.path.join(ROOT, 'analysis', 'exif-index.csv')
+    csvp = os.path.join(ROOT, 'analysis', 'derived', 'exif-index.csv')
     os.makedirs(os.path.dirname(csvp), exist_ok=True)
     with open(csvp, 'w', newline='') as f:
         w = csv.DictWriter(f, fieldnames=['file','dt','tz','model','lat','lon','alt','dir','w','h',
@@ -96,7 +96,7 @@ def build():
             paths = [os.path.join(ROOT, 'photos', d, r['file']) for r in s]
             paths = [p for p in paths if os.path.exists(p)]
             if paths: sheet(paths, out)
-    rp = os.path.join(ROOT, 'analysis', 'session-index.md')
+    rp = os.path.join(ROOT, 'analysis', 'derived', 'session-index.md')
     open(rp, 'w').write('\n'.join(lines) + '\n')
     print('wrote', rp)
 

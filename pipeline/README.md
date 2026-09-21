@@ -117,6 +117,8 @@ fails is written **with its problems attached**, never dropped.
   every archived photo passes the geofence, that count=0 is not counted as a
   bird, and that S1 has never been photographed (if that one ever fails, someone
   has walked the eastern third).
+- `census.py --water` — the water rollup, including the brown-vs-wind
+  cross-tabulation. Currently inconclusive, and says why.
 - `status.py` — what is done and what is waiting, per date. The answer to
   "where was I?". `python3 pipeline/status.py --todo`
 - `run.py` — the machine half, end to end, then the to-do list.

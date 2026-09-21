@@ -1,0 +1,61 @@
+{
+ "date": "2026-03-27",
+ "generated": "2026-09-20T18:22:50",
+ "source": "Pass 2. Claude Opus 5 reading native-resolution crops. Species IDs are Claude\u2019s read, not Geno\u2019s confirmation (PROTOCOL.md 9). Not in logs/bird-log.md. March: pair again, two days later, same stretch.",
+ "records": [
+  {
+   "photo": "photos/2026-03-27/IMG_0665.HEIC",
+   "species": "Mute Swan",
+   "confidence": "certain",
+   "count": 2,
+   "count_exact": true,
+   "age_class": "adult",
+   "stratum": "open_water",
+   "activity": "loafing",
+   "associations": "",
+   "census_class": "core",
+   "surface": "open_water",
+   "stop": 1,
+   "event": 1,
+   "frames": [
+    "IMG_0664.HEIC",
+    "IMG_0665.HEIC"
+   ],
+   "count_basis": "max_simultaneous",
+   "features": {
+    "bill": "bright orange with black basal knob",
+    "legs": "not visible",
+    "head": "white",
+    "breast_flank": "white",
+    "wing_tail": "not visible",
+    "asymmetries": "not visible",
+    "size": "not visible"
+   },
+   "marks_checked": false,
+   "marks": "",
+   "tier": "B",
+   "individual_id": "SWAN-B01+B02",
+   "notes": "The pair again, two days after 03-25, same western stretch. Site fidelity \u2014 supports the Tier B inference rather than just repeating it. A dog on the bank nearby; the swans did not leave the water.",
+   "provider": "claude-pass2",
+   "model": "Claude Opus 5, native-resolution crops",
+   "segment": "S5",
+   "bank": "S",
+   "detections_in_frames": [
+    "IMG_0664-b01",
+    "IMG_0664-b02",
+    "IMG_0664-b03",
+    "IMG_0664-b04",
+    "IMG_0665-b01",
+    "IMG_0665-b02",
+    "IMG_0665-b03",
+    "IMG_0665-b04",
+    "IMG_0665-b05",
+    "IMG_0665-b06"
+   ],
+   "schema_version": 3
+  }
+ ],
+ "validation_problems": 0,
+ "derived_by": "pipeline/observe.py \u2014 stop, event, census_class and detections_in_frames are computed, not typed",
+ "schema_version": 3
+}

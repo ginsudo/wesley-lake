@@ -35,6 +35,15 @@ ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 import surfaces                      # for the shared geography.md table parser
 
+SCHEMA_VERSION = 2
+MIGRATIONS = {
+    1: 'original — surface_state, ice_cover, organic_load, water_level, '
+       'marginal_vegetation, litter',
+    2: 'added sky + water_appearance, gated on a clear sky (the exhaustive '
+       'sweep of 2026-09-21 overturned the blanket exclusion of colour); '
+       'organic_load gained `scattered` and `banded_below_rail`',
+}
+
 NA = 'not_assessable'
 
 # Every vocabulary carries NA, which means what "not visible" means in a feature
@@ -60,6 +69,20 @@ ICE_COVER      = ['none', 'partial', 'complete', NA]
 ORGANIC_LOAD   = ['clear', 'scattered', 'banded_below_rail', 'packed_to_rail',
                   'overtopping', NA]
 WATER_LEVEL    = ['below_sill', 'at_sill', 'mid_posts', 'at_rail', 'above_rail', NA]
+
+# Wesley Lake terminates at Ocean Avenue at a FLUME, and has a culvert and
+# trash racks at its western head. That is the signature of a NJ-shore coastal
+# lagoon -- an impounded former tidal creek behind the barrier beach, like Deal,
+# Sunset and Fletcher Lakes -- not a freshwater pond.
+#
+# If there is ANY exchange through that flume, water level varies over hours.
+# A level reading without a tide stage is therefore not a measurement of
+# anything: two readings a week apart may differ entirely because of the moon.
+# validate() refuses a level without one. Whether this lake is actually tidal
+# is UNCONFIRMED -- see STATE.md -- and `unknown` is the honest answer until
+# somebody checks. Recording it costs nothing and makes the series salvageable
+# either way.
+TIDE = ['low', 'falling', 'high', 'rising', 'unknown', NA]
 MARGINAL_VEG   = ['absent', 'sparse', 'fringing', 'dense', NA]
 LITTER_TYPES   = ['plastic_film', 'bottle_can', 'other']
 
@@ -87,8 +110,9 @@ def stations(path=None):
 
 
 def blank(date, station, **kw):
-    r = dict(date=date, station=station, frames=None,
-             sky=NA, water_appearance=NA,
+    r = dict(schema_version=SCHEMA_VERSION,
+             date=date, station=station, frames=None,
+             sky=NA, water_appearance=NA, tide=NA,
              surface_state=NA, ice_cover=NA, organic_load=NA,
              water_level=NA, marginal_vegetation=NA,
              litter_count=None, litter_exact=False, litter_range=None,
@@ -116,6 +140,11 @@ def validate(r, known=None):
         if r.get('litter_count') is not None:
             p.append("station LAKE-WIDE with a litter_count — a count with no fixed "
                      "framing cannot be compared between visits")
+    v = r.get('schema_version')
+    if v is None:
+        p.append(f"no schema_version; current is {SCHEMA_VERSION}, see water.MIGRATIONS")
+    elif v != SCHEMA_VERSION:
+        p.append(f"schema_version {v} but current is {SCHEMA_VERSION} — migrate")
     if r.get('station') not in known:
         p.append(f"unknown station {r.get('station')!r}; "
                  f"geography.md has {sorted(known)}")
@@ -127,17 +156,20 @@ def validate(r, known=None):
         p.append(f"bad date {r.get('date')!r}")
 
     for field, vocab in (('sky', SKY), ('water_appearance', WATER_APPEARANCE),
+                         ('tide', TIDE),
                          ('surface_state', SURFACE_STATE), ('ice_cover', ICE_COVER),
                          ('organic_load', ORGANIC_LOAD), ('water_level', WATER_LEVEL),
                          ('marginal_vegetation', MARGINAL_VEG)):
         if r.get(field) not in vocab:
             p.append(f"bad {field} {r.get(field)!r}; one of {vocab}")
 
-    # Colour is only judgeable when the sky would betray a reflection.
-    if r.get('water_appearance') != NA and r.get('sky') != 'clear':
-        p.append(f"water_appearance {r.get('water_appearance')!r} with sky "
-                 f"{r.get('sky')!r} — colour is only judgeable under a CLEAR sky, "
-                 f"where a merely reflective surface would look blue")
+    # A level with no tide stage is a number with no meaning. See TIDE above.
+    if r.get('water_level') != NA and r.get('tide') == NA:
+        p.append(f"water_level {r.get('water_level')!r} with no tide stage — this "
+                 f"is a coastal lagoon with an ocean flume, so level may vary over "
+                 f"HOURS. Record a tide stage, or 'unknown' if you did not check; "
+                 f"{NA!r} means the question was not asked and makes the reading "
+                 f"uncomparable")
 
     # Colour is only judgeable when the sky would betray a reflection.
     if r.get('water_appearance') != NA and r.get('sky') != 'clear':
@@ -215,7 +247,7 @@ def prepare(date, out=None):
 
 
 def process(records, date, path=None):
-    path = path or os.path.join(ROOT, 'analysis', f'{date}-water.json')
+    path = path or os.path.join(ROOT, 'analysis', 'records', f'{date}-water.json')
     known = stations()
     bad = 0
     for r in records:
@@ -241,18 +273,18 @@ def process(records, date, path=None):
 
 def report(paths=None):
     paths = paths or sorted(__import__('glob').glob(
-        os.path.join(ROOT, 'analysis', '*-water.json')))
+        os.path.join(ROOT, 'analysis', 'records', '*-water.json')))
     if not paths:
         print('no water observations yet'); return
     print(f"{'date':<12}{'stn':<11}{'surface':<14}{'ice':<9}{'organic':<20}"
-          f"{'level':<12}{'litter':>7}")
+          f"{'level':<16}{'tide':<9}{'litter':>7}")
     for p in paths:
         for r in json.load(open(p))['records']:
             n = r.get('litter_count')
             lr = r.get('litter_range')
             lit = '—' if n is None else (f'{lr[0]}–{lr[1]}' if lr else str(n))
             print(f"{r['date']:<12}{r['station']:<11}{r['surface_state']:<14}"
-                  f"{r['ice_cover']:<9}{r['organic_load']:<20}{r['water_level']:<12}{lit:>7}")
+                  f"{r['ice_cover']:<9}{r['organic_load']:<20}{r['water_level']:<16}{r.get('tide',NA)[:8]:<9}{lit:>7}")
             if r.get('notable'): print(f"{'':<12}  notable: {r['notable']}")
             if r.get('problems'): print(f"{'':<12}  PROBLEMS: {r['problems']}")
 

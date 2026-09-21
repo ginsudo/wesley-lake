@@ -167,7 +167,7 @@ if __name__ == '__main__':
     print(f'outline: {len(OUTLINE)} points, '
           f'{(max(lats)-min(lats))*_MY:.0f} m N-S x {(max(lons)-min(lons))*_MX:.0f} m E-W')
     print(f'buffers: ON <= {BUFFER_ON:.0f} m, NEAR <= {BUFFER_NEAR:.0f} m\n')
-    rows = [r for r in csv.DictReader(open(os.path.join(ROOT, 'analysis', 'exif-index.csv')))
+    rows = [r for r in csv.DictReader(open(os.path.join(ROOT, 'analysis', 'derived', 'exif-index.csv')))
             if r['lat']]
     z = collections.Counter(zone(float(r['lat']), float(r['lon'])) for r in rows)
     print('archive:', dict(z))

@@ -14,6 +14,25 @@ habitat, and tech-driven monitoring for the lake. Bird observation is one thread
 it, and is also simply enjoyable birdwatching. Treat it as both data collection and
 pleasure — the record should be rigorous, the tone should not be grim.
 
+**What kind of water body this is, because it governs everything below.**
+Wesley Lake terminates at Ocean Avenue at a **flume**, and has a culvert and
+trash racks at its western head. That is the signature of a NJ-shore **coastal
+lagoon** — an impounded former tidal creek behind the barrier beach, in the same
+family as Deal, Sunset and Fletcher Lakes — not a freshwater pond. Three
+consequences:
+
+- **Water level may be tidal.** If there is exchange through the flume, level
+  varies over hours. Every level reading therefore carries a tide stage
+  (§3a); without one it is not comparable to anything.
+- **The floating treatment mats are themselves a water-quality datum.** A public
+  works body does not install them in a healthy lake. They are a standard
+  eutrophication intervention, which means somebody has already diagnosed a
+  nutrient problem here. Treat them as evidence, not just as bird furniture.
+- **Winter is the season this record is missing.** On NJ coastal lagoons the
+  interesting waterfowl are the winter ones — Brant, Bufflehead, scaup, Ruddy
+  Duck, Red-breasted Merganser, American Coot, Great Cormorant, large gull
+  flocks. See §9 on effort bias.
+
 Wesley Lake is the boundary water between Asbury Park (north shore) and Ocean Grove
 (south shore), Monmouth County, NJ. It is small and walkable end to end. Geno gives it as about 0.8 miles
 (≈1290 m) along its east–west axis; a supplied outline makes it ≈1130 m, so
@@ -400,3 +419,15 @@ with rafting birds is not comparable to anything.
 - `GPSImgDirection` is recorded but unreliable at this lake — the banks are steel
   sheet piling, which distorts a phone magnetometer. Trust position, not heading.
 - One walk is one observation event, however many upload batches it arrives in.
+- **Know what season the record is biased toward.** As of 2026-09-21 this log
+  holds 31 dates, of which **one** falls in November–February and that one was
+  frozen. Every species proportion is a breeding-and-late-summer proportion.
+  The nine species recorded are all year-round generalists; the winter visitors
+  that define a NJ coastal lagoon are simply absent from the record, not from
+  the lake. Do not read the species list as the lake's avifauna.
+- **Mute Swan is non-native in New Jersey**, aggressive toward other waterfowl,
+  and uproots submerged vegetation; NJDEP operates a control policy. The log
+  follows the resident pair closely and warmly, which is right for a
+  birdwatching record — but the water-quality thread and the bird thread are
+  describing the same animal, and §8's rollups should say so rather than
+  treating them as separate subjects.

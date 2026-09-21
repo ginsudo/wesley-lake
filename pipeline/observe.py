@@ -45,7 +45,7 @@ def _frames_on_disk(date):
 
 
 def _detections(date, conf=CONF):
-    p = os.path.join(ROOT, 'analysis', f'{date}-candidates.json')
+    p = os.path.join(ROOT, 'analysis', 'derived', f'{date}-candidates.json')
     if not os.path.exists(p):
         return {}
     out = {}
@@ -98,7 +98,7 @@ def derive(date, record, eo=None, so=None, dets=None, disk=None):
     lons = []
     if _EXIF.get('_loaded') is None:
         _EXIF['_loaded'] = {x['file']: x for x in _csv.DictReader(
-            open(os.path.join(ROOT, 'analysis', 'exif-index.csv')))}
+            open(os.path.join(ROOT, 'analysis', 'derived', 'exif-index.csv')))}
     for f in real:
         e = _EXIF['_loaded'].get(f)
         if e and e.get('lon'):
@@ -136,7 +136,7 @@ def process(date, records, source='', write=True):
         'records': out,
         'validation_problems': nbad,
     }
-    p = os.path.join(ROOT, 'analysis', f'{date}-observations.json')
+    p = os.path.join(ROOT, 'analysis', 'records', f'{date}-observations.json')
     if write:
         json.dump(payload, open(p, 'w'), indent=1)
     return payload, nbad
@@ -144,7 +144,7 @@ def process(date, records, source='', write=True):
 
 def recheck(write=False):
     """Re-derive every existing observations file and report what changes."""
-    files = sorted(glob.glob(os.path.join(ROOT, 'analysis', '*-observations.json')))
+    files = sorted(glob.glob(os.path.join(ROOT, 'analysis', 'records', '*-observations.json')))
     tot = changed = bad = 0
     for f in files:
         d = json.load(open(f))

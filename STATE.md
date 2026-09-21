@@ -66,46 +66,33 @@ The deterministic pipeline is built. The model layer is built and swappable.
 
 ## Pending, ranked
 
-**The archive is logged.** `logs/bird-log.md` Entry 5 backfills all 30 dates;
-Entry 6 appends corrections to Entry 4. `logs/individuals.md` and
-`logs/patterns.md` now exist. What is left is mostly field work.
+**The archive is logged.** What is left is mostly field work, re-ranked
+2026-09-21 after a review informed by what kind of water body this is: a NJ
+coastal lagoon, not a pond.
 
-1. **Walk the eastern third.** 363 m from −74.00119 east to Ocean Avenue has
-   never been photographed — segment S1 not once, S2 twice and both birdless.
-   It contains two of the three crossings. Every species proportion in
-   `logs/patterns.md` is an S3–S5 proportion until this is closed.
-2. **A fixed transect.** The single most valuable change available to the
-   water-quality thread. §8 wants goose and cormorant concentrations as indices;
-   an index needs consistent effort and this record has none — 11 of 30 dates
-   are one stop of 1–5 photos. One repeatable walk, same route, comparable time,
-   even monthly.
-3. **Photograph WQ-1 on every walk that reaches the west end.** Two frames:
-   one wide on the rack, sill and posts; one closer on the waterline. n=1 today;
-   it becomes a series on the second visit. Consider a **Secchi disk** (~$30) —
-   the only instrument that would turn any of this into a measurement.
-4. **Ask the Wesley Lake Commission**: installation record for the mats, how
-   many, how anchored, what for — and **whether they are lifted for winter**,
-   which decides whether item 4 is possible at all.
-4. **One bare-season walk photographing every mat at the waterline.** The base is
-   a manufactured module — bevelled edges, corners, countable planting ports,
-   hardware, a teal element on at least one. It would give every mat a durable
-   identity in a single outing. Only MAT-01 has one now.
-5. **Next winter: is the frozen lake used by birds?** Geno expects yes; the one
-   winter visit found none. Do NOT use the detector (179 false positives, snow
-   scoring to 0.78). Photograph dark shapes at 2x or closer, concentrate on
-   wet-ice leads and open water, look for shadows and legs.
-6. ~~**Re-do log Entries 2 and 3.**~~ **Done — log Entry 7.** Entry 2's dock
-   cormorant is dated and fixed (IMG_3402, 10:05:04, match to metres) with a
-   clean hard-mark negative. **Entry 3's ~26 additive geese STAND** — Claude
-   drafted a correction down to 10 on the strength of the event grouping and was
-   wrong: 3404 and 3405 are 9 s apart because Geno turned, and the frames show
-   different water. Unreconcilable: most of Entry 2 is in chat-only photos never
-   ingested, including the white wader, which is now probably unresolvable
-   forever.
+1. **A winter walk — November or February.** The single biggest hole. 31 dates
+   and **one** falls in Nov–Feb. All nine species recorded are year-round
+   generalists; the birds that define a NJ coastal lagoon in winter — Brant,
+   Bufflehead, scaup, Ruddy Duck, Red-breasted Merganser, American Coot, Great
+   Cormorant, big gull flocks — are absent from the RECORD, not from the lake.
+   One November walk would likely add more species than everything since March.
+   Two unresolved records fit: the 2026-03-26 diving duck (Bufflehead, scaup or
+   Ruddy Duck are the likely candidates) and the Entry 2 white wader.
+2. **Walk the eastern third.** 363 m from −74.00119 east to Ocean Avenue, never
+   photographed. Segment S1 has no records at all; S2 has two, both birdless.
+   Contains two of the three crossings.
+3. **A fixed transect.** §8 wants goose and cormorant counts as indices; an
+   index needs consistent effort and 11 of 31 dates are one stop of 1–5 photos.
+4. **Photograph WQ-1 on every west-end walk**, and **judge `surface_state`
+   deliberately** — the brown-water cross-tab is currently inconclusive only
+   because every observation was coded `rippled`.
+5. **Ask the Wesley Lake Commission**: mat installation record, count,
+   anchoring, purpose, and whether they are lifted for winter. Also worth
+   asking outright whether the lake is tidal and whether it is brackish.
+6. **Two cheap instruments**: a **Secchi disk** (~$30) for clarity and a
+   **refractometer** (~$20) for salinity. Between them they would turn the
+   entire water thread from categories into measurement.
 7. **Name Crossing A.** Geno stood on its deck 15:08–15:10 on 2026-09-20.
-   Nearest crossing by longitude is Mattison Avenue (85 m). Naming it places
-   B and C, and B is probably a real second span while C is probably the
-   western end rather than a crossing.
 
 ## Open questions — do not harden these into facts
 
@@ -122,6 +109,8 @@ Entry 6 appends corrections to Entry 4. `logs/individuals.md` and
 | What is the ochre-brown water? | Strongly brown on 5 of 31 dates, judged under clear sky so it is real colour, not reflection. Sediment, tannin or algal tint — **not determinable from a photograph**. A Secchi disk would be the cheapest next step. |
 | Were the vivid green patches of 2026-08-12 algae? | Uncertain — duckweed, filamentous algae or floating litter all look alike at that range. The only algae-like observation in the archive. Photograph closely if it recurs. |
 | Was the 2026-03-25 dumped drum ever removed? | Unknown; no later frame covers that spot. |
+| Is Wesley Lake tidal? | **Unconfirmed and it matters.** It meets the ocean at a flume. If there is exchange, water level varies over hours and any level series without a tide stage is noise. `water.py` now requires a tide stage with every level reading. |
+| Is it brackish or fresh? | Unknown. It determines what should be here. A refractometer (~$20) settles it. |
 | The landbird feeder station on the Asbury bank (~40.2158/−74.0077) | Never deliberately visited. The log is otherwise all waterbirds. Note these will be almost entirely §5b `noted`, not core. |
 | Are the mats present in deep winter, or lifted out? | Unresolved and it matters: 2026-01-31 shows none, but the lake is frozen under snow. If they are removed seasonally, the recommended bare-season waterline survey is impossible. Ask the Commission. |
 | Does the lake freeze every winter, and for how long? | It freezes — 2026-01-31, bank to bank, confirmed. n=1, no series. |
