@@ -1,6 +1,6 @@
 # Wesley Lake — current state
 
-Last updated 2026-09-20 (detector built; §5b core count and mat surfaces added; **the full archive is now in the log**). **A new Claude thread should read this first, then
+Last updated 2026-10-22 (pictures moved to a Dodo data root, MLJ-54; before that 2026-09-20: detector built, full archive in the log). **A new Claude thread should read this first, then
 `PROTOCOL.md`, then `CLAUDE.md`.** This file says where things stand; the others
 say how the work is done.
 
@@ -65,6 +65,13 @@ The deterministic pipeline is built. The model layer is built and swappable.
 - `geography.md` — Crossing A confirmed; segments; floating mats.
 
 ## Pending, ranked
+
+- **Run today's zip on Dodo** — `_incoming/2026-10-22-birds-back-in-AP.zip`
+  (75 HEIC), first run of the Dodo data root. Then review its sheets.
+- **Gair copies of photos/ and archive/zips/** are now duplicates of Dodo's.
+  Removing them waits for Gene.
+- **`run.py` had never archived a zip since e300091** (the zone variable shadowed
+  the zip path, so the archive move crashed). Fixed 2026-10-22 with a test.
 
 **The archive is logged.** What is left is mostly field work, re-ranked
 2026-09-21 after a review informed by what kind of water body this is: a NJ
@@ -159,8 +166,9 @@ coastal lagoon, not a pond.
 - **The folder is the system of record.** Memory holds a pointer, not a copy.
 - **Geofence is a bounding box, never a point radius**, and it has already been
   widened once after March photos fell outside it.
-- **Processing is local on the MacBook Air**; Claude does identification and
-  judgment, not ingest. The model is swappable via config.
+- **Processing is local to the disk that holds the pictures** — Dodo since
+  2026-10-22 (PROTOCOL.md §1); Claude does identification and judgment, not
+  ingest. The model is swappable via config.
 - **The core count is on-lake birds only** (PROTOCOL.md §5b), and census class is
   derived from stratum rather than judged. Waders standing in the water count;
   pedal boats do not, even though they float — the count is the lake's own
@@ -174,6 +182,13 @@ coastal lagoon, not a pond.
   corners and countable planting ports — so they need a waterline photograph,
   not a better lens from the bank. MAT-01 is matched across 09-08 and 09-20 by
   its log; the others simply have not been photographed close enough yet.
-- **No Dodo side** (Geno, 2026-10-22). Dodo sees this folder only through `_air-mirror/Projects/Wesley Lake` (hourly, read-only). If something needs to run on Dodo (e.g. the detector with a local model), open a Dodo side per the Master Learning Journal doc claude/dodo-sides.md.
+- **Pictures live on Dodo** (Gene, 2026-10-22 ~17:20 ET; MLJ-54; supersedes
+  "no Dodo side" for pictures only). Data root `~/Claude Project Files/Wesley Lake/`
+  on Dodo holds photos/, archive/zips/, _incoming/, work/, analysis/derived/.
+  Zips go to its `_incoming/`; the machine half (`run.py` with `WL_DATA`) runs on
+  Dodo from `runner/`, a read-only clone; the review runs in any session from
+  `work/` sheets. Never run the pipeline from the Air against the share. Code,
+  PROTOCOL, STATE, logs and records stay here. The Air's own photos/ and
+  archive/zips/ are kept until Gene says otherwise.
 - **No local general-purpose VLM.** The Air cannot run one worth having, and a
   specialist classifier beats a mid-size VLM at species anyway.

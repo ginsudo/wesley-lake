@@ -22,6 +22,7 @@ import os, sys, json, glob, collections
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
+from paths import DATA
 import bootstrap
 bootstrap.ensure(['PIL', 'pillow_heif'], ['pillow', 'pillow-heif'])
 import framing
@@ -45,11 +46,11 @@ def build(date, conf=CONF, outdir=None):
     from PIL import Image, ImageDraw
     import pillow_heif; pillow_heif.register_heif_opener()
 
-    cand = os.path.join(ROOT, 'analysis', 'derived', f'{date}-candidates.json')
+    cand = os.path.join(DATA, 'analysis', 'derived', f'{date}-candidates.json')
     if not os.path.exists(cand):
         print(f'no candidates for {date} — run detect.py first'); return
     d = json.load(open(cand))
-    outdir = outdir or os.path.join(ROOT, 'work', date, 'review')
+    outdir = outdir or os.path.join(DATA, 'work', date, 'review')
     os.makedirs(outdir, exist_ok=True)
 
     by_frame = collections.defaultdict(list)
@@ -74,7 +75,7 @@ def build(date, conf=CONF, outdir=None):
         # --- counting view: every frame in the event, boxed, side by side
         ims = []
         for f in frames:
-            p = os.path.join(ROOT, 'photos', date, f)
+            p = os.path.join(DATA, 'photos', date, f)
             if not os.path.exists(p): continue
             im = Image.open(p).convert('RGB'); W, H = im.size
             ax = im.copy(); _draw(ax, by_frame.get(f, []), W, H, conf)
@@ -104,7 +105,7 @@ def build(date, conf=CONF, outdir=None):
             sh = Image.new('RGB', (cols*ID_CELL, rows*(ID_CELL+22)), 'white')
             dr = ImageDraw.Draw(sh)
             for i, r in enumerate(crops):
-                cp = os.path.join(ROOT, r['crop']) if not os.path.isabs(r['crop']) else r['crop']
+                cp = os.path.join(DATA, r['crop']) if not os.path.isabs(r['crop']) else r['crop']
                 if not os.path.exists(cp): continue
                 im = Image.open(cp).convert('RGB'); im.thumbnail((ID_CELL-8, ID_CELL-8))
                 x = (i % cols)*ID_CELL; y = (i//cols)*(ID_CELL+22)
@@ -119,13 +120,13 @@ def build(date, conf=CONF, outdir=None):
         if nb:
             print(f'            zoom bursts inside this event: '
                   f'{", ".join(sorted(f[4:8] for f in nb))} — re-views, not new birds')
-    print(f'\n  -> {len(made)} sheets in {os.path.relpath(outdir, ROOT)}')
+    print(f'\n  -> {len(made)} sheets in {os.path.relpath(outdir, DATA)}')
     return made
 
 
 if __name__ == '__main__':
     args = [a for a in sys.argv[1:] if not a.startswith('-')]
     for d in (args or [os.path.basename(x) for x in
-                       sorted(glob.glob(os.path.join(ROOT, 'photos', '2*')))]):
+                       sorted(glob.glob(os.path.join(DATA, 'photos', '2*')))]):
         print(f'[{d}]')
         build(d)

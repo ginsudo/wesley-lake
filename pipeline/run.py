@@ -11,6 +11,8 @@ import os, sys, csv, glob, shutil, zipfile, datetime
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
+import paths
+from paths import DATA
 
 # Deps may live in a session-scoped home that does not persist, and on native
 # macOS Homebrew's python refuses installs outright (PEP 668). bootstrap.ensure
@@ -36,10 +38,10 @@ def zone(la, lo):
     return lake.zone(la, lo)
 
 def ingest():
-    zips = [z for z in glob.glob(os.path.join(ROOT, '*.zip'))]
+    zips = paths.incoming_zips()
     if not zips:
-        print('no new zip at root — rebuilding from photos/ on disk'); return 0
-    staged = os.path.join(ROOT, 'staging'); os.makedirs(staged, exist_ok=True)
+        print('no new zip (root or _incoming/) — rebuilding from photos/ on disk'); return 0
+    staged = os.path.join(DATA, 'staging'); os.makedirs(staged, exist_ok=True)
     n = 0; no_gps = []
     for z in zips:
         print('unzipping', os.path.basename(z))
@@ -50,23 +52,25 @@ def ingest():
             if not r.get('dt'):
                 print('  !! no datetime, left in staging:', os.path.basename(p)); continue
             d = r['dt'][:10].replace(':', '-')
-            z = zone(r['lat'], r['lon'])
+            # zn, not z: z is the zip being ingested, and e300091 shadowed it
+            # here, so the archive move below crashed on the zone string.
+            zn = zone(r['lat'], r['lon'])
             # PROTOCOL.md 3: "Never infer a location silently." A photo with no
             # GPS used to be filed straight into photos/<date>/ as though it were
             # on the lake, because NOGPS is not OFF. Nothing in the archive has
             # ever tripped it, but any photo from elsewhere -- a stranger's, a
             # screenshot, anything off the web -- would have walked in unnoticed
             # and created a date that nobody walked.
-            if z == 'NOGPS':
-                dest = os.path.join(ROOT, 'photos', '_no-gps'); no_gps.append(r['file'])
-            elif z == 'OFF':
-                dest = os.path.join(ROOT, 'photos', '_off-lake', d)
+            if zn == 'NOGPS':
+                dest = os.path.join(DATA, 'photos', '_no-gps'); no_gps.append(r['file'])
+            elif zn == 'OFF':
+                dest = os.path.join(DATA, 'photos', '_off-lake', d)
             else:
-                dest = os.path.join(ROOT, 'photos', d)
+                dest = os.path.join(DATA, 'photos', d)
             os.makedirs(dest, exist_ok=True)
             dst = os.path.join(dest, os.path.basename(p))
             if not os.path.exists(dst): shutil.move(p, dst); n += 1
-        arc = os.path.join(ROOT, 'archive', 'zips'); os.makedirs(arc, exist_ok=True)
+        arc = os.path.join(DATA, 'archive', 'zips'); os.makedirs(arc, exist_ok=True)
         stamp = datetime.date.today().isoformat()
         shutil.move(z, os.path.join(arc, f'{stamp}-{os.path.basename(z)}'))
     print(f'filed {n} photos')
@@ -79,11 +83,11 @@ def ingest():
 
 def build():
     rows = []
-    for d in sorted(glob.glob(os.path.join(ROOT, 'photos', '2*'))):
+    for d in sorted(glob.glob(os.path.join(DATA, 'photos', '2*'))):
         for p in sorted(glob.glob(os.path.join(d, '*'))):
             if os.path.isfile(p): rows.append(exif.parse(p))
     rows = [r for r in rows if r.get('dt')]
-    csvp = os.path.join(ROOT, 'analysis', 'derived', 'exif-index.csv')
+    csvp = os.path.join(DATA, 'analysis', 'derived', 'exif-index.csv')
     os.makedirs(os.path.dirname(csvp), exist_ok=True)
     with open(csvp, 'w', newline='') as f:
         w = csv.DictWriter(f, fieldnames=['file','dt','tz','model','lat','lon','alt','dir','w','h',
@@ -106,14 +110,14 @@ def build():
         lines.append(f"| {d} | {len(rs)} | {rs[0]['dt'][11:]}–{rs[-1]['dt'][11:]} | {len(ss)} | "
                      + ' '.join(f'{k}:{v}' for k, v in sorted(z.items())) + ' |')
         # contact sheets, one per stop
-        wd = os.path.join(ROOT, 'work', d); os.makedirs(wd, exist_ok=True)
+        wd = os.path.join(DATA, 'work', d); os.makedirs(wd, exist_ok=True)
         for i, s in enumerate(ss, 1):
             out = os.path.join(wd, f'stop{i}.jpg')
             if os.path.exists(out): continue
-            paths = [os.path.join(ROOT, 'photos', d, r['file']) for r in s]
+            paths = [os.path.join(DATA, 'photos', d, r['file']) for r in s]
             paths = [p for p in paths if os.path.exists(p)]
             if paths: sheet(paths, out)
-    rp = os.path.join(ROOT, 'analysis', 'derived', 'session-index.md')
+    rp = os.path.join(DATA, 'analysis', 'derived', 'session-index.md')
     open(rp, 'w').write('\n'.join(lines) + '\n')
     print('wrote', rp)
 
@@ -153,8 +157,8 @@ def water_stage(dates=None):
     import water
     made = 0
     for d in (dates or sorted(os.path.basename(x) for x in
-                              glob.glob(os.path.join(ROOT, 'photos', '2*')))):
-        out = os.path.join(ROOT, 'work', d, 'water.jpg')
+                              glob.glob(os.path.join(DATA, 'photos', '2*')))):
+        out = os.path.join(DATA, 'work', d, 'water.jpg')
         if os.path.exists(out):
             continue                       # idempotent, like everything above
         try:

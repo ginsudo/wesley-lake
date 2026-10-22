@@ -23,6 +23,10 @@ identification tiers, the two-pass analysis method, and the discipline rules.
     archive/zips/      processed source zips
 
 ## Conventions that matter
+- **Pictures live on Dodo since 2026-10-22** (PROTOCOL.md §1). photos/, archive/,
+  staging/, work/ and analysis/derived/ resolve under the data root
+  (`pipeline/paths.py`: env `WL_DATA`, else config `data_root`, else this folder).
+  The machine half runs on Dodo; never run the pipeline here against the share.
 - `logs/bird-log.md` and `logs/narrative.md` are **append-only**. Never
   consolidate or summarize the narrative.
 - Identification tiers A–D (PROTOCOL.md §6) are load-bearing. Never assign an

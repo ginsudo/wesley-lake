@@ -24,20 +24,21 @@ import os, sys, glob, json
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
+from paths import DATA
 
 
 def dates():
-    return sorted(os.path.basename(d) for d in glob.glob(os.path.join(ROOT, 'photos', '2*'))
+    return sorted(os.path.basename(d) for d in glob.glob(os.path.join(DATA, 'photos', '2*'))
                   if os.path.isdir(d))
 
 
 def _n(pattern):
-    return len(glob.glob(os.path.join(ROOT, pattern)))
+    return len(glob.glob(os.path.join(DATA, pattern)))
 
 
 def state(date):
     # derived/ is regenerable, records/ is not — see analysis/README.md
-    cand = os.path.join(ROOT, 'analysis', 'derived', f'{date}-candidates.json')
+    cand = os.path.join(DATA, 'analysis', 'derived', f'{date}-candidates.json')
     obs = os.path.join(ROOT, 'analysis', 'records', f'{date}-observations.json')
     wat = os.path.join(ROOT, 'analysis', 'records', f'{date}-water.json')
     st = {
@@ -46,7 +47,7 @@ def state(date):
         'swept': os.path.exists(cand),
         'detections': 0,
         'reviewed': _n(f'work/{date}/review/*') > 0,
-        'water_crop': os.path.exists(os.path.join(ROOT, 'work', date, 'water.jpg')),
+        'water_crop': os.path.exists(os.path.join(DATA, 'work', date, 'water.jpg')),
         'birds': os.path.exists(obs),
         'bird_records': 0,
         'water': os.path.exists(wat),

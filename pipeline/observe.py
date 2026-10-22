@@ -33,6 +33,7 @@ import os, sys, json, glob, datetime
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
+from paths import DATA
 import schema, framing
 
 _EXIF = {}
@@ -40,12 +41,12 @@ CONF = 0.30      # provenance floor; matches the review triage in review.py
 
 
 def _frames_on_disk(date):
-    return {os.path.basename(p) for p in glob.glob(os.path.join(ROOT, 'photos', date, '*'))
+    return {os.path.basename(p) for p in glob.glob(os.path.join(DATA, 'photos', date, '*'))
             if os.path.isfile(p)}
 
 
 def _detections(date, conf=CONF):
-    p = os.path.join(ROOT, 'analysis', 'derived', f'{date}-candidates.json')
+    p = os.path.join(DATA, 'analysis', 'derived', f'{date}-candidates.json')
     if not os.path.exists(p):
         return {}
     out = {}
@@ -98,7 +99,7 @@ def derive(date, record, eo=None, so=None, dets=None, disk=None):
     lons = []
     if _EXIF.get('_loaded') is None:
         _EXIF['_loaded'] = {x['file']: x for x in _csv.DictReader(
-            open(os.path.join(ROOT, 'analysis', 'derived', 'exif-index.csv')))}
+            open(os.path.join(DATA, 'analysis', 'derived', 'exif-index.csv')))}
     for f in real:
         e = _EXIF['_loaded'].get(f)
         if e and e.get('lon'):

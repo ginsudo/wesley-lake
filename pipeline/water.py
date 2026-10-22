@@ -33,6 +33,7 @@ import os, re, sys, json, datetime
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
+from paths import DATA
 import surfaces                      # for the shared geography.md table parser
 
 SCHEMA_VERSION = 3
@@ -237,11 +238,11 @@ def prepare(date, out=None):
     from PIL import Image, ImageDraw
     import pillow_heif; pillow_heif.register_heif_opener()
     import glob as _glob
-    paths = sorted(p for p in _glob.glob(os.path.join(ROOT, 'photos', date, '*'))
+    paths = sorted(p for p in _glob.glob(os.path.join(DATA, 'photos', date, '*'))
                    if os.path.isfile(p) and not os.path.basename(p).startswith('.'))
     if not paths:
         return None
-    out = out or os.path.join(ROOT, 'work', date, 'water.jpg')
+    out = out or os.path.join(DATA, 'work', date, 'water.jpg')
     os.makedirs(os.path.dirname(out), exist_ok=True)
     cell, cols = 760, 5
     ims = []
@@ -308,9 +309,9 @@ if __name__ == '__main__':
     if '--prepare' in sys.argv:
         import glob as _g
         for d in sorted(os.path.basename(x) for x in
-                        _g.glob(os.path.join(ROOT, 'photos', '2*'))):
+                        _g.glob(os.path.join(DATA, 'photos', '2*'))):
             o = prepare(d)
-            if o: print('  ', os.path.relpath(o, ROOT))
+            if o: print('  ', os.path.relpath(o, DATA))
         sys.exit(0)
     st = stations()
     print(f'{len(st)} station(s) in geography.md:')

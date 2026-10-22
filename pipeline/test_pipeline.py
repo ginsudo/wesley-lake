@@ -12,6 +12,7 @@ import os, re, sys, json, tempfile
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
+from paths import DATA
 import schema
 
 fails = []
@@ -60,7 +61,7 @@ class StubDet:
 try:
     import detect
     import glob
-    src = sorted(glob.glob(os.path.join(ROOT, 'photos', '2026-03-30', '*')))[:1]
+    src = sorted(glob.glob(os.path.join(DATA, 'photos', '2026-03-30', '*')))[:1]
     if not src:
         check('fixture photo present', False, 'photos/2026-03-30 empty — skipped')
     else:
@@ -370,7 +371,7 @@ check('a bank photo is a short distance out, not inside',
 check('every archived on-lake photo passes the geofence',
       all(lake.zone(float(r['lat']), float(r['lon'])) == 'ON'
           for r in __import__('csv').DictReader(
-              open(os.path.join(ROOT, 'analysis', 'derived', 'exif-index.csv'))) if r['lat']),
+              open(os.path.join(DATA, 'analysis', 'derived', 'exif-index.csv'))) if r['lat']),
       'a geofence that rejects a real observation is worse than a loose one')
 check('somewhere obviously not the lake is OFF',
       lake.zone(40.2300, -74.0100) == 'OFF')           # ~1.5 km north, inland
@@ -424,7 +425,7 @@ check('every migration step is documented',
       set(schema.MIGRATIONS) == set(range(1, schema.SCHEMA_VERSION + 1)),
       str(sorted(schema.MIGRATIONS)))
 check('derived and authored records live in separate directories',
-      os.path.isdir(os.path.join(ROOT,'analysis','derived'))
+      os.path.isdir(os.path.join(DATA, 'analysis','derived'))
       and os.path.isdir(os.path.join(ROOT,'analysis','records'))
       and not glob.glob(os.path.join(ROOT,'analysis','*.json')),
       'irreplaceable records must not sit beside regenerable output')
@@ -501,7 +502,7 @@ if os.path.exists(_wf):
 import status
 _all = status.dates()
 check('status sees every date on disk', len(_all) == len(glob.glob(
-          os.path.join(ROOT, 'photos', '2*'))))
+          os.path.join(DATA, 'photos', '2*'))))
 _s = status.state('2026-09-21')
 check('status reports the machine half', _s['swept'] and _s['photos'] == 43,
       str(_s))
@@ -570,6 +571,41 @@ check('all records migrated to the current schema versions',
 from providers.base import Detector
 check('base.Detector.detect is abstract', 
       Detector.detect.__doc__ and 'fractional' in Detector.detect.__doc__)
+
+# 12. data root (MLJ-54): photos/archive/staging/work/derived follow WL_DATA --
+# Prevents: the pipeline writing photos, zips or derived output into the repo
+# (or the Air's disk) when the data root is set elsewhere, e.g. Dodo.
+import subprocess, zipfile, shutil
+def _snap(top):
+    out = {}
+    for dp, dn, fn in os.walk(top):
+        dn[:] = [d for d in dn if d not in ('.git', '__pycache__', '.venv')]
+        for n in fn:
+            p = os.path.join(dp, n); st = os.stat(p)
+            out[p] = (st.st_size, st.st_mtime_ns)
+    return out
+_src = sorted(glob.glob(os.path.join(DATA, 'photos', '2026-03-30', '*')))[:1]
+if not _src:
+    check('fixture photo present for data-root test', False, 'photos/2026-03-30 empty')
+else:
+    with tempfile.TemporaryDirectory() as td:
+        os.makedirs(os.path.join(td, '_incoming'))
+        with zipfile.ZipFile(os.path.join(td, '_incoming', 't.zip'), 'w') as z:
+            z.write(_src[0], 'Takeout/' + os.path.basename(_src[0]))
+        drv = os.path.join(td, 'drive.py')
+        open(drv, 'w').write('import sys; sys.path.insert(0, %r)\nimport run\nrun.ingest(); run.build()\n' % HERE)
+        before = _snap(ROOT)
+        env = dict(os.environ, WL_DATA=td)
+        r = subprocess.run([sys.executable, drv], env=env, capture_output=True, text=True, timeout=150)
+        after = _snap(ROOT)
+        _name = os.path.basename(_src[0])
+        check('data root: zip in _incoming/ is filed under WL_DATA/photos',
+              os.path.exists(os.path.join(td, 'photos', '2026-03-30', _name)), r.stdout[-400:] + r.stderr[-400:])
+        check('data root: zip archived and derived output written under WL_DATA',
+              glob.glob(os.path.join(td, 'archive', 'zips', '*-t.zip'))
+              and os.path.exists(os.path.join(td, 'analysis', 'derived', 'exif-index.csv')))
+        _diff = sorted(set(before.items()) ^ set(after.items()))
+        check('data root: nothing written under ROOT', not _diff, str(_diff[:5]))
 
 print()
 print(f'{len(fails)} failure(s)' if fails else 'all checks passed')

@@ -3,7 +3,7 @@
 Durable working document. The claude.ai Project Instructions point here; this file
 holds the actual method. Edit this file to change how the work is done.
 
-Last revised: 2026-09-20 (§5b added: core count and surfaces)
+Last revised: 2026-10-22 (§1: data root on Dodo; machine half runs there)
 
 ---
 
@@ -44,23 +44,44 @@ at the western and eastern *ends* and do not span the lake. See `geography.md`.
 
 ## 1. Trigger and ingest
 
-Geno downloads a Google Photos zip to the project root on the MacBook Air —
-usually whenever he happens to be at the laptop and remembers. Then he says
-something like "go check for new photos."
+**Where things live (Gene, 2026-10-22; MLJ-54).** The picture archive lives on
+**Dodo**: `~/Claude Project Files/Wesley Lake/` there, which the Air sees as
+`/Volumes/ginsudodojang/Claude Project Files/Wesley Lake/`. That folder is the
+*data root* — `photos/`, `archive/zips/`, `staging/`, `work/`,
+`analysis/derived/`, and `_incoming/`. Code, this file, `STATE.md`, `logs/` and
+`analysis/records/` stay in the repo on the Air. `pipeline/paths.py` resolves the
+data root: env `WL_DATA`, else `config.json` key `data_root`, else the repo
+itself (the old layout, still the default).
 
-That means: run the local pipeline first, then review only what needs reviewing.
+The work splits in three:
 
-    python3 pipeline/run.py
+1. **The zip goes to Dodo's `_incoming/`.** Geno downloads a Google Photos zip
+   and saves it straight into `Wesley Lake/_incoming/` on the share (on the Air,
+   choose the mounted share as the download location; on Dodo, it is local). A
+   zip in the repo root is still picked up, for the old layout.
+2. **The machine half runs on Dodo**, against Dodo's local disk:
 
-It unzips, reads EXIF, files each photo into `photos/YYYY-MM-DD/` by its own
-`DateTimeOriginal`, geofences (off-lake goes to `photos/_off-lake/`), clusters
-each date into stops, builds `work/<date>/stop*.jpg` contact sheets, writes
-`analysis/session-index.md`, and archives the zip. Measured at 45 s for 153
-photos. It is idempotent — re-running is always safe.
+       cd "$HOME/Claude Project Files/Wesley Lake"
+       git -C runner pull --ff-only
+       WL_DATA="$PWD" python3 runner/pipeline/run.py
 
-Claude runs this via the device shell; Geno does not have to remember the
-command. Then Claude reads `analysis/session-index.md` and the new contact
-sheets, and goes to §4.
+   `runner/` is a read-only clone of the repo (fast-forward only, never edited
+   there). **Never run the pipeline from the Air against the share** — no
+   processing over SMB. It unzips, reads EXIF, files each photo into
+   `photos/YYYY-MM-DD/` by its own `DateTimeOriginal`, geofences (off-lake to
+   `photos/_off-lake/`, no GPS to `photos/_no-gps/`), clusters each date into
+   stops, builds `work/<date>/stop*.jpg` contact sheets, writes
+   `analysis/derived/session-index.md`, runs the detector sweep, and archives
+   the zip. Idempotent — re-running is always safe.
+3. **The review runs in any session** — Cowork on the Air, Dodo, anywhere that
+   can read `work/<date>/` on the data root. Reading a few sheets and crops over
+   the share is fine; bulk work over it is not. Claude reads
+   `analysis/derived/session-index.md` and the new contact sheets, and goes to
+   §4. Records and log entries are written in the repo on the Air and pushed.
+
+"Go check for new photos" therefore means: look in `_incoming/`; if a zip is
+waiting, the machine half has to run on Dodo first (a Dodo session, or a handoff
+prompt to one); then review.
 
 Note: deletion is disabled in connected folders. Move files, don't delete them.
 

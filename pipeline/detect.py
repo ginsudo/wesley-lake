@@ -33,6 +33,7 @@ import os, sys, json, glob, time, datetime
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
+from paths import DATA
 
 import bootstrap
 bootstrap.ensure(['PIL', 'pillow_heif', 'numpy', 'onnxruntime'],
@@ -90,8 +91,8 @@ def is_fresh(date, photo_dir=None, out_json=None):
     would quietly break that promise. A date is re-swept only when a photo is
     newer than its candidates file, or the detector settings changed.
     """
-    photo_dir = photo_dir or os.path.join(ROOT, 'photos', date)
-    out_json = out_json or os.path.join(ROOT, 'analysis', 'derived', f'{date}-candidates.json')
+    photo_dir = photo_dir or os.path.join(DATA, 'photos', date)
+    out_json = out_json or os.path.join(DATA, 'analysis', 'derived', f'{date}-candidates.json')
     if not os.path.exists(out_json): return False
     try:
         prev = json.load(open(out_json))
@@ -115,9 +116,9 @@ def detect_date(date, det, photo_dir=None, work_dir=None, out_json=None,
     from PIL import Image
     import pillow_heif; pillow_heif.register_heif_opener()
 
-    photo_dir = photo_dir or os.path.join(ROOT, 'photos', date)
-    work_dir = work_dir or os.path.join(ROOT, 'work', date)
-    out_json = out_json or os.path.join(ROOT, 'analysis', 'derived', f'{date}-candidates.json')
+    photo_dir = photo_dir or os.path.join(DATA, 'photos', date)
+    work_dir = work_dir or os.path.join(DATA, 'work', date)
+    out_json = out_json or os.path.join(DATA, 'analysis', 'derived', f'{date}-candidates.json')
     crops_dir = os.path.join(work_dir, 'crops')
     ov_dir = os.path.join(work_dir, 'overlay')
     os.makedirs(crops_dir, exist_ok=True)
@@ -179,7 +180,7 @@ def detect_date(date, det, photo_dir=None, work_dir=None, out_json=None,
                     zb = _zone_box(l, t, r, b, z)
                     res = crop_box(pil, os.path.join(crops_dir, f'{tag}-{z}.jpg'),
                                    *zb, pad=0.20)
-                    if res: subs[z] = os.path.relpath(res[0], ROOT)
+                    if res: subs[z] = os.path.relpath(res[0], DATA)
             else:
                 why = (f'box is {long_px} px on its long side, under the '
                        f'{MIN_BOX_PX_FOR_MARKS} px floor where PROTOCOL.md 5a sub-crops '
@@ -197,7 +198,7 @@ def detect_date(date, det, photo_dir=None, work_dir=None, out_json=None,
                           f"zoom burst {_bz['burst'][0]}..{_bz['burst'][-1]} — one subject. "
                           f"{_bz['why']}.")
             rec = schema.blank(
-                os.path.relpath(p, ROOT),
+                os.path.relpath(p, DATA),
                 provider=det.name, model=getattr(det, 'model', ''),
                 count=1, count_exact=False,
                 notes=('detector box only — nothing identified. '
@@ -226,7 +227,7 @@ def detect_date(date, det, photo_dir=None, work_dir=None, out_json=None,
                 box=[round(v, 6) for v in (l, t, r, b)],
                 box_px=[bw_px, bh_px],
                 score=round(s, 4),
-                crop=os.path.relpath(cp[0], ROOT) if cp else None,
+                crop=os.path.relpath(cp[0], DATA) if cp else None,
                 crop_px=list(cp[1]) if cp else None,
                 subcrops=subs,
                 marks_resolvable=bool(subs),
@@ -281,12 +282,12 @@ def detect_date(date, det, photo_dir=None, work_dir=None, out_json=None,
     if verbose:
         print(f'  -> {len(records)} detections over {len(photos)} photos in '
               f'{time.time()-t0:.0f}s; {n_clean} clean, {n_bad} with problems')
-        print(f'  -> {os.path.relpath(out_json, ROOT)}')
+        print(f'  -> {os.path.relpath(out_json, DATA)}')
     return payload
 
 
 def settings_changed(date, det, out_json=None):
-    out_json = out_json or os.path.join(ROOT, 'analysis', 'derived', f'{date}-candidates.json')
+    out_json = out_json or os.path.join(DATA, 'analysis', 'derived', f'{date}-candidates.json')
     if not os.path.exists(out_json): return True
     try:
         return json.load(open(out_json)).get('detector') != settings_of(det)
@@ -295,7 +296,7 @@ def settings_changed(date, det, out_json=None):
 
 
 def dates_on_disk():
-    return sorted(os.path.basename(d) for d in glob.glob(os.path.join(ROOT, 'photos', '2*'))
+    return sorted(os.path.basename(d) for d in glob.glob(os.path.join(DATA, 'photos', '2*'))
                   if os.path.isdir(d))
 
 
