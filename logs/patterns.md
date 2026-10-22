@@ -2,6 +2,8 @@
 
 Built from `logs/bird-log.md` Entry 5 and the records behind it. Generated 2026-09-20T19:10:17. PROTOCOL.md §8. Update monthly.
 
+> **STALE AS OF 2026-10-22, and the label above is wrong.** The tables cover **30 dates**; the record is **31** — Entry 8 (2026-09-21) is logged but not rolled up. Delta in `analysis/records/2026-10-22-cross-species-review.md` §3. Also: nothing generates this file — `grep -rn "patterns" pipeline/` is empty — so “Generated …” is a hand-maintained file wearing a machine label. Write the generator or drop the label.
+
 **Everything here is the core count (§5b) unless a section says otherwise** — birds on the lake surface. Flying, bank and man-made-perch birds are kept separate and never folded in.
 
 ## Read this first
@@ -25,7 +27,7 @@ Built from `logs/bird-log.md` Entry 5 and the records behind it. Generated 2026-
 | Gull sp. | 1 | 1% |
 | Great Blue Heron | 1 | 1% |
 
-**Canada Goose is the second species of this lake.** Before this backfill the log held one goose record — Entry 3, "geese today", no EXIF, no count. It is now 36 sightings across five dates, peaking at 10–12.
+**Canada Goose is the second species of this lake.** Before this backfill the log held one goose record — Entry 3, "geese today", no EXIF, no count. It is now 36 sightings across six dates (03-26, 04-27, 07-09, 09-08, 09-10, 09-17), peaking at 10–15 max-simultaneous on 04-27 — and at ~24–26 additive on 09-17 (Entry 3/7). *Corrected 2026-10-22: read “five dates, peaking at 10–12”. The 36 was verified and the two numbers beside it were not; “10–12” was a stale 09-17 hedge that Entry 5 had already resolved to 10. See `analysis/records/2026-10-22-cross-species-review.md` §4a.*
 
 ## By month
 
