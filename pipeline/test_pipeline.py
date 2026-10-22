@@ -607,6 +607,18 @@ else:
         _diff = sorted(set(before.items()) ^ set(after.items()))
         check('data root: nothing written under ROOT', not _diff, str(_diff[:5]))
 
+# 13. a configured detector that fails to load is reported, not silent (WL-02)
+# Prevents: run.py exiting 0 with "could not load ... skipping" while no date
+# was swept, as on Dodo 2026-10-22.
+import run as _run, providers as _prov
+_g = _prov.get
+try:
+    def _boom(role): raise ImportError("No module named 'numpy'")
+    _prov.get = _boom
+    check('detector load failure returns False (run exits 3)', _run.detect_stage(dates=[]) is False)
+finally:
+    _prov.get = _g
+
 print()
 print(f'{len(fails)} failure(s)' if fails else 'all checks passed')
 sys.exit(1 if fails else 0)

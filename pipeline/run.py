@@ -129,12 +129,17 @@ def detect_stage(dates=None):
     """
     from providers import get
     try:
+        # import detect FIRST: its bootstrap.ensure installs numpy and
+        # onnxruntime, which providers/yolox.py imports at module level. The
+        # other order failed on Dodo's fresh venv (WL-02): "No module named
+        # 'numpy'" and the whole sweep was skipped with exit 0.
+        import detect
         det = get('detector')
     except Exception as e:
-        print(f'detector: could not load ({e}) — skipping'); return
+        print(f'\n!! DETECTOR FAILED TO LOAD ({e}) — sweep skipped, run will exit 3')
+        return False
     if det is None:
-        return
-    import detect
+        return True
     print(f'\ndetector: {det.name} / {getattr(det, "model", "")}')
     for d in (dates or detect.dates_on_disk()):
         if detect.is_fresh(d) and not detect.settings_changed(d, det):
@@ -144,6 +149,7 @@ def detect_stage(dates=None):
             detect.detect_date(d, det)
         except Exception as e:
             print(f'  !! detection failed on {d}: {e}')
+    return True
 
 def water_stage(dates=None):
     """Prepare the water-band sheet for each date. PROTOCOL.md §3a.
@@ -172,8 +178,13 @@ def water_stage(dates=None):
 if __name__ == '__main__':
     ingest()
     build()
-    detect_stage()      # birds:  machine sweep
-    water_stage()       # water:  machine prep
+    det_ok = detect_stage()   # birds:  machine sweep
+    water_stage()             # water:  machine prep
     print()
-    import status       # then say plainly what still needs eyes
+    import status             # then say plainly what still needs eyes
     status.report(todo_only=True)
+    # Ingest never depends on the detector, but a configured detector that
+    # could not load must not look like success (WL-02 exited 0).
+    if det_ok is False:
+        print('\n!! detector configured but not loaded — exit 3')
+        sys.exit(3)

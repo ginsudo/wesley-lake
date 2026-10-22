@@ -66,8 +66,11 @@ The deterministic pipeline is built. The model layer is built and swappable.
 
 ## Pending, ranked
 
-- **Run today's zip on Dodo** — `_incoming/2026-10-22-birds-back-in-AP.zip`
-  (75 HEIC), first run of the Dodo data root. Then review its sheets.
+- **2026-10-22 is ingested on Dodo** (75 photos, WL-02; zip archived) but the
+  **detector has never run on Dodo**: run.py imported the provider before the
+  deps were installed and skipped the sweep with exit 0. Fixed (run.py now
+  installs via detect first and exits 3 if a configured detector can't load);
+  needs a pull and rerun on Dodo. Then review 2026-10-22.
 - **Gair copies of photos/ and archive/zips/** are now duplicates of Dodo's.
   Removing them waits for Gene.
 - **`run.py` had never archived a zip since e300091** (the zone variable shadowed
