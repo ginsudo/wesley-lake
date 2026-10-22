@@ -125,6 +125,7 @@ coastal lagoon, not a pond.
 | Are MAT-?a and MAT-?b separate mats, or MAT-02/03 at distance? | Unresolved, and **position can no longer help** — the mats drift. Only a durable structural mark can settle it, and neither has one. |
 | Do the mats carry asset tags or numbers? | Partly answered. IMG_2187 (06-17) shows an artificial teal/turquoise element standing proud of MAT base — a tie, stake or tag. Not readable at that range. One close photo settles it. |
 | Gulls in flight on 2026-09-20 — real, and how many? | Detector found them in ~7 frames, 3 at once in IMG_3482. Entry 4 records no in-flight birds at all and concluded activity was "overwhelmingly loafing". Claude's read, unconfirmed. |
+| Are 2025-06-10 and 2025-10-20 observation effort at all? | **New 2026-10-22.** Both are inside the geofence and both are birdless (4 and 2 photos), but the watching began after the move to Asbury Park that winter. If they are incidental visitor photographs, “31 dates” overstates the effort denominator by two and those two blanks are not low-count birding days. Only Geno can settle it. |
 
 ## Known fragilities
 
@@ -173,5 +174,6 @@ coastal lagoon, not a pond.
   corners and countable planting ports — so they need a waterline photograph,
   not a better lens from the bank. MAT-01 is matched across 09-08 and 09-20 by
   its log; the others simply have not been photographed close enough yet.
+- **No Dodo side** (Geno, 2026-10-22). Dodo sees this folder only through `_air-mirror/Projects/Wesley Lake` (hourly, read-only). If something needs to run on Dodo (e.g. the detector with a local model), open a Dodo side per the Master Learning Journal doc claude/dodo-sides.md.
 - **No local general-purpose VLM.** The Air cannot run one worth having, and a
   specialist classifier beats a mid-size VLM at species anyway.
