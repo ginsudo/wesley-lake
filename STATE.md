@@ -72,6 +72,7 @@ The deterministic pipeline is built. The model layer is built and swappable.
   run.py picks a compatible interpreter itself. Open: **no mute swans on this
   walk** (six earlier walks also had none; last seen 2 on 09-21); the gull raft was probably in S1/S2 but
   carries S4 because segments come from camera position.
+- auto-select committed 78f59b7, pending Dodo check
 - **Gair copies of photos/ and archive/zips/** are now duplicates of Dodo's.
   Removing them waits for Gene.
 - **`run.py` had never archived a zip since e300091** (the zone variable shadowed
