@@ -619,6 +619,31 @@ try:
 finally:
     _prov.get = _g
 
+# 14. interpreter auto-select (MLJ-57): FALLBACK_PYTHONS, first that installs --
+# Prevents: run.py dying under Dodo's python3 (3.15; onnxruntime has no 3.15
+# wheel, WL-03/04) instead of choosing python3.14/3.13 -- or failing silently.
+import bootstrap as _bs
+with tempfile.TemporaryDirectory() as td:
+    for v in _bs.FALLBACK_PYTHONS:             # fake interpreters, never run
+        f = os.path.join(td, f'python{v}'); open(f, 'w').write('#!/bin/sh\nexit 1\n'); os.chmod(f, 0o755)
+    _seen = []
+    def _fake(ok):
+        def attempt(v, py):
+            _seen.append(v)
+            return ('/venv/' + v + '/bin/python', '') if v in ok else (None, 'ERROR: No matching distribution found for onnxruntime')
+        return attempt
+    _c = _bs.candidates(path=td, extra=())
+    _r = _bs.select(_c, _fake({'3.14'}))
+    check('auto-select: running Python first, then first fallback that installs',
+          _seen[0] == _c[0][0] and _r[0] == '3.14' and _r[2] == '/venv/3.14/bin/python'
+          and (_r[1] == os.path.join(td, 'python3.14') or _bs._ver() == '3.14'), f'{_seen} {_r}')
+    try:
+        _bs.select(_c, _fake(set())); _msg = ''
+    except RuntimeError as e:
+        _msg = str(e)
+    check('auto-select: none works -> error lists every interpreter tried',
+          all(f'python{v}' in _msg for v, _ in _c) and 'No matching distribution' in _msg, _msg)
+
 print()
 print(f'{len(fails)} failure(s)' if fails else 'all checks passed')
 sys.exit(1 if fails else 0)

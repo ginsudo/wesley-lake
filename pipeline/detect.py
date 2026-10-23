@@ -36,8 +36,7 @@ sys.path.insert(0, HERE)
 from paths import DATA
 
 import bootstrap
-bootstrap.ensure(['PIL', 'pillow_heif', 'numpy', 'onnxruntime'],
-                 ['pillow', 'pillow-heif', 'numpy', 'onnxruntime'])
+bootstrap.ensure(*bootstrap.DETECTOR_DEPS)
 
 import schema, exif, surfaces, framing
 from crop import crop_box

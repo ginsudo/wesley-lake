@@ -20,6 +20,17 @@ from paths import DATA
 # and ENVIRONMENT in ../CLAUDE.md.
 import bootstrap
 bootstrap.ensure(['PIL', 'pillow_heif'], ['pillow', 'pillow-heif'])
+# With a detector configured, settle the interpreter now, before ingest: a
+# Python that cannot install onnxruntime (Dodo's 3.15, WL-03/04) is swapped for
+# one of bootstrap.FALLBACK_PYTHONS here, not by a re-exec from detect.py that
+# would repeat ingest and build. A failure is left for detect_stage to report
+# (exit 3) -- ingest must not depend on the detector. __main__ only, so tests
+# that import run never install anything.
+if __name__ == '__main__':
+    import providers as _providers
+    if _providers.config()['roles'].get('detector', 'none') != 'none':
+        try: bootstrap.ensure(*bootstrap.DETECTOR_DEPS)
+        except RuntimeError as e: print(f'!! {e}', file=sys.stderr)
 
 import exif, track
 from sheets import sheet

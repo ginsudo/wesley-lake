@@ -10,6 +10,11 @@
 So: try a direct install; if that is refused, build a venv, install there, and
 re-exec the calling script with the venv's interpreter. Costs one re-exec, once.
 
+If the running Python cannot install them at all (Dodo's python3 is 3.15 and
+onnxruntime has no 3.15 wheel, WL-03/04), try FALLBACK_PYTHONS in order and
+use the first that can, printing one line naming it. If none can, fail and
+list what was tried.
+
 The venv lives OUTSIDE the project, keyed by platform and Python version:
     ~/.cache/wesley-lake/venv-<platform>-<machine>-<pyX.Y>
 Outside because CLAUDE.md is emphatic about stray files in the project; keyed
@@ -20,12 +25,29 @@ import os, sys, subprocess, importlib
 
 GUARD = 'WESLEY_BOOTSTRAPPED'
 
+# Interpreters tried, in this order, when the running Python cannot install the
+# deps (WL-03/04: onnxruntime has no 3.15 wheel and Dodo's python3 is 3.15).
+# The running Python is always tried first. This is the ONE place to change.
+FALLBACK_PYTHONS = ('3.14', '3.13')
+# Searched after $PATH. Homebrew's versioned pythons live here on Apple silicon.
+EXTRA_DIRS = ('/opt/homebrew/bin',)
+# Versions already found unable to install, carried across re-execs.
+TRIED = 'WESLEY_PY_TRIED'
+
+# The detector's deps, in one place so run.py can settle the interpreter up
+# front (before ingest) instead of re-exec'ing mid-run from detect.py.
+DETECTOR_DEPS = (['PIL', 'pillow_heif', 'numpy', 'onnxruntime'],
+                 ['pillow', 'pillow-heif', 'numpy', 'onnxruntime'])
+
 def _cache_root():
     base = os.environ.get('XDG_CACHE_HOME') or os.path.expanduser('~/.cache')
     return os.path.join(base, 'wesley-lake')
 
-def venv_dir():
-    tag = f'{sys.platform}-{os.uname().machine}-py{sys.version_info.major}.{sys.version_info.minor}'
+def _ver():
+    return f'{sys.version_info.major}.{sys.version_info.minor}'
+
+def venv_dir(ver=None):
+    tag = f'{sys.platform}-{os.uname().machine}-py{ver or _ver()}'
     return os.path.join(_cache_root(), f'venv-{tag}')
 
 def _venv_python(d):
@@ -47,6 +69,62 @@ def _pip(py, pkgs):
                        capture_output=True, text=True)
     return r.returncode == 0, (r.stderr or '') + (r.stdout or '')
 
+def find_python(ver, path=None, extra=EXTRA_DIRS):
+    """Path of an executable `python<ver>` on PATH or in `extra`, else None."""
+    dirs = (os.environ.get('PATH', '') if path is None else path).split(os.pathsep)
+    for d in [*dirs, *extra]:
+        p = os.path.join(d, f'python{ver}')
+        if d and os.path.isfile(p) and os.access(p, os.X_OK): return p
+    return None
+
+def candidates(path=None, extra=EXTRA_DIRS):
+    """[(version, interpreter-or-None)]: the running Python, then FALLBACK_PYTHONS."""
+    cur = _ver()
+    out = [(cur, sys.executable)]
+    out += [(v, find_python(v, path, extra)) for v in FALLBACK_PYTHONS if v != cur]
+    return out
+
+def select(cands, attempt, skip=()):
+    """First candidate `attempt(ver, py)` can make work.
+
+    attempt returns (venv_python or None, log). Returns (ver, py, venv_python,
+    failed_versions). Raises RuntimeError naming every candidate tried, and how
+    it failed, if none works. No silent fallback.
+    """
+    tried, failed = [], []
+    for ver, py in cands:
+        if ver in skip:
+            tried.append(f'python{ver}: already failed'); continue
+        if not py:
+            tried.append(f'python{ver}: not found on PATH or in {", ".join(EXTRA_DIRS)}'); continue
+        vpy, log = attempt(ver, py)
+        if vpy: return ver, py, vpy, failed
+        failed.append(ver)
+        last = [l for l in (log or '').strip().splitlines() if l.strip()]
+        tried.append(f'python{ver} ({py}): {last[-1] if last else "failed"}')
+    raise RuntimeError('no Python could install the dependencies. Tried:\n  '
+                       + '\n  '.join(tried))
+
+def _attempt(ver, py, modules, packages):
+    """Make venv-<ver> hold `modules`; return (its python or None, log)."""
+    d = venv_dir(ver)
+    vpy = _venv_python(d)
+    if not vpy:
+        print(f'creating venv {d} (one time; Homebrew python refuses direct installs)',
+              file=sys.stderr)
+        os.makedirs(os.path.dirname(d), exist_ok=True)
+        r = subprocess.run([py, '-m', 'venv', d], capture_output=True, text=True)
+        vpy = _venv_python(d)
+        if r.returncode != 0 or not vpy:
+            return None, f'venv creation failed: {r.stderr or r.stdout}'
+    if not _missing_in(vpy, modules):
+        return vpy, ''
+    print(f'installing {" ".join(packages)} into {d} ...', file=sys.stderr)
+    ok, log = _pip(vpy, packages)
+    if ok and not _missing_in(vpy, modules):
+        return vpy, ''
+    return None, log or 'installed, but modules still not importable'
+
 def ensure(modules, packages=None):
     """Make `modules` importable, by whatever route this platform allows.
 
@@ -54,40 +132,25 @@ def ensure(modules, packages=None):
     packages -- pip names to install; defaults to `modules`
 
     Returns normally once the modules are importable. May re-exec the process
-    (this call then never returns). Raises RuntimeError if it cannot succeed.
+    into a venv -- built from the running Python, or failing that from the
+    first of FALLBACK_PYTHONS that can install them (this call then never
+    returns). Raises RuntimeError, listing what was tried, if none can.
     """
     packages = packages or modules
-    miss = _missing(modules)
-    if not miss: return
+    if not _missing(modules): return
 
     ok, log = _pip(sys.executable, packages)
     if ok and not _missing(modules): return
 
-    in_venv = sys.prefix != sys.base_prefix
-    if in_venv:
-        raise RuntimeError(f'cannot install {packages} into the active venv:\n{log}')
-    if os.environ.get(GUARD):
-        raise RuntimeError(f'still missing {miss} after re-exec into a venv:\n{log}')
-
-    d = venv_dir()
-    py = _venv_python(d)
-    if not py:
-        print(f'creating venv {d} (one time; Homebrew python refuses direct installs)',
-              file=sys.stderr)
-        os.makedirs(os.path.dirname(d), exist_ok=True)
-        subprocess.run([sys.executable, '-m', 'venv', d], check=True)
-        py = _venv_python(d)
-    if not py:
-        raise RuntimeError(f'venv created but no interpreter found under {d}')
-
-    if _missing_in(py, modules):
-        print(f'installing {" ".join(packages)} into {d} ...', file=sys.stderr)
-        ok, log = _pip(py, packages)
-        if not ok:
-            raise RuntimeError(f'pip install {packages} failed in {d}:\n{log}')
-
-    env = dict(os.environ, **{GUARD: '1'})
-    os.execve(py, [py, *sys.argv], env)   # does not return
+    skip = {v for v in os.environ.get(TRIED, '').split(',') if v}
+    if sys.prefix != sys.base_prefix:
+        skip.add(_ver())          # the direct install above WAS this venv's try
+    ver, base, vpy, failed = select(
+        candidates(), lambda v, p: _attempt(v, p, modules, packages), skip)
+    print(f'bootstrap: using Python {ver} ({base}) via {os.path.dirname(os.path.dirname(vpy))}',
+          file=sys.stderr)
+    env = dict(os.environ, **{GUARD: '1', TRIED: ','.join(sorted(skip | set(failed)))})
+    os.execve(vpy, [vpy, *sys.argv], env)   # does not return
 
 def _missing_in(py, modules):
     probe = ('import importlib,sys\n'
