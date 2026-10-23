@@ -10,8 +10,11 @@ say how the work is done.
 
 262 on-lake photos over 31 dates (**Jun 2025** – Sep 2026), plus 6 in `photos/_off-lake/`,
 are ingested, EXIF-indexed, geofenced, filed by date, and contact-sheeted.
-(An earlier version of this file said 153 / 101 unlogged; the real backlog is
-**147 photos over 26 dates**.) **Only 2026-09-20 has been analysed and logged.**
+(Those counts are as of 2026-09-20.) **Every dated record is analysed and
+logged** — checked 2026-10-22: all 32 dates in `analysis/records/` have a section
+in `logs/bird-log.md` (Entry 5 backfills the archive; Entries 4/6/7 cover
+09-17 and 09-20, Entry 8 is 09-21, Entry 10 is 10-22). There is no backlog.
+An earlier line here said only 09-20 was logged; that predated Entry 5.
 
 The deterministic pipeline is built. The model layer is built and swappable.
 **The detector is built** and off by default.
@@ -66,6 +69,10 @@ The deterministic pipeline is built. The model layer is built and swappable.
 
 ## Pending, ranked
 
+- **Bird board — phase 0 test page built 2026-10-22, awaiting Geno's look.**
+  Plan and result in `BOARD-PLAN.md` (§9: link, findings for phase 1). Next:
+  Geno judges the page at phone width; then phase 1 (`pipeline/board.py`).
+  Four decisions for Geno in its §7.
 - **2026-10-22 is reviewed** (Entry 10; 9 records). Detector works on Dodo
   only under **python3.14** — onnxruntime has no Python 3.15 build and Dodo's
   `python3` is 3.15 (WL-03/04). PROTOCOL §1's command needs `python3.14` until

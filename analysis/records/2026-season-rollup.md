@@ -2,7 +2,7 @@
 
 Regenerated after recount 2026-09-20T18:26:14 from the 26 `analysis/<date>-observations.json` files plus `2026-09-20-core-count.json`.
 
-**All of it is Claude’s read of native-resolution crops, not Geno’s confirmation** (PROTOCOL.md §9). Nothing here is in `logs/bird-log.md` yet.
+**All of it is Claude’s read of native-resolution crops, not Geno’s confirmation** (PROTOCOL.md §9). Nothing here is in `logs/bird-log.md` yet. *(Stale as of the same evening: these dates were logged as bird-log Entry 5 on 2026-09-20. Note added 2026-10-22. This table also stops at 09-20 and omits the 2025 dates, 01-31, 09-21 and 10-22.)*
 
 ## Method and its limits
 
