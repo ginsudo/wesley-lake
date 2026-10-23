@@ -73,13 +73,12 @@ The deterministic pipeline is built. The model layer is built and swappable.
   Plan and result in `BOARD-PLAN.md` (§9: link, findings for phase 1). Next:
   Geno judges the page at phone width; then phase 1 (`pipeline/board.py`).
   Four decisions for Geno in its §7.
-- **2026-10-22 is reviewed** (Entry 10; 9 records). Detector works on Dodo
-  only under **python3.14** — onnxruntime has no Python 3.15 build and Dodo's
-  `python3` is 3.15 (WL-03/04). PROTOCOL §1's command needs `python3.14` until
-  run.py picks a compatible interpreter itself. Open: **no mute swans on this
+- **2026-10-22 is reviewed** (Entry 10; 9 records). Detector runs on Dodo
+  with plain `python3`: onnxruntime has no 3.15 build, so bootstrap.py switches
+  to 3.14 by itself (78f59b7; field-tested in WL-05, exit 0). Open: **no mute swans on this
   walk** (six earlier walks also had none; last seen 2 on 09-21); the gull raft was probably in S1/S2 but
   carries S4 because segments come from camera position.
-- auto-select committed 78f59b7, pending Dodo check
+- auto-select 78f59b7 passed the Dodo check (WL-05). Untested: building a fresh 3.14 venv, and the all-fail error.
 - **Gair copies of photos/ and archive/zips/** are now duplicates of Dodo's.
   Removing them waits for Gene.
 - **`run.py` had never archived a zip since e300091** (the zone variable shadowed
