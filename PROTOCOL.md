@@ -63,7 +63,7 @@ The work splits in three:
 
        cd "$HOME/Claude Project Files/Wesley Lake"
        git -C runner pull --ff-only
-       WL_DATA="$PWD" python3 runner/pipeline/run.py
+       WL_DATA="$PWD" python3.14 runner/pipeline/run.py   # 3.14: onnxruntime has no 3.15 build yet
 
    `runner/` is a read-only clone of the repo (fast-forward only, never edited
    there). **Never run the pipeline from the Air against the share** — no

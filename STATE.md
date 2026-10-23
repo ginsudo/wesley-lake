@@ -66,11 +66,12 @@ The deterministic pipeline is built. The model layer is built and swappable.
 
 ## Pending, ranked
 
-- **2026-10-22 is ingested on Dodo** (75 photos, WL-02; zip archived) but the
-  **detector has never run on Dodo**: run.py imported the provider before the
-  deps were installed and skipped the sweep with exit 0. Fixed (run.py now
-  installs via detect first and exits 3 if a configured detector can't load);
-  needs a pull and rerun on Dodo. Then review 2026-10-22.
+- **2026-10-22 is reviewed** (Entry 10; 9 records). Detector works on Dodo
+  only under **python3.14** — onnxruntime has no Python 3.15 build and Dodo's
+  `python3` is 3.15 (WL-03/04). PROTOCOL §1's command needs `python3.14` until
+  run.py picks a compatible interpreter itself. Open: **no mute swans on this
+  walk** (six earlier walks also had none; last seen 2 on 09-21); the gull raft was probably in S1/S2 but
+  carries S4 because segments come from camera position.
 - **Gair copies of photos/ and archive/zips/** are now duplicates of Dodo's.
   Removing them waits for Gene.
 - **`run.py` had never archived a zip since e300091** (the zone variable shadowed

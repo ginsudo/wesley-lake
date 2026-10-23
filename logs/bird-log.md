@@ -526,3 +526,41 @@ under a clear blue sky a merely reflective surface reads blue, so water reading
 ochre-brown under blue sky is genuinely brown. Colour is now a judged category
 gated on clear sky — never a measurement. Cause stays undeterminable from a
 photograph; sediment, tannin and an algal tint all look alike.
+
+### Entry 10 — 2026-10-22, 15:45–16:19 EDT. Clear, sunny. Mattison Ave to the western head (S4).
+
+75 photographs, all within S4 (camera between −74.0099 and −74.0049), in nine
+stops. The first walk ingested and swept on Dodo (WL-02, WL-04). Records in
+`analysis/records/2026-10-22-observations.json`; Claude's read of
+native-resolution crops, not yet confirmed by Geno.
+
+- **Mallard, 2** — an adult drake in full breeding plumage and a female, swimming
+  in close along the bank at stops 4–5 (IMG_4660–4667). Certain. Legs seen only
+  through turbid water: no band seen, not cleanly resolved.
+- **Duck sp. (mallard-type), 2 + 2** — distant pairs at stop 2 (IMG_4652) and
+  stop 6 (IMG_4668). Quite possibly the same pair each time; Tier D, unknowable.
+- **Gull sp., ~26** — a loose raft, some bathing, white adults mixed with brownish
+  birds that are probably first-cycle gulls (IMG_4691–4695; also IMG_4684 from
+  stop 7). Estimate, not exact. **Location caveat:** these are zoom frames from
+  the Mattison Ave end looking east; the raft sits off the far bulkhead below the
+  carousel house and Casino, so it was most likely in **S1 or S2**, where the
+  record has never had a bird. The records carry the camera's segment (S4)
+  because that is all the pipeline can derive.
+- **Gull sp., 1 + 1 + 1** — single adults at stops 4, 6 and 8, one bathing.
+- **Canada Goose, 1** — alone near the bridge (IMG_4674). Probable.
+- **Double-crested Cormorant, possible, 1** — a low, dark bird beyond the gull raft
+  (IMG_4694). Possible only.
+
+**No mute swans anywhere on this walk** — neither the pair nor any of the four
+cygnets. This walk covered only S4 plus long zoom views east, so it is not
+evidence they have left the lake. Six earlier walks also recorded no swans
+(06-17, 06-28, 07-09, 09-08, 09-13, 09-17); the last swans in the record are 2 on
+09-21.
+
+Water ran **strongly ochre-brown** in the western half (stops 1–3, 9) under a
+clear sky; bluer to the east. Recorded here only; no water record written yet.
+Floating mats visible near the bridge (IMG_4701, 4704, 4705), apparently empty;
+not assigned to registry IDs.
+
+The detector returned 272 boxes on this date (127 at score ≥ 0.30); most were
+glints, ripples and the light buoy (IMG_4654). The real birds number about 35.
